@@ -11,7 +11,17 @@ const meta = {
   argTypes: {
     variant: {
       control: 'select',
-      options: ['primary', 'secondary', 'accent', 'info', 'success', 'warning', 'error', 'ghost', 'link'],
+      options: [
+        'primary',
+        'secondary',
+        'accent',
+        'info',
+        'success',
+        'warning',
+        'error',
+        'ghost',
+        'link',
+      ],
     },
     size: {
       control: 'select',
@@ -21,7 +31,7 @@ const meta = {
       control: 'boolean',
     },
     wide: {
-      control: 'boolean',
+      control:         'boolean',
     },
     block: {
       control: 'boolean',

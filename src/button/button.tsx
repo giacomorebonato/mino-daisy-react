@@ -1,8 +1,17 @@
-import { ButtonHTMLAttributes, forwardRef } from 'react'
 import { clsx } from 'clsx'
+import type { ButtonHTMLAttributes } from 'react'
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'accent' | 'info' | 'success' | 'warning' | 'error' | 'ghost' | 'link'
+  variant?:
+    | 'primary'
+    | 'secondary'
+    | 'accent'
+    | 'info'
+    | 'success'
+    | 'warning'
+    | 'error'
+    | 'ghost'
+    | 'link'
   size?: 'xs' | 'sm' | 'md' | 'lg'
   outline?: boolean
   wide?: boolean
@@ -11,52 +20,42 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   square?: boolean
   loading?: boolean
   disabled?: boolean
+  ref?: React.Ref<HTMLButtonElement>
 }
 
-export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  (
+export function Button({
+  children,
+  className,
+  variant,
+  size,
+  outline,
+  wide,
+  block,
+  circle,
+  square,
+  loading,
+  disabled,
+  ref,
+  ...props
+}: ButtonProps) {
+  const classes = clsx(
+    'btn',
     {
-      children,
-      className,
-      variant,
-      size,
-      outline,
-      wide,
-      block,
-      circle,
-      square,
-      loading,
-      disabled,
-      ...props
+      [`btn-${variant}`]: variant,
+      [`btn-${size}`]: size,
+      'btn-outline': outline,
+      'btn-wide': wide,
+      'btn-block': block,
+      'btn-circle': circle,
+      'btn-square': square,
+      loading: loading,
     },
-    ref
-  ) => {
-    const classes = clsx(
-      'btn',
-      {
-        [`btn-${variant}`]: variant,
-        [`btn-${size}`]: size,
-        'btn-outline': outline,
-        'btn-wide': wide,
-        'btn-block': block,
-        'btn-circle': circle,
-        'btn-square': square,
-        'loading': loading,
-      },
-      className
-    )
+    className,
+  )
 
-    return (
-      <button
-        ref={ref}
-        className={classes}
-        disabled={disabled || loading}
-        {...props}
-      >
-        {children}
-      </button>
-    )
-  }
-)
-
-Button.displayName = 'Button'
+  return (
+    <button ref={ref} className={classes} disabled={disabled || loading} {...props}>
+      {children}
+    </button>
+  )
+}
