@@ -147,10 +147,7 @@ describe('Table', () => {
         </tbody>
       </Table>,
     )
-    expect(container.querySelector('table')).toHaveAttribute(
-      'data-testid',
-      'table-element',
-    )
+    expect(container.querySelector('table')).toHaveAttribute('data-testid', 'table-element')
   })
 
   it('renders as table element', () => {

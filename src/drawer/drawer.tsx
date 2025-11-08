@@ -1,10 +1,5 @@
-import {
-  type HTMLAttributes,
-  type InputHTMLAttributes,
-  type LabelHTMLAttributes,
-  type ReactNode,
-} from 'react'
 import clsx from 'clsx'
+import type { HTMLAttributes, InputHTMLAttributes, LabelHTMLAttributes, ReactNode } from 'react'
 
 export interface DrawerProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode
@@ -22,8 +17,7 @@ export function Drawer({ children, className, end, ...props }: DrawerProps) {
 
 Drawer.displayName = 'Drawer'
 
-export interface DrawerToggleProps
-  extends InputHTMLAttributes<HTMLInputElement> {
+export interface DrawerToggleProps extends InputHTMLAttributes<HTMLInputElement> {
   id: string
 }
 
@@ -38,11 +32,7 @@ export interface DrawerContentProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode
 }
 
-export function DrawerContent({
-  children,
-  className,
-  ...props
-}: DrawerContentProps) {
+export function DrawerContent({ children, className, ...props }: DrawerContentProps) {
   const classes = clsx('drawer-content', className)
   return (
     <div className={classes} {...props}>
@@ -57,11 +47,7 @@ export interface DrawerSideProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode
 }
 
-export function DrawerSide({
-  children,
-  className,
-  ...props
-}: DrawerSideProps) {
+export function DrawerSide({ children, className, ...props }: DrawerSideProps) {
   const classes = clsx('drawer-side', className)
   return (
     <div className={classes} {...props}>
@@ -72,20 +58,13 @@ export function DrawerSide({
 
 DrawerSide.displayName = 'DrawerSide'
 
-export interface DrawerOverlayProps
-  extends LabelHTMLAttributes<HTMLLabelElement> {
+export interface DrawerOverlayProps extends LabelHTMLAttributes<HTMLLabelElement> {
   htmlFor: string
 }
 
-export function DrawerOverlay({
-  className,
-  htmlFor,
-  ...props
-}: DrawerOverlayProps) {
+export function DrawerOverlay({ className, htmlFor, ...props }: DrawerOverlayProps) {
   const classes = clsx('drawer-overlay', className)
-  return (
-    <label htmlFor={htmlFor} aria-label="close sidebar" className={classes} {...props} />
-  )
+  return <label htmlFor={htmlFor} aria-label="close sidebar" className={classes} {...props} />
 }
 
 DrawerOverlay.displayName = 'DrawerOverlay'

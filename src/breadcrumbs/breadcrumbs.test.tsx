@@ -56,10 +56,7 @@ describe('Breadcrumbs', () => {
         <li>Item</li>
       </Breadcrumbs>,
     )
-    expect(container.querySelector('div')).toHaveAttribute(
-      'data-testid',
-      'breadcrumbs-element',
-    )
+    expect(container.querySelector('div')).toHaveAttribute('data-testid', 'breadcrumbs-element')
   })
 
   it('renders multiple breadcrumb items', () => {

@@ -1,5 +1,5 @@
-import { type HTMLAttributes, type ReactNode } from 'react'
 import clsx from 'clsx'
+import type { HTMLAttributes, ReactNode } from 'react'
 
 export interface NavbarProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode
@@ -20,11 +20,7 @@ export interface NavbarSectionProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode
 }
 
-export function NavbarStart({
-  children,
-  className,
-  ...props
-}: NavbarSectionProps) {
+export function NavbarStart({ children, className, ...props }: NavbarSectionProps) {
   const classes = clsx('navbar-start', className)
   return (
     <div className={classes} {...props}>
@@ -35,11 +31,7 @@ export function NavbarStart({
 
 NavbarStart.displayName = 'NavbarStart'
 
-export function NavbarCenter({
-  children,
-  className,
-  ...props
-}: NavbarSectionProps) {
+export function NavbarCenter({ children, className, ...props }: NavbarSectionProps) {
   const classes = clsx('navbar-center', className)
   return (
     <div className={classes} {...props}>
@@ -50,11 +42,7 @@ export function NavbarCenter({
 
 NavbarCenter.displayName = 'NavbarCenter'
 
-export function NavbarEnd({
-  children,
-  className,
-  ...props
-}: NavbarSectionProps) {
+export function NavbarEnd({ children, className, ...props }: NavbarSectionProps) {
   const classes = clsx('navbar-end', className)
   return (
     <div className={classes} {...props}>

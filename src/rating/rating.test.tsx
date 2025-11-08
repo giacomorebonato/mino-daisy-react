@@ -61,10 +61,7 @@ describe('RatingItem', () => {
 
   it('applies custom name attribute', () => {
     render(<RatingItem name="custom-rating" data-testid="rating-item" />)
-    expect(screen.getByTestId('rating-item')).toHaveAttribute(
-      'name',
-      'custom-rating',
-    )
+    expect(screen.getByTestId('rating-item')).toHaveAttribute('name', 'custom-rating')
   })
 
   it('applies mask classes', () => {

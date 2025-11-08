@@ -1,2 +1,2 @@
-export { Range } from './range'
 export type { RangeProps } from './range'
+export { Range } from './range'

@@ -1,7 +1,7 @@
 export type {
-  ModalProps,
   ModalActionProps,
   ModalBackdropProps,
   ModalBoxProps,
+  ModalProps,
 } from './modal'
 export { Modal, ModalAction, ModalBackdrop, ModalBox } from './modal'

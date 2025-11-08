@@ -28,12 +28,7 @@ const PlusIcon = () => (
     stroke="currentColor"
   >
     <title>Plus</title>
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M12 4v16m8-8H4"
-    />
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
   </svg>
 )
 
@@ -82,12 +77,7 @@ const CloseIcon = () => (
     stroke="currentColor"
   >
     <title>Close</title>
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M6 18L18 6M6 6l12 12"
-    />
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
   </svg>
 )
 
@@ -107,11 +97,7 @@ export const VerticalSpeedDial: Story = {
   render: () => (
     <div className="h-96 w-96 relative">
       <Fab>
-        <div
-          tabIndex={0}
-          role="button"
-          className="btn btn-lg btn-circle btn-primary"
-        >
+        <div tabIndex={0} role="button" className="btn btn-lg btn-circle btn-primary">
           <PlusIcon />
         </div>
         <button type="button" className="btn btn-lg btn-circle">
@@ -129,11 +115,7 @@ export const FlowerLayout: Story = {
   render: () => (
     <div className="h-96 w-96 relative">
       <Fab flower>
-        <div
-          tabIndex={0}
-          role="button"
-          className="btn btn-lg btn-circle btn-primary"
-        >
+        <div tabIndex={0} role="button" className="btn btn-lg btn-circle btn-primary">
           <PlusIcon />
         </div>
         <button type="button" className="btn btn-lg btn-circle">
@@ -156,11 +138,7 @@ export const WithCloseButton: Story = {
             <CloseIcon />
           </button>
         </FabClose>
-        <div
-          tabIndex={0}
-          role="button"
-          className="btn btn-lg btn-circle btn-primary"
-        >
+        <div tabIndex={0} role="button" className="btn btn-lg btn-circle btn-primary">
           <PlusIcon />
         </div>
         <button type="button" className="btn btn-lg btn-circle">
@@ -178,11 +156,7 @@ export const WithMainAction: Story = {
   render: () => (
     <div className="h-96 w-96 relative">
       <Fab>
-        <div
-          tabIndex={0}
-          role="button"
-          className="btn btn-lg btn-circle btn-primary"
-        >
+        <div tabIndex={0} role="button" className="btn btn-lg btn-circle btn-primary">
           <PlusIcon />
         </div>
         <FabMainAction className="btn btn-lg btn-circle btn-secondary">
@@ -201,11 +175,7 @@ export const ColorVariants: Story = {
     <div className="flex gap-4">
       <div className="h-64 w-64 relative">
         <Fab>
-          <div
-            tabIndex={0}
-            role="button"
-            className="btn btn-lg btn-circle btn-primary"
-          >
+          <div tabIndex={0} role="button" className="btn btn-lg btn-circle btn-primary">
             <PlusIcon />
           </div>
           <button type="button" className="btn btn-lg btn-circle">
@@ -215,11 +185,7 @@ export const ColorVariants: Story = {
       </div>
       <div className="h-64 w-64 relative">
         <Fab>
-          <div
-            tabIndex={0}
-            role="button"
-            className="btn btn-lg btn-circle btn-secondary"
-          >
+          <div tabIndex={0} role="button" className="btn btn-lg btn-circle btn-secondary">
             <PlusIcon />
           </div>
           <button type="button" className="btn btn-lg btn-circle">
@@ -229,11 +195,7 @@ export const ColorVariants: Story = {
       </div>
       <div className="h-64 w-64 relative">
         <Fab>
-          <div
-            tabIndex={0}
-            role="button"
-            className="btn btn-lg btn-circle btn-accent"
-          >
+          <div tabIndex={0} role="button" className="btn btn-lg btn-circle btn-accent">
             <PlusIcon />
           </div>
           <button type="button" className="btn btn-lg btn-circle">

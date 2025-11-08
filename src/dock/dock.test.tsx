@@ -67,10 +67,7 @@ describe('Dock', () => {
         <DockItem>Item</DockItem>
       </Dock>,
     )
-    expect(container.querySelector('div')).toHaveAttribute(
-      'data-testid',
-      'dock-element',
-    )
+    expect(container.querySelector('div')).toHaveAttribute('data-testid', 'dock-element')
   })
 
   it('renders as div element', () => {

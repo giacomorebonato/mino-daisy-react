@@ -1,5 +1,5 @@
-import { type HTMLAttributes, type ReactNode } from 'react'
 import clsx from 'clsx'
+import type { HTMLAttributes, ReactNode } from 'react'
 
 export interface MenuProps extends HTMLAttributes<HTMLUListElement> {
   children: ReactNode
@@ -7,13 +7,7 @@ export interface MenuProps extends HTMLAttributes<HTMLUListElement> {
   size?: 'xs' | 'sm' | 'md' | 'lg'
 }
 
-export function Menu({
-  children,
-  className,
-  horizontal,
-  size,
-  ...props
-}: MenuProps) {
+export function Menu({ children, className, horizontal, size, ...props }: MenuProps) {
   const classes = clsx(
     'menu',
     {

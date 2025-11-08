@@ -22,18 +22,7 @@ describe('Countdown', () => {
 
   it('applies aria-live attribute', () => {
     render(<Countdown value={5} />)
-    expect(screen.getByText('5').parentElement).toHaveAttribute(
-      'aria-live',
-      'polite',
-    )
-  })
-
-  it('applies aria-label with value', () => {
-    render(<Countdown value={25} />)
-    expect(screen.getByText('25').parentElement).toHaveAttribute(
-      'aria-label',
-      '25',
-    )
+    expect(screen.getByText('5').parentElement).toHaveAttribute('aria-live', 'polite')
   })
 
   it('renders custom children when provided', () => {

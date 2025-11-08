@@ -44,11 +44,7 @@ export function Tooltip({
   )
 }
 
-export function TooltipContent({
-  children,
-  className,
-  ...props
-}: TooltipContentProps) {
+export function TooltipContent({ children, className, ...props }: TooltipContentProps) {
   const classes = clsx('tooltip-content', className)
 
   return (

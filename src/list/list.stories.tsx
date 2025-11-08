@@ -169,15 +169,15 @@ export const WithColWrap: Story = {
         <ListRow colWrap>
           <span>Label</span>
           <span>
-            This is a very long text that demonstrates the list-col-wrap modifier
-            which forces items to wrap onto the next line when needed
+            This is a very long text that demonstrates the list-col-wrap modifier which forces items
+            to wrap onto the next line when needed
           </span>
         </ListRow>
         <ListRow colWrap>
           <span>Description</span>
           <span>
-            Another example of wrapping content in a list row. The text will wrap
-            to the next line when it exceeds the available width.
+            Another example of wrapping content in a list row. The text will wrap to the next line
+            when it exceeds the available width.
           </span>
         </ListRow>
       </List>

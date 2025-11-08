@@ -78,8 +78,8 @@ export const WithBadge: Story = {
           <Badge variant="secondary">NEW</Badge>
         </CardTitle>
         <p>
-          A card component has a figure, a body part, and inside body there are
-          title and actions parts
+          A card component has a figure, a body part, and inside body there are title and actions
+          parts
         </p>
         <CardActions className="justify-end">
           <Badge outline>Fashion</Badge>

@@ -2,8 +2,7 @@ import { clsx } from 'clsx'
 import type { InputHTMLAttributes } from 'react'
 import { forwardRef } from 'react'
 
-export interface RangeProps
-  extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'> {
+export interface RangeProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'> {
   variant?:
     | 'neutral'
     | 'primary'
@@ -27,16 +26,7 @@ export const Range = forwardRef<HTMLInputElement, RangeProps>(
       className,
     )
 
-    return (
-      <input
-        ref={ref}
-        type="range"
-        min={min}
-        max={max}
-        className={classes}
-        {...props}
-      />
-    )
+    return <input ref={ref} type="range" min={min} max={max} className={classes} {...props} />
   },
 )
 

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Countdown } from './countdown'
 
 const meta = {
@@ -140,7 +140,7 @@ export const Timer: Story = {
 
 export const Days: Story = {
   render: () => {
-    const targetDate = new Date('2025-12-31T23:59:59')
+    const targetDate = useMemo(() => new Date('2025-12-31T23:59:59'), [])
     const [timeLeft, setTimeLeft] = useState({
       days: 0,
       hours: 0,
@@ -162,7 +162,7 @@ export const Days: Story = {
       }, 1000)
 
       return () => clearInterval(interval)
-    }, [])
+    }, [targetDate])
 
     return (
       <div className="grid grid-cols-4 gap-4 text-center">

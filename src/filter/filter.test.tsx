@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
-import { Filter, FilterReset, FilterItem } from './filter'
+import { Filter, FilterItem, FilterReset } from './filter'
 
 describe('Filter', () => {
   it('renders as div by default', () => {

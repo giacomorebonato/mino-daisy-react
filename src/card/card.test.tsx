@@ -39,22 +39,15 @@ describe('Card', () => {
   })
 
   it('merges custom className with component classes', () => {
-    const { container } = render(
-      <Card className="custom-class">Content</Card>,
-    )
+    const { container } = render(<Card className="custom-class">Content</Card>)
     const card = container.querySelector('div')
     expect(card).toHaveClass('card')
     expect(card).toHaveClass('custom-class')
   })
 
   it('passes through additional props', () => {
-    const { container } = render(
-      <Card data-testid="card-element">Content</Card>,
-    )
-    expect(container.querySelector('div')).toHaveAttribute(
-      'data-testid',
-      'card-element',
-    )
+    const { container } = render(<Card data-testid="card-element">Content</Card>)
+    expect(container.querySelector('div')).toHaveAttribute('data-testid', 'card-element')
   })
 })
 
@@ -71,9 +64,7 @@ describe('CardBody', () => {
   })
 
   it('merges custom className with component classes', () => {
-    const { container } = render(
-      <CardBody className="custom">Content</CardBody>,
-    )
+    const { container } = render(<CardBody className="custom">Content</CardBody>)
     const body = container.querySelector('div')
     expect(body).toHaveClass('card-body')
     expect(body).toHaveClass('custom')
@@ -93,9 +84,7 @@ describe('CardTitle', () => {
   })
 
   it('merges custom className with component classes', () => {
-    const { container } = render(
-      <CardTitle className="custom">Title</CardTitle>,
-    )
+    const { container } = render(<CardTitle className="custom">Title</CardTitle>)
     const title = container.querySelector('h2')
     expect(title).toHaveClass('card-title')
     expect(title).toHaveClass('custom')
@@ -120,9 +109,7 @@ describe('CardActions', () => {
   })
 
   it('merges custom className with component classes', () => {
-    const { container } = render(
-      <CardActions className="custom">Content</CardActions>,
-    )
+    const { container } = render(<CardActions className="custom">Content</CardActions>)
     const actions = container.querySelector('div')
     expect(actions).toHaveClass('card-actions')
     expect(actions).toHaveClass('custom')

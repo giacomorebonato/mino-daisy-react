@@ -19,16 +19,7 @@ const meta = {
     },
     variant: {
       control: 'select',
-      options: [
-        'neutral',
-        'primary',
-        'secondary',
-        'accent',
-        'info',
-        'success',
-        'warning',
-        'error',
-      ],
+      options: ['neutral', 'primary', 'secondary', 'accent', 'info', 'success', 'warning', 'error'],
     },
     open: {
       control: 'boolean',

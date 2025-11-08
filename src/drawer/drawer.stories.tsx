@@ -1,13 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { Button } from '../button'
 import { Menu } from '../menu'
-import {
-  Drawer,
-  DrawerContent,
-  DrawerOverlay,
-  DrawerSide,
-  DrawerToggle,
-} from './drawer'
+import { Drawer, DrawerContent, DrawerOverlay, DrawerSide, DrawerToggle } from './drawer'
 
 const meta = {
   title: 'Components/Drawer',
@@ -62,10 +56,7 @@ export const End: Story = {
       <DrawerToggle id="my-drawer-4" />
       <DrawerContent>
         <div className="p-4">
-          <label
-            htmlFor="my-drawer-4"
-            className="btn btn-primary drawer-button"
-          >
+          <label htmlFor="my-drawer-4" className="btn btn-primary drawer-button">
             Open drawer (right)
           </label>
         </div>
@@ -132,9 +123,8 @@ export const WithNavbar: Story = {
         <div className="p-10">
           <h2 className="text-2xl font-bold mb-4">Page Content</h2>
           <p>
-            This is a responsive layout with a navbar. On small screens, the
-            hamburger menu opens the drawer. On large screens, the navbar items
-            are visible.
+            This is a responsive layout with a navbar. On small screens, the hamburger menu opens
+            the drawer. On large screens, the navbar items are visible.
           </p>
         </div>
       </DrawerContent>
@@ -159,10 +149,7 @@ export const WithMenuItems: Story = {
       <DrawerToggle id="my-drawer-3" />
       <DrawerContent>
         <div className="p-4">
-          <label
-            htmlFor="my-drawer-3"
-            className="btn btn-primary drawer-button"
-          >
+          <label htmlFor="my-drawer-3" className="btn btn-primary drawer-button">
             Open menu
           </label>
         </div>

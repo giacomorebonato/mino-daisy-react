@@ -5,13 +5,7 @@ export interface CountdownProps extends HTMLAttributes<HTMLSpanElement> {
   value: number
 }
 
-export function Countdown({
-  children,
-  className,
-  value,
-  style,
-  ...props
-}: CountdownProps) {
+export function Countdown({ children, className, value, style, ...props }: CountdownProps) {
   const classes = clsx('countdown', className)
 
   const countdownStyle = {
@@ -20,13 +14,7 @@ export function Countdown({
   } as React.CSSProperties
 
   return (
-    <span
-      className={classes}
-      style={countdownStyle}
-      aria-live="polite"
-      aria-label={value.toString()}
-      {...props}
-    >
+    <span className={classes} style={countdownStyle} aria-live="polite" {...props}>
       <span>{children ?? value}</span>
     </span>
   )

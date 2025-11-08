@@ -11,13 +11,7 @@ export interface RatingItemProps extends InputHTMLAttributes<HTMLInputElement> {
   hidden?: boolean
 }
 
-export function Rating({
-  children,
-  className,
-  size,
-  half,
-  ...props
-}: RatingProps) {
+export function Rating({ children, className, size, half, ...props }: RatingProps) {
   const classes = clsx(
     'rating',
     {

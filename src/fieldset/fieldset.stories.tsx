@@ -36,9 +36,7 @@ export const Default: Story = {
           <Input placeholder="Doe" />
         </Label>
       </div>
-      <p className="label text-sm opacity-70 mt-2">
-        Please provide your full legal name
-      </p>
+      <p className="label text-sm opacity-70 mt-2">Please provide your full legal name</p>
     </Fieldset>
   ),
 }
@@ -70,9 +68,7 @@ export const WithRadioButtons: Story = {
           </div>
         </label>
       </div>
-      <p className="label text-sm opacity-70 mt-2">
-        You can change your plan at any time
-      </p>
+      <p className="label text-sm opacity-70 mt-2">You can change your plan at any time</p>
     </Fieldset>
   ),
 }
@@ -95,9 +91,7 @@ export const WithCheckboxes: Story = {
           <span>Push notifications</span>
         </label>
       </div>
-      <p className="label text-sm opacity-70 mt-2">
-        Select how you want to be notified
-      </p>
+      <p className="label text-sm opacity-70 mt-2">Select how you want to be notified</p>
     </Fieldset>
   ),
 }
@@ -116,9 +110,7 @@ export const Disabled: Story = {
           <Input placeholder="Cannot edit" />
         </Label>
       </div>
-      <p className="label text-sm opacity-70 mt-2">
-        This section is currently disabled
-      </p>
+      <p className="label text-sm opacity-70 mt-2">This section is currently disabled</p>
     </Fieldset>
   ),
 }
@@ -213,9 +205,7 @@ export const FormExample: Story = {
               <span>Newsletter</span>
             </label>
           </div>
-          <p className="label text-sm opacity-70 mt-2">
-            You can unsubscribe at any time
-          </p>
+          <p className="label text-sm opacity-70 mt-2">You can unsubscribe at any time</p>
         </Fieldset>
 
         <button type="button" className="btn btn-primary">

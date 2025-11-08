@@ -2,8 +2,7 @@ import { clsx } from 'clsx'
 import type { SelectHTMLAttributes } from 'react'
 import { forwardRef } from 'react'
 
-export interface SelectProps
-  extends Omit<SelectHTMLAttributes<HTMLSelectElement>, 'size'> {
+export interface SelectProps extends Omit<SelectHTMLAttributes<HTMLSelectElement>, 'size'> {
   variant?:
     | 'neutral'
     | 'primary'

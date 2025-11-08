@@ -188,13 +188,7 @@ export const Radio: Story = {
   render: () => (
     <div className="w-96">
       <Tabs>
-        <input
-          type="radio"
-          name="my_tabs_1"
-          className="tab"
-          aria-label="Tab 1"
-          defaultChecked
-        />
+        <input type="radio" name="my_tabs_1" className="tab" aria-label="Tab 1" defaultChecked />
         <input type="radio" name="my_tabs_1" className="tab" aria-label="Tab 2" />
         <input type="radio" name="my_tabs_1" className="tab" aria-label="Tab 3" />
       </Tabs>

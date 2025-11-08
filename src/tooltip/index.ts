@@ -1,2 +1,2 @@
-export type { TooltipProps, TooltipContentProps } from './tooltip'
+export type { TooltipContentProps, TooltipProps } from './tooltip'
 export { Tooltip, TooltipContent } from './tooltip'

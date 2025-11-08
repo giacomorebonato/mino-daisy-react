@@ -1,5 +1,5 @@
-import { type HTMLAttributes, type ReactNode } from 'react'
 import clsx from 'clsx'
+import type { HTMLAttributes, ReactNode } from 'react'
 
 export interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
   children: ReactNode
@@ -16,14 +16,7 @@ export interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
   outline?: boolean
 }
 
-export function Badge({
-  children,
-  className,
-  variant,
-  size,
-  outline,
-  ...props
-}: BadgeProps) {
+export function Badge({ children, className, variant, size, outline, ...props }: BadgeProps) {
   const classes = clsx(
     'badge',
     {

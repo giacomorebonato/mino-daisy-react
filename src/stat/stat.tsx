@@ -1,5 +1,5 @@
-import { type HTMLAttributes, type ReactNode } from 'react'
 import clsx from 'clsx'
+import type { HTMLAttributes, ReactNode } from 'react'
 
 export interface StatsProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode
@@ -7,13 +7,7 @@ export interface StatsProps extends HTMLAttributes<HTMLDivElement> {
   horizontal?: boolean
 }
 
-export function Stats({
-  children,
-  className,
-  vertical,
-  horizontal,
-  ...props
-}: StatsProps) {
+export function Stats({ children, className, vertical, horizontal, ...props }: StatsProps) {
   const classes = clsx(
     'stats',
     {

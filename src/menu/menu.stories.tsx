@@ -217,7 +217,7 @@ export const WithDisabledItem: Story = {
         <a href="#item1">Item 1</a>
       </li>
       <li className="disabled">
-        <a>Disabled Item</a>
+        <a href="#disabled">Disabled Item</a>
       </li>
       <li>
         <a href="#item3">Item 3</a>

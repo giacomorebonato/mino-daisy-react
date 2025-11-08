@@ -2,8 +2,7 @@ import { clsx } from 'clsx'
 import type { InputHTMLAttributes } from 'react'
 import { forwardRef } from 'react'
 
-export interface ToggleProps
-  extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'> {
+export interface ToggleProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'> {
   variant?:
     | 'neutral'
     | 'primary'

@@ -1,3 +1,11 @@
+export type {
+  TimelineBoxProps,
+  TimelineEndProps,
+  TimelineItemProps,
+  TimelineMiddleProps,
+  TimelineProps,
+  TimelineStartProps,
+} from './timeline'
 export {
   Timeline,
   TimelineBox,
@@ -5,12 +13,4 @@ export {
   TimelineItem,
   TimelineMiddle,
   TimelineStart,
-} from './timeline'
-export type {
-  TimelineProps,
-  TimelineBoxProps,
-  TimelineEndProps,
-  TimelineItemProps,
-  TimelineMiddleProps,
-  TimelineStartProps,
 } from './timeline'

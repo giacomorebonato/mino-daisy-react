@@ -31,7 +31,7 @@ const meta = {
       control: 'boolean',
     },
     wide: {
-      control:         'boolean',
+      control: 'boolean',
     },
     block: {
       control: 'boolean',

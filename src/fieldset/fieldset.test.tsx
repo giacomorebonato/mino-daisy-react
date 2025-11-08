@@ -15,9 +15,7 @@ describe('Fieldset', () => {
   })
 
   it('merges custom className with component classes', () => {
-    const { container } = render(
-      <Fieldset className="custom-class">Content</Fieldset>,
-    )
+    const { container } = render(<Fieldset className="custom-class">Content</Fieldset>)
     const fieldset = container.querySelector('fieldset')
     expect(fieldset).toHaveClass('fieldset')
     expect(fieldset).toHaveClass('custom-class')
@@ -35,13 +33,8 @@ describe('Fieldset', () => {
   })
 
   it('passes through additional props', () => {
-    const { container } = render(
-      <Fieldset data-testid="fieldset-element">Content</Fieldset>,
-    )
-    expect(container.querySelector('fieldset')).toHaveAttribute(
-      'data-testid',
-      'fieldset-element',
-    )
+    const { container } = render(<Fieldset data-testid="fieldset-element">Content</Fieldset>)
+    expect(container.querySelector('fieldset')).toHaveAttribute('data-testid', 'fieldset-element')
   })
 })
 

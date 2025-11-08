@@ -15,22 +15,15 @@ describe('Navbar', () => {
   })
 
   it('merges custom className with component classes', () => {
-    const { container } = render(
-      <Navbar className="custom-class">Content</Navbar>,
-    )
+    const { container } = render(<Navbar className="custom-class">Content</Navbar>)
     const navbar = container.querySelector('div')
     expect(navbar).toHaveClass('navbar')
     expect(navbar).toHaveClass('custom-class')
   })
 
   it('passes through additional props', () => {
-    const { container } = render(
-      <Navbar data-testid="navbar-element">Content</Navbar>,
-    )
-    expect(container.querySelector('div')).toHaveAttribute(
-      'data-testid',
-      'navbar-element',
-    )
+    const { container } = render(<Navbar data-testid="navbar-element">Content</Navbar>)
+    expect(container.querySelector('div')).toHaveAttribute('data-testid', 'navbar-element')
   })
 })
 
@@ -47,9 +40,7 @@ describe('NavbarStart', () => {
   })
 
   it('merges custom className with component classes', () => {
-    const { container } = render(
-      <NavbarStart className="custom">Content</NavbarStart>,
-    )
+    const { container } = render(<NavbarStart className="custom">Content</NavbarStart>)
     const section = container.querySelector('div')
     expect(section).toHaveClass('navbar-start')
     expect(section).toHaveClass('custom')
@@ -69,9 +60,7 @@ describe('NavbarCenter', () => {
   })
 
   it('merges custom className with component classes', () => {
-    const { container } = render(
-      <NavbarCenter className="custom">Content</NavbarCenter>,
-    )
+    const { container } = render(<NavbarCenter className="custom">Content</NavbarCenter>)
     const section = container.querySelector('div')
     expect(section).toHaveClass('navbar-center')
     expect(section).toHaveClass('custom')
@@ -91,9 +80,7 @@ describe('NavbarEnd', () => {
   })
 
   it('merges custom className with component classes', () => {
-    const { container } = render(
-      <NavbarEnd className="custom">Content</NavbarEnd>,
-    )
+    const { container } = render(<NavbarEnd className="custom">Content</NavbarEnd>)
     const section = container.querySelector('div')
     expect(section).toHaveClass('navbar-end')
     expect(section).toHaveClass('custom')

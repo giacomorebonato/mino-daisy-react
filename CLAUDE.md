@@ -129,3 +129,4 @@ The Storybook configuration includes a `viteFinal` hook that explicitly sets `pr
 - Write only files in lowercase kebab-case (e.g., `button.tsx`, not `Button.tsx`)
 - Always read updated DaisyUI doc on https://daisyui.com/llms.txt
 - Always update README.md when new components are added
+- Each time you make changes or create code. Run `pnpm format` to ensure that you're following the rules.

@@ -1,7 +1,7 @@
 export type {
-  AccordionProps,
   AccordionContentProps,
   AccordionItemProps,
+  AccordionProps,
   AccordionRadioProps,
   AccordionTitleProps,
 } from './accordion'

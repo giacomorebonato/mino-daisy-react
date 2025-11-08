@@ -1,5 +1,5 @@
-import { type CSSProperties, type HTMLAttributes, type ReactNode, forwardRef } from 'react'
 import clsx from 'clsx'
+import { type CSSProperties, forwardRef, type HTMLAttributes, type ReactNode } from 'react'
 
 export interface RadialProgressProps extends HTMLAttributes<HTMLDivElement> {
   children?: ReactNode

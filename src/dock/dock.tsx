@@ -1,5 +1,5 @@
-import { type ButtonHTMLAttributes, type ReactNode, forwardRef } from 'react'
 import clsx from 'clsx'
+import { type ButtonHTMLAttributes, forwardRef, type ReactNode } from 'react'
 
 export interface DockProps extends ButtonHTMLAttributes<HTMLDivElement> {
   children: ReactNode
@@ -25,8 +25,7 @@ export const Dock = forwardRef<HTMLDivElement, DockProps>(
 
 Dock.displayName = 'Dock'
 
-export interface DockItemProps
-  extends ButtonHTMLAttributes<HTMLButtonElement> {
+export interface DockItemProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode
   active?: boolean
 }

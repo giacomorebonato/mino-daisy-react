@@ -1,7 +1,7 @@
-export { Card, CardActions, CardBody, CardTitle } from './card'
 export type {
-  CardProps,
   CardActionsProps,
   CardBodyProps,
+  CardProps,
   CardTitleProps,
 } from './card'
+export { Card, CardActions, CardBody, CardTitle } from './card'

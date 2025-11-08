@@ -89,10 +89,7 @@ describe('Menu', () => {
         <li>Item</li>
       </Menu>,
     )
-    expect(container.querySelector('ul')).toHaveAttribute(
-      'data-testid',
-      'menu-element',
-    )
+    expect(container.querySelector('ul')).toHaveAttribute('data-testid', 'menu-element')
   })
 
   it('renders as ul element', () => {

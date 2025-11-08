@@ -1,9 +1,5 @@
-import type {
-  FormHTMLAttributes,
-  HTMLAttributes,
-  InputHTMLAttributes,
-} from 'react'
 import { clsx } from 'clsx'
+import type { FormHTMLAttributes, HTMLAttributes, InputHTMLAttributes } from 'react'
 
 export interface FilterProps extends HTMLAttributes<HTMLDivElement> {
   /**
@@ -25,13 +21,7 @@ export interface FilterResetProps extends InputHTMLAttributes<HTMLInputElement> 
 
 export interface FilterItemProps extends InputHTMLAttributes<HTMLInputElement> {}
 
-export function Filter({
-  children,
-  className,
-  asForm,
-  name,
-  ...props
-}: FilterProps) {
+export function Filter({ children, className, asForm, name, ...props }: FilterProps) {
   const classes = clsx('filter', className)
 
   if (asForm) {
@@ -49,11 +39,7 @@ export function Filter({
   )
 }
 
-export function FilterReset({
-  className,
-  asReset = false,
-  ...props
-}: FilterResetProps) {
+export function FilterReset({ className, asReset = false, ...props }: FilterResetProps) {
   const classes = clsx(
     'btn',
     {
@@ -64,37 +50,14 @@ export function FilterReset({
   )
 
   if (asReset) {
-    return (
-      <input
-        type="reset"
-        className={classes}
-        value="×"
-        {...props}
-      />
-    )
+    return <input type="reset" className={classes} value="×" {...props} />
   }
 
-  return (
-    <input
-      type="radio"
-      className={classes}
-      aria-label="×"
-      {...props}
-    />
-  )
+  return <input type="radio" className={classes} aria-label="×" {...props} />
 }
 
-export function FilterItem({
-  className,
-  ...props
-}: FilterItemProps) {
+export function FilterItem({ className, ...props }: FilterItemProps) {
   const classes = clsx('btn', className)
 
-  return (
-    <input
-      type="radio"
-      className={classes}
-      {...props}
-    />
-  )
+  return <input type="radio" className={classes} {...props} />
 }

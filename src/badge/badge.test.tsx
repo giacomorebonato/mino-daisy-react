@@ -15,9 +15,7 @@ describe('Badge', () => {
   })
 
   it('applies variant classes', () => {
-    const { container, rerender } = render(
-      <Badge variant="primary">Content</Badge>,
-    )
+    const { container, rerender } = render(<Badge variant="primary">Content</Badge>)
     let badge = container.querySelector('span')
     expect(badge).toHaveClass('badge-primary')
 
@@ -55,22 +53,15 @@ describe('Badge', () => {
   })
 
   it('merges custom className with component classes', () => {
-    const { container } = render(
-      <Badge className="custom-class">Content</Badge>,
-    )
+    const { container } = render(<Badge className="custom-class">Content</Badge>)
     const badge = container.querySelector('span')
     expect(badge).toHaveClass('badge')
     expect(badge).toHaveClass('custom-class')
   })
 
   it('passes through additional props', () => {
-    const { container } = render(
-      <Badge data-testid="badge-element">Content</Badge>,
-    )
-    expect(container.querySelector('span')).toHaveAttribute(
-      'data-testid',
-      'badge-element',
-    )
+    const { container } = render(<Badge data-testid="badge-element">Content</Badge>)
+    expect(container.querySelector('span')).toHaveAttribute('data-testid', 'badge-element')
   })
 
   it('renders as span element', () => {

@@ -1,3 +1,11 @@
+export type {
+  StatDescProps,
+  StatFigureProps,
+  StatProps,
+  StatsProps,
+  StatTitleProps,
+  StatValueProps,
+} from './stat'
 export {
   Stat,
   StatDesc,
@@ -5,12 +13,4 @@ export {
   Stats,
   StatTitle,
   StatValue,
-} from './stat'
-export type {
-  StatProps,
-  StatDescProps,
-  StatFigureProps,
-  StatsProps,
-  StatTitleProps,
-  StatValueProps,
 } from './stat'

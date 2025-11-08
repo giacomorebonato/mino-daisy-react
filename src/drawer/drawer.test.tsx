@@ -1,12 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
-import {
-  Drawer,
-  DrawerContent,
-  DrawerOverlay,
-  DrawerSide,
-  DrawerToggle,
-} from './drawer'
+import { Drawer, DrawerContent, DrawerOverlay, DrawerSide, DrawerToggle } from './drawer'
 
 describe('Drawer', () => {
   it('renders children correctly', () => {
@@ -27,22 +21,15 @@ describe('Drawer', () => {
   })
 
   it('merges custom className with component classes', () => {
-    const { container } = render(
-      <Drawer className="custom-class">Content</Drawer>,
-    )
+    const { container } = render(<Drawer className="custom-class">Content</Drawer>)
     const drawer = container.querySelector('div')
     expect(drawer).toHaveClass('drawer')
     expect(drawer).toHaveClass('custom-class')
   })
 
   it('passes through additional props', () => {
-    const { container } = render(
-      <Drawer data-testid="drawer-element">Content</Drawer>,
-    )
-    expect(container.querySelector('div')).toHaveAttribute(
-      'data-testid',
-      'drawer-element',
-    )
+    const { container } = render(<Drawer data-testid="drawer-element">Content</Drawer>)
+    expect(container.querySelector('div')).toHaveAttribute('data-testid', 'drawer-element')
   })
 })
 
@@ -66,9 +53,7 @@ describe('DrawerToggle', () => {
   })
 
   it('merges custom className with component classes', () => {
-    const { container } = render(
-      <DrawerToggle id="my-drawer" className="custom" />,
-    )
+    const { container } = render(<DrawerToggle id="my-drawer" className="custom" />)
     const toggle = container.querySelector('input')
     expect(toggle).toHaveClass('drawer-toggle')
     expect(toggle).toHaveClass('custom')
@@ -88,9 +73,7 @@ describe('DrawerContent', () => {
   })
 
   it('merges custom className with component classes', () => {
-    const { container } = render(
-      <DrawerContent className="custom">Content</DrawerContent>,
-    )
+    const { container } = render(<DrawerContent className="custom">Content</DrawerContent>)
     const content = container.querySelector('div')
     expect(content).toHaveClass('drawer-content')
     expect(content).toHaveClass('custom')
@@ -110,9 +93,7 @@ describe('DrawerSide', () => {
   })
 
   it('merges custom className with component classes', () => {
-    const { container } = render(
-      <DrawerSide className="custom">Content</DrawerSide>,
-    )
+    const { container } = render(<DrawerSide className="custom">Content</DrawerSide>)
     const side = container.querySelector('div')
     expect(side).toHaveClass('drawer-side')
     expect(side).toHaveClass('custom')
@@ -139,9 +120,7 @@ describe('DrawerOverlay', () => {
   })
 
   it('merges custom className with component classes', () => {
-    const { container } = render(
-      <DrawerOverlay htmlFor="my-drawer" className="custom" />,
-    )
+    const { container } = render(<DrawerOverlay htmlFor="my-drawer" className="custom" />)
     const overlay = container.querySelector('label')
     expect(overlay).toHaveClass('drawer-overlay')
     expect(overlay).toHaveClass('custom')

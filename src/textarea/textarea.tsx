@@ -2,8 +2,7 @@ import { clsx } from 'clsx'
 import type { TextareaHTMLAttributes } from 'react'
 import { forwardRef } from 'react'
 
-export interface TextareaProps
-  extends TextareaHTMLAttributes<HTMLTextAreaElement> {
+export interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   variant?:
     | 'neutral'
     | 'primary'

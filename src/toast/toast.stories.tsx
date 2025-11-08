@@ -159,7 +159,9 @@ export const WithCustomContent: Story = {
               <div className="text-xs">You have 1 unread message</div>
             </div>
           </div>
-          <button className="btn btn-sm">View</button>
+          <button type="button" className="btn btn-sm">
+            View
+          </button>
         </div>
       </Toast>
     </div>

@@ -67,7 +67,7 @@ describe('StatDesc', () => {
   })
 
   it('applies stat-desc class', () => {
-    const { container} = render(<StatDesc>Description</StatDesc>)
+    const { container } = render(<StatDesc>Description</StatDesc>)
     expect(container.querySelector('div')).toHaveClass('stat-desc')
   })
 })

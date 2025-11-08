@@ -55,10 +55,7 @@ describe('Pagination', () => {
         </button>
       </Pagination>,
     )
-    expect(container.querySelector('div')).toHaveAttribute(
-      'data-testid',
-      'pagination-element',
-    )
+    expect(container.querySelector('div')).toHaveAttribute('data-testid', 'pagination-element')
   })
 
   it('renders as div element', () => {

@@ -1,8 +1,7 @@
 import { clsx } from 'clsx'
 import type { FieldsetHTMLAttributes, HTMLAttributes, ReactNode } from 'react'
 
-export interface FieldsetProps
-  extends FieldsetHTMLAttributes<HTMLFieldSetElement> {
+export interface FieldsetProps extends FieldsetHTMLAttributes<HTMLFieldSetElement> {
   children: ReactNode
 }
 
@@ -20,11 +19,7 @@ export function Fieldset({ children, className, ...props }: FieldsetProps) {
   )
 }
 
-export function FieldsetLegend({
-  children,
-  className,
-  ...props
-}: FieldsetLegendProps) {
+export function FieldsetLegend({ children, className, ...props }: FieldsetLegendProps) {
   const classes = clsx('fieldset-legend', className)
 
   return (

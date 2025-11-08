@@ -275,7 +275,7 @@ export const PinnedRowsAndColumns: Story = {
         </thead>
         <tbody>
           {Array.from({ length: 20 }, (_, i) => (
-            <tr key={i}>
+            <tr key={`row-${i + 1}`}>
               <th>{i + 1}</th>
               <td>Cy Ganderton</td>
               <td>Quality Control Specialist</td>

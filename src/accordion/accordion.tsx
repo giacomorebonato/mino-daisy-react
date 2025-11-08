@@ -11,8 +11,7 @@ export interface AccordionTitleProps extends HTMLAttributes<HTMLDivElement> {}
 
 export interface AccordionContentProps extends HTMLAttributes<HTMLDivElement> {}
 
-export interface AccordionRadioProps
-  extends InputHTMLAttributes<HTMLInputElement> {}
+export interface AccordionRadioProps extends InputHTMLAttributes<HTMLInputElement> {}
 
 export function Accordion({ children, className, ...props }: AccordionProps) {
   const classes = clsx('space-y-2', className)
@@ -24,12 +23,7 @@ export function Accordion({ children, className, ...props }: AccordionProps) {
   )
 }
 
-export function AccordionItem({
-  children,
-  className,
-  icon,
-  ...props
-}: AccordionItemProps) {
+export function AccordionItem({ children, className, icon, ...props }: AccordionItemProps) {
   const classes = clsx(
     'collapse',
     {
@@ -46,11 +40,7 @@ export function AccordionItem({
   )
 }
 
-export function AccordionTitle({
-  children,
-  className,
-  ...props
-}: AccordionTitleProps) {
+export function AccordionTitle({ children, className, ...props }: AccordionTitleProps) {
   const classes = clsx('collapse-title', className)
 
   return (
@@ -60,11 +50,7 @@ export function AccordionTitle({
   )
 }
 
-export function AccordionContent({
-  children,
-  className,
-  ...props
-}: AccordionContentProps) {
+export function AccordionContent({ children, className, ...props }: AccordionContentProps) {
   const classes = clsx('collapse-content', className)
 
   return (
@@ -74,11 +60,7 @@ export function AccordionContent({
   )
 }
 
-export function AccordionRadio({
-  className,
-  name = 'accordion',
-  ...props
-}: AccordionRadioProps) {
+export function AccordionRadio({ className, name = 'accordion', ...props }: AccordionRadioProps) {
   const classes = clsx('collapse-toggle', className)
 
   return <input type="radio" name={name} className={classes} {...props} />

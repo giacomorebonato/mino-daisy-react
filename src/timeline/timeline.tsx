@@ -1,5 +1,5 @@
-import { type HTMLAttributes, type LiHTMLAttributes, type ReactNode } from 'react'
 import clsx from 'clsx'
+import type { HTMLAttributes, LiHTMLAttributes, ReactNode } from 'react'
 
 export interface TimelineProps extends HTMLAttributes<HTMLUListElement> {
   children: ReactNode
@@ -41,11 +41,7 @@ export interface TimelineItemProps extends LiHTMLAttributes<HTMLLIElement> {
   children: ReactNode
 }
 
-export function TimelineItem({
-  children,
-  className,
-  ...props
-}: TimelineItemProps) {
+export function TimelineItem({ children, className, ...props }: TimelineItemProps) {
   return (
     <li className={className} {...props}>
       {children}
@@ -59,11 +55,7 @@ export interface TimelineStartProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode
 }
 
-export function TimelineStart({
-  children,
-  className,
-  ...props
-}: TimelineStartProps) {
+export function TimelineStart({ children, className, ...props }: TimelineStartProps) {
   const classes = clsx('timeline-start', className)
   return (
     <div className={classes} {...props}>
@@ -78,11 +70,7 @@ export interface TimelineMiddleProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode
 }
 
-export function TimelineMiddle({
-  children,
-  className,
-  ...props
-}: TimelineMiddleProps) {
+export function TimelineMiddle({ children, className, ...props }: TimelineMiddleProps) {
   const classes = clsx('timeline-middle', className)
   return (
     <div className={classes} {...props}>
@@ -97,11 +85,7 @@ export interface TimelineEndProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode
 }
 
-export function TimelineEnd({
-  children,
-  className,
-  ...props
-}: TimelineEndProps) {
+export function TimelineEnd({ children, className, ...props }: TimelineEndProps) {
   const classes = clsx('timeline-end', className)
   return (
     <div className={classes} {...props}>
@@ -116,11 +100,7 @@ export interface TimelineBoxProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode
 }
 
-export function TimelineBox({
-  children,
-  className,
-  ...props
-}: TimelineBoxProps) {
+export function TimelineBox({ children, className, ...props }: TimelineBoxProps) {
   const classes = clsx('timeline-box', className)
   return (
     <div className={classes} {...props}>

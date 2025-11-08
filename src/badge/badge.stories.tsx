@@ -12,16 +12,7 @@ const meta = {
   argTypes: {
     variant: {
       control: 'select',
-      options: [
-        'neutral',
-        'primary',
-        'secondary',
-        'accent',
-        'info',
-        'success',
-        'warning',
-        'error',
-      ],
+      options: ['neutral', 'primary', 'secondary', 'accent', 'info', 'success', 'warning', 'error'],
     },
     size: {
       control: 'select',
@@ -133,12 +124,7 @@ export const WithIcon: Story = {
           className="inline-block h-4 w-4 stroke-current"
         >
           <title>Check</title>
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M5 13l4 4L19 7"
-          />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
         </svg>
         Success
       </Badge>

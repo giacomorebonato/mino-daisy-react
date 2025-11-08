@@ -58,8 +58,8 @@ export const WithArrow: Story = {
           <AccordionTitle>What is an accordion?</AccordionTitle>
           <AccordionContent>
             <p>
-              An accordion is a component that shows and hides content, but only
-              one item can be open at a time.
+              An accordion is a component that shows and hides content, but only one item can be
+              open at a time.
             </p>
           </AccordionContent>
         </AccordionItem>
@@ -68,8 +68,8 @@ export const WithArrow: Story = {
           <AccordionTitle>How does it work?</AccordionTitle>
           <AccordionContent>
             <p>
-              It uses radio buttons with the same name attribute to ensure only
-              one section is expanded.
+              It uses radio buttons with the same name attribute to ensure only one section is
+              expanded.
             </p>
           </AccordionContent>
         </AccordionItem>
@@ -78,8 +78,8 @@ export const WithArrow: Story = {
           <AccordionTitle>When should I use it?</AccordionTitle>
           <AccordionContent>
             <p>
-              Use it when you want to display multiple sections of content but
-              save space by allowing only one to be visible at a time.
+              Use it when you want to display multiple sections of content but save space by
+              allowing only one to be visible at a time.
             </p>
           </AccordionContent>
         </AccordionItem>
@@ -122,14 +122,9 @@ export const Styled: Story = {
   render: () => (
     <div className="w-96">
       <Accordion>
-        <AccordionItem
-          icon="arrow"
-          className="border border-base-300 bg-base-100 rounded-box"
-        >
+        <AccordionItem icon="arrow" className="border border-base-300 bg-base-100 rounded-box">
           <AccordionRadio name="styled-accordion" defaultChecked />
-          <AccordionTitle className="text-lg font-semibold">
-            Premium Plan
-          </AccordionTitle>
+          <AccordionTitle className="text-lg font-semibold">Premium Plan</AccordionTitle>
           <AccordionContent>
             <p className="text-sm">
               Includes all features with unlimited access. Perfect for power users.
@@ -141,14 +136,9 @@ export const Styled: Story = {
             </ul>
           </AccordionContent>
         </AccordionItem>
-        <AccordionItem
-          icon="arrow"
-          className="border border-base-300 bg-base-100 rounded-box mt-2"
-        >
+        <AccordionItem icon="arrow" className="border border-base-300 bg-base-100 rounded-box mt-2">
           <AccordionRadio name="styled-accordion" />
-          <AccordionTitle className="text-lg font-semibold">
-            Standard Plan
-          </AccordionTitle>
+          <AccordionTitle className="text-lg font-semibold">Standard Plan</AccordionTitle>
           <AccordionContent>
             <p className="text-sm">
               Great for individuals and small teams with essential features.
@@ -160,14 +150,9 @@ export const Styled: Story = {
             </ul>
           </AccordionContent>
         </AccordionItem>
-        <AccordionItem
-          icon="arrow"
-          className="border border-base-300 bg-base-100 rounded-box mt-2"
-        >
+        <AccordionItem icon="arrow" className="border border-base-300 bg-base-100 rounded-box mt-2">
           <AccordionRadio name="styled-accordion" />
-          <AccordionTitle className="text-lg font-semibold">
-            Free Plan
-          </AccordionTitle>
+          <AccordionTitle className="text-lg font-semibold">Free Plan</AccordionTitle>
           <AccordionContent>
             <p className="text-sm">
               Get started with our free plan. Perfect for trying out the service.
@@ -194,8 +179,8 @@ export const FAQ: Story = {
           <AccordionTitle>What is DaisyUI?</AccordionTitle>
           <AccordionContent>
             <p>
-              DaisyUI is a component library for Tailwind CSS that provides
-              beautiful, pre-designed components.
+              DaisyUI is a component library for Tailwind CSS that provides beautiful, pre-designed
+              components.
             </p>
           </AccordionContent>
         </AccordionItem>
@@ -204,8 +189,7 @@ export const FAQ: Story = {
           <AccordionTitle>How do I install it?</AccordionTitle>
           <AccordionContent>
             <p>
-              Install DaisyUI via npm or yarn, then add it to your Tailwind CSS
-              configuration file.
+              Install DaisyUI via npm or yarn, then add it to your Tailwind CSS configuration file.
             </p>
           </AccordionContent>
         </AccordionItem>
@@ -221,8 +205,8 @@ export const FAQ: Story = {
           <AccordionTitle>Can I customize the components?</AccordionTitle>
           <AccordionContent>
             <p>
-              Yes, all components can be customized using Tailwind CSS classes or
-              by modifying the theme configuration.
+              Yes, all components can be customized using Tailwind CSS classes or by modifying the
+              theme configuration.
             </p>
           </AccordionContent>
         </AccordionItem>

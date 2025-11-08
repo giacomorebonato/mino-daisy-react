@@ -1,9 +1,5 @@
 import { clsx } from 'clsx'
-import type {
-  DialogHTMLAttributes,
-  FormHTMLAttributes,
-  HTMLAttributes,
-} from 'react'
+import type { DialogHTMLAttributes, FormHTMLAttributes, HTMLAttributes } from 'react'
 import { forwardRef } from 'react'
 
 export interface ModalProps extends DialogHTMLAttributes<HTMLDialogElement> {
@@ -15,8 +11,7 @@ export interface ModalBoxProps extends HTMLAttributes<HTMLDivElement> {}
 
 export interface ModalActionProps extends HTMLAttributes<HTMLDivElement> {}
 
-export interface ModalBackdropProps
-  extends FormHTMLAttributes<HTMLFormElement> {}
+export interface ModalBackdropProps extends FormHTMLAttributes<HTMLFormElement> {}
 
 export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
   ({ children, className, open, placement, ...props }, ref) => {
@@ -39,11 +34,7 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
 
 Modal.displayName = 'Modal'
 
-export function ModalBox({
-  children,
-  className,
-  ...props
-}: ModalBoxProps) {
+export function ModalBox({ children, className, ...props }: ModalBoxProps) {
   const classes = clsx('modal-box', className)
 
   return (
@@ -53,11 +44,7 @@ export function ModalBox({
   )
 }
 
-export function ModalAction({
-  children,
-  className,
-  ...props
-}: ModalActionProps) {
+export function ModalAction({ children, className, ...props }: ModalActionProps) {
   const classes = clsx('modal-action', className)
 
   return (
@@ -67,11 +54,7 @@ export function ModalAction({
   )
 }
 
-export function ModalBackdrop({
-  children,
-  className,
-  ...props
-}: ModalBackdropProps) {
+export function ModalBackdrop({ children, className, ...props }: ModalBackdropProps) {
   const classes = clsx('modal-backdrop', className)
 
   return (

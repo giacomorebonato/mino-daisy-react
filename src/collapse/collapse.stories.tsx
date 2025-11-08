@@ -1,11 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { useState } from 'react'
-import {
-  Collapse,
-  CollapseCheckbox,
-  CollapseContent,
-  CollapseTitle,
-} from './collapse'
+import { Collapse, CollapseCheckbox, CollapseContent, CollapseTitle } from './collapse'
 
 const meta = {
   title: 'Interactive & Feedback/Collapse',
@@ -116,11 +111,7 @@ export const Controlled: Story = {
 
     return (
       <div className="w-96 space-y-4">
-        <button
-          type="button"
-          className="btn btn-primary"
-          onClick={() => setOpen(!open)}
-        >
+        <button type="button" className="btn btn-primary" onClick={() => setOpen(!open)}>
           {open ? 'Close' : 'Open'} Collapse
         </button>
         <Collapse icon="arrow" open={open}>
@@ -162,18 +153,11 @@ export const Multiple: Story = {
 export const Styled: Story = {
   render: () => (
     <div className="w-96">
-      <Collapse
-        icon="plus"
-        className="border border-base-300 bg-base-100 rounded-box"
-      >
-        <CollapseTitle className="text-xl font-medium">
-          Styled Collapse
-        </CollapseTitle>
+      <Collapse icon="plus" className="border border-base-300 bg-base-100 rounded-box">
+        <CollapseTitle className="text-xl font-medium">Styled Collapse</CollapseTitle>
         <CollapseContent>
           <p>This collapse has custom styling applied.</p>
-          <p className="mt-2">
-            You can add borders, backgrounds, and other styles.
-          </p>
+          <p className="mt-2">You can add borders, backgrounds, and other styles.</p>
         </CollapseContent>
       </Collapse>
     </div>

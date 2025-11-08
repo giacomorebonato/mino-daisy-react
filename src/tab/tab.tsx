@@ -12,13 +12,7 @@ export interface TabProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 export interface TabContentProps extends HTMLAttributes<HTMLDivElement> {}
 
-export function Tabs({
-  children,
-  className,
-  tabsStyle,
-  placement,
-  ...props
-}: TabsProps) {
+export function Tabs({ children, className, tabsStyle, placement, ...props }: TabsProps) {
   const classes = clsx(
     'tabs',
     {
@@ -37,13 +31,7 @@ export function Tabs({
   )
 }
 
-export function Tab({
-  children,
-  className,
-  active,
-  disabled,
-  ...props
-}: TabProps) {
+export function Tab({ children, className, active, disabled, ...props }: TabProps) {
   const classes = clsx(
     'tab',
     {
@@ -54,23 +42,13 @@ export function Tab({
   )
 
   return (
-    <button
-      role="tab"
-      className={classes}
-      disabled={disabled}
-      aria-selected={active}
-      {...props}
-    >
+    <button role="tab" className={classes} disabled={disabled} aria-selected={active} {...props}>
       {children}
     </button>
   )
 }
 
-export function TabContent({
-  children,
-  className,
-  ...props
-}: TabContentProps) {
+export function TabContent({ children, className, ...props }: TabContentProps) {
   const classes = clsx('tab-content', className)
 
   return (

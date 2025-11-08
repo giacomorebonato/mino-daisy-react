@@ -11,8 +11,7 @@ export interface CollapseTitleProps extends HTMLAttributes<HTMLDivElement> {}
 
 export interface CollapseContentProps extends HTMLAttributes<HTMLDivElement> {}
 
-export interface CollapseCheckboxProps
-  extends InputHTMLAttributes<HTMLInputElement> {}
+export interface CollapseCheckboxProps extends InputHTMLAttributes<HTMLInputElement> {}
 
 export function Collapse({
   children,
@@ -42,17 +41,14 @@ export function Collapse({
   }
 
   return (
+    // biome-ignore lint/a11y/noNoninteractiveTabindex: DaisyUI collapse requires tabIndex for keyboard navigation
     <div tabIndex={0} className={classes} {...props}>
       {children}
     </div>
   )
 }
 
-export function CollapseTitle({
-  children,
-  className,
-  ...props
-}: CollapseTitleProps) {
+export function CollapseTitle({ children, className, ...props }: CollapseTitleProps) {
   const classes = clsx('collapse-title', className)
 
   return (
@@ -62,11 +58,7 @@ export function CollapseTitle({
   )
 }
 
-export function CollapseContent({
-  children,
-  className,
-  ...props
-}: CollapseContentProps) {
+export function CollapseContent({ children, className, ...props }: CollapseContentProps) {
   const classes = clsx('collapse-content', className)
 
   return (
@@ -76,10 +68,7 @@ export function CollapseContent({
   )
 }
 
-export function CollapseCheckbox({
-  className,
-  ...props
-}: CollapseCheckboxProps) {
+export function CollapseCheckbox({ className, ...props }: CollapseCheckboxProps) {
   const classes = clsx('collapse-toggle', className)
 
   return <input type="checkbox" className={classes} {...props} />

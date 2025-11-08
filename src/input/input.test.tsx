@@ -10,9 +10,7 @@ describe('Input', () => {
 
   it('applies variant classes', () => {
     render(<Input variant="primary" placeholder="Primary input" />)
-    expect(screen.getByPlaceholderText('Primary input')).toHaveClass(
-      'input-primary',
-    )
+    expect(screen.getByPlaceholderText('Primary input')).toHaveClass('input-primary')
   })
 
   it('applies size classes', () => {
@@ -22,9 +20,7 @@ describe('Input', () => {
 
   it('applies ghost style when ghost prop is true', () => {
     render(<Input ghost placeholder="Ghost input" />)
-    expect(screen.getByPlaceholderText('Ghost input')).toHaveClass(
-      'input-ghost',
-    )
+    expect(screen.getByPlaceholderText('Ghost input')).toHaveClass('input-ghost')
   })
 
   it('disables input when disabled prop is true', () => {
@@ -47,9 +43,6 @@ describe('Input', () => {
 
   it('supports different input types', () => {
     render(<Input type="email" placeholder="Email input" />)
-    expect(screen.getByPlaceholderText('Email input')).toHaveAttribute(
-      'type',
-      'email',
-    )
+    expect(screen.getByPlaceholderText('Email input')).toHaveAttribute('type', 'email')
   })
 })

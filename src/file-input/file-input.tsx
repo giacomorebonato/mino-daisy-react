@@ -2,8 +2,7 @@ import { clsx } from 'clsx'
 import type { InputHTMLAttributes } from 'react'
 import { forwardRef } from 'react'
 
-export interface FileInputProps
-  extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'> {
+export interface FileInputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'> {
   variant?:
     | 'neutral'
     | 'primary'

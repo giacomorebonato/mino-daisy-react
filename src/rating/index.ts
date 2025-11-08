@@ -1,2 +1,2 @@
-export type { RatingProps, RatingItemProps } from './rating'
+export type { RatingItemProps, RatingProps } from './rating'
 export { Rating, RatingItem } from './rating'

@@ -38,22 +38,15 @@ describe('Footer', () => {
   })
 
   it('merges custom className with component classes', () => {
-    const { container } = render(
-      <Footer className="custom-class">Content</Footer>,
-    )
+    const { container } = render(<Footer className="custom-class">Content</Footer>)
     const footer = container.querySelector('footer')
     expect(footer).toHaveClass('footer')
     expect(footer).toHaveClass('custom-class')
   })
 
   it('passes through additional props', () => {
-    const { container } = render(
-      <Footer data-testid="footer-element">Content</Footer>,
-    )
-    expect(container.querySelector('footer')).toHaveAttribute(
-      'data-testid',
-      'footer-element',
-    )
+    const { container } = render(<Footer data-testid="footer-element">Content</Footer>)
+    expect(container.querySelector('footer')).toHaveAttribute('data-testid', 'footer-element')
   })
 
   it('renders as footer element', () => {
@@ -75,9 +68,7 @@ describe('FooterTitle', () => {
   })
 
   it('merges custom className with component classes', () => {
-    const { container } = render(
-      <FooterTitle className="custom">Title</FooterTitle>,
-    )
+    const { container } = render(<FooterTitle className="custom">Title</FooterTitle>)
     const title = container.querySelector('h6')
     expect(title).toHaveClass('footer-title')
     expect(title).toHaveClass('custom')

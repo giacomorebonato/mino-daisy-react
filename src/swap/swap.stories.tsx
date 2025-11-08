@@ -62,20 +62,12 @@ export const ControlledSwap: Story = {
     return (
       <div className="space-y-4">
         <Swap active={active}>
-          <input
-            type="checkbox"
-            checked={active}
-            onChange={(e) => setActive(e.target.checked)}
-          />
+          <input type="checkbox" checked={active} onChange={(e) => setActive(e.target.checked)} />
           <SwapOn>Active</SwapOn>
           <SwapOff>Inactive</SwapOff>
         </Swap>
         <div>
-          <button
-            type="button"
-            className="btn btn-sm"
-            onClick={() => setActive(!active)}
-          >
+          <button type="button" className="btn btn-sm" onClick={() => setActive(!active)}>
             Toggle: {active ? 'ON' : 'OFF'}
           </button>
         </div>
@@ -99,12 +91,7 @@ export const ThemeToggle: Story = {
     <Swap rotate className="btn btn-ghost btn-circle">
       <input type="checkbox" />
       <SwapOn>
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
+        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -114,12 +101,7 @@ export const ThemeToggle: Story = {
         </svg>
       </SwapOn>
       <SwapOff>
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
+        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -137,12 +119,7 @@ export const HamburgerMenu: Story = {
     <Swap rotate className="btn btn-ghost btn-circle">
       <input type="checkbox" />
       <SwapOn>
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
+        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -152,12 +129,7 @@ export const HamburgerMenu: Story = {
         </svg>
       </SwapOn>
       <SwapOff>
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
+        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -175,20 +147,12 @@ export const PlayPause: Story = {
     <Swap className="btn btn-circle btn-primary">
       <input type="checkbox" />
       <SwapOn>
-        <svg
-          className="w-6 h-6"
-          fill="currentColor"
-          viewBox="0 0 24 24"
-        >
+        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
           <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
         </svg>
       </SwapOn>
       <SwapOff>
-        <svg
-          className="w-6 h-6"
-          fill="currentColor"
-          viewBox="0 0 24 24"
-        >
+        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
           <path d="M8 5v14l11-7z" />
         </svg>
       </SwapOff>
@@ -201,12 +165,7 @@ export const VolumeToggle: Story = {
     <Swap className="btn btn-circle btn-ghost">
       <input type="checkbox" />
       <SwapOn>
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
+        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -222,12 +181,7 @@ export const VolumeToggle: Story = {
         </svg>
       </SwapOn>
       <SwapOff>
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
+        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -245,11 +199,7 @@ export const LikeButton: Story = {
     const [liked, setLiked] = useState(false)
 
     return (
-      <Swap
-        active={liked}
-        className="text-4xl"
-        onClick={() => setLiked(!liked)}
-      >
+      <Swap active={liked} className="text-4xl" onClick={() => setLiked(!liked)}>
         <SwapOn className="text-red-500">❤️</SwapOn>
         <SwapOff>🤍</SwapOff>
       </Swap>

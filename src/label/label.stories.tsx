@@ -36,16 +36,12 @@ export const WithDescription: Story = {
       <Label htmlFor="username">
         <span className="label">Username</span>
         <Input id="username" placeholder="Enter username" />
-        <span className="label text-xs opacity-70">
-          Choose a unique username
-        </span>
+        <span className="label text-xs opacity-70">Choose a unique username</span>
       </Label>
       <Label htmlFor="password">
         <span className="label">Password</span>
         <Input id="password" type="password" placeholder="Enter password" />
-        <span className="label text-xs opacity-70">
-          Must be at least 8 characters
-        </span>
+        <span className="label text-xs opacity-70">Must be at least 8 characters</span>
       </Label>
     </div>
   ),

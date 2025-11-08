@@ -6,13 +6,7 @@ export interface ToastProps extends HTMLAttributes<HTMLDivElement> {
   vertical?: 'top' | 'middle' | 'bottom'
 }
 
-export function Toast({
-  children,
-  className,
-  horizontal,
-  vertical,
-  ...props
-}: ToastProps) {
+export function Toast({ children, className, horizontal, vertical, ...props }: ToastProps) {
   const classes = clsx(
     'toast',
     {

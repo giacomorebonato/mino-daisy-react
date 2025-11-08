@@ -11,16 +11,7 @@ const meta = {
   argTypes: {
     variant: {
       control: 'select',
-      options: [
-        'neutral',
-        'primary',
-        'secondary',
-        'accent',
-        'info',
-        'success',
-        'warning',
-        'error',
-      ],
+      options: ['neutral', 'primary', 'secondary', 'accent', 'info', 'success', 'warning', 'error'],
     },
     size: {
       control: 'select',
@@ -118,18 +109,14 @@ export const Settings: Story = {
       <div className="flex items-center justify-between">
         <div>
           <div className="font-medium">Email notifications</div>
-          <div className="text-sm opacity-70">
-            Receive emails about your account
-          </div>
+          <div className="text-sm opacity-70">Receive emails about your account</div>
         </div>
         <Toggle variant="primary" defaultChecked />
       </div>
       <div className="flex items-center justify-between">
         <div>
           <div className="font-medium">Auto-save</div>
-          <div className="text-sm opacity-70">
-            Automatically save your changes
-          </div>
+          <div className="text-sm opacity-70">Automatically save your changes</div>
         </div>
         <Toggle variant="primary" />
       </div>

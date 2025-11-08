@@ -2,8 +2,7 @@ import { clsx } from 'clsx'
 import type { InputHTMLAttributes } from 'react'
 import { forwardRef } from 'react'
 
-export interface CheckboxProps
-  extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'> {
+export interface CheckboxProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'> {
   variant?:
     | 'neutral'
     | 'primary'

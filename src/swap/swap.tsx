@@ -13,14 +13,7 @@ export interface SwapOffProps extends HTMLAttributes<HTMLDivElement> {}
 
 export interface SwapIndeterminateProps extends HTMLAttributes<HTMLDivElement> {}
 
-export function Swap({
-  children,
-  className,
-  active,
-  rotate,
-  flip,
-  ...props
-}: SwapProps) {
+export function Swap({ children, className, active, rotate, flip, ...props }: SwapProps) {
   const classes = clsx(
     'swap',
     {
@@ -58,11 +51,7 @@ export function SwapOff({ children, className, ...props }: SwapOffProps) {
   )
 }
 
-export function SwapIndeterminate({
-  children,
-  className,
-  ...props
-}: SwapIndeterminateProps) {
+export function SwapIndeterminate({ children, className, ...props }: SwapIndeterminateProps) {
   const classes = clsx('swap-indeterminate', className)
 
   return (

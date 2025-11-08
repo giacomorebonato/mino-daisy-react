@@ -1,5 +1,5 @@
-import { type TableHTMLAttributes, type ReactNode } from 'react'
 import clsx from 'clsx'
+import type { ReactNode, TableHTMLAttributes } from 'react'
 
 export interface TableProps extends TableHTMLAttributes<HTMLTableElement> {
   children: ReactNode

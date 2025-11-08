@@ -11,16 +11,7 @@ const meta = {
   argTypes: {
     variant: {
       control: 'select',
-      options: [
-        'neutral',
-        'primary',
-        'secondary',
-        'accent',
-        'info',
-        'success',
-        'warning',
-        'error',
-      ],
+      options: ['neutral', 'primary', 'secondary', 'accent', 'info', 'success', 'warning', 'error'],
     },
     size: {
       control: 'select',

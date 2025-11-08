@@ -140,11 +140,7 @@ export const WithForm: Story = {
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
-                <input
-                  type="password"
-                  placeholder="password"
-                  className="input input-bordered"
-                />
+                <input type="password" placeholder="password" className="input input-bordered" />
               </div>
             </div>
             <ModalAction>
@@ -171,6 +167,7 @@ export const WithCloseButton: Story = {
         <Modal open={open} onClick={() => setOpen(false)}>
           <ModalBox>
             <button
+              type="button"
               className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
               onClick={() => setOpen(false)}
             >

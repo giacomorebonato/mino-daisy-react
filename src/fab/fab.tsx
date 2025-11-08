@@ -40,11 +40,7 @@ export function FabClose({ children, className, ...props }: FabCloseProps) {
   )
 }
 
-export function FabMainAction({
-  children,
-  className,
-  ...props
-}: FabMainActionProps) {
+export function FabMainAction({ children, className, ...props }: FabMainActionProps) {
   const classes = clsx('fab-main-action', className)
 
   return (

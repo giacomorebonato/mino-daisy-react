@@ -18,13 +18,7 @@ export function List({ children, className, ...props }: ListProps) {
   )
 }
 
-export function ListRow({
-  children,
-  className,
-  colWrap,
-  colGrow,
-  ...props
-}: ListRowProps) {
+export function ListRow({ children, className, colWrap, colGrow, ...props }: ListRowProps) {
   const classes = clsx(
     'list-row',
     {

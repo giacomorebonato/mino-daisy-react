@@ -1,7 +1,7 @@
 export type {
-  CollapseProps,
   CollapseCheckboxProps,
   CollapseContentProps,
+  CollapseProps,
   CollapseTitleProps,
 } from './collapse'
 export {

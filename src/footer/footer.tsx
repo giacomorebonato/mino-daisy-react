@@ -1,5 +1,5 @@
-import { type HTMLAttributes, type ReactNode } from 'react'
 import clsx from 'clsx'
+import type { HTMLAttributes, ReactNode } from 'react'
 
 export interface FooterProps extends HTMLAttributes<HTMLElement> {
   children: ReactNode
@@ -7,13 +7,7 @@ export interface FooterProps extends HTMLAttributes<HTMLElement> {
   center?: boolean
 }
 
-export function Footer({
-  children,
-  className,
-  horizontal,
-  center,
-  ...props
-}: FooterProps) {
+export function Footer({ children, className, horizontal, center, ...props }: FooterProps) {
   const classes = clsx(
     'footer',
     {
@@ -35,11 +29,7 @@ export interface FooterTitleProps extends HTMLAttributes<HTMLHeadingElement> {
   children: ReactNode
 }
 
-export function FooterTitle({
-  children,
-  className,
-  ...props
-}: FooterTitleProps) {
+export function FooterTitle({ children, className, ...props }: FooterTitleProps) {
   const classes = clsx('footer-title', className)
   return (
     <h6 className={classes} {...props}>

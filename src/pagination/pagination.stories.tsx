@@ -183,11 +183,7 @@ export const WithInput: Story = {
       <Button className="join-item">«</Button>
       <div className="join-item flex items-center px-4">
         Page
-        <input
-          type="text"
-          className="input input-bordered w-16 mx-2"
-          defaultValue="22"
-        />
+        <input type="text" className="input input-bordered w-16 mx-2" defaultValue="22" />
         of 100
       </div>
       <Button className="join-item">»</Button>

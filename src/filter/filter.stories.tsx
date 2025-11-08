@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Filter, FilterReset, FilterItem } from './filter'
+import { Filter, FilterItem, FilterReset } from './filter'
 
 const meta = {
   title: 'Interactive & Feedback/Filter',
@@ -99,19 +99,10 @@ export const WithButtonVariants: Story = {
         <h3 className="mb-2 font-semibold">Styled Filters</h3>
         <Filter name="styled">
           <FilterReset name="styled" />
-          <FilterItem
-            name="styled"
-            aria-label="All"
-            className="btn-primary"
-            defaultChecked
-          />
+          <FilterItem name="styled" aria-label="All" className="btn-primary" defaultChecked />
           <FilterItem name="styled" aria-label="Active" className="btn-secondary" />
           <FilterItem name="styled" aria-label="Pending" className="btn-accent" />
-          <FilterItem
-            name="styled"
-            aria-label="Completed"
-            className="btn-success"
-          />
+          <FilterItem name="styled" aria-label="Completed" className="btn-success" />
         </Filter>
       </div>
     </div>

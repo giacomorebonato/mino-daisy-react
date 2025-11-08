@@ -118,18 +118,12 @@ describe('AccordionRadio', () => {
 
   it('applies default name attribute', () => {
     render(<AccordionRadio data-testid="accordion-radio" />)
-    expect(screen.getByTestId('accordion-radio')).toHaveAttribute(
-      'name',
-      'accordion',
-    )
+    expect(screen.getByTestId('accordion-radio')).toHaveAttribute('name', 'accordion')
   })
 
   it('applies custom name attribute', () => {
     render(<AccordionRadio name="custom-accordion" data-testid="accordion-radio" />)
-    expect(screen.getByTestId('accordion-radio')).toHaveAttribute(
-      'name',
-      'custom-accordion',
-    )
+    expect(screen.getByTestId('accordion-radio')).toHaveAttribute('name', 'custom-accordion')
   })
 
   it('applies collapse-toggle class', () => {
@@ -138,9 +132,7 @@ describe('AccordionRadio', () => {
   })
 
   it('merges custom className', () => {
-    render(
-      <AccordionRadio className="custom" data-testid="accordion-radio" />,
-    )
+    render(<AccordionRadio className="custom" data-testid="accordion-radio" />)
     const radio = screen.getByTestId('accordion-radio')
     expect(radio).toHaveClass('collapse-toggle')
     expect(radio).toHaveClass('custom')

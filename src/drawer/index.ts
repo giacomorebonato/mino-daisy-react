@@ -1,14 +1,14 @@
+export type {
+  DrawerContentProps,
+  DrawerOverlayProps,
+  DrawerProps,
+  DrawerSideProps,
+  DrawerToggleProps,
+} from './drawer'
 export {
   Drawer,
   DrawerContent,
   DrawerOverlay,
   DrawerSide,
   DrawerToggle,
-} from './drawer'
-export type {
-  DrawerProps,
-  DrawerContentProps,
-  DrawerOverlayProps,
-  DrawerSideProps,
-  DrawerToggleProps,
 } from './drawer'

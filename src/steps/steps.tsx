@@ -1,5 +1,5 @@
-import { type HTMLAttributes, type LiHTMLAttributes, type ReactNode } from 'react'
 import clsx from 'clsx'
+import type { HTMLAttributes, LiHTMLAttributes, ReactNode } from 'react'
 
 export interface StepsProps extends HTMLAttributes<HTMLUListElement> {
   children: ReactNode
@@ -7,13 +7,7 @@ export interface StepsProps extends HTMLAttributes<HTMLUListElement> {
   horizontal?: boolean
 }
 
-export function Steps({
-  children,
-  className,
-  vertical,
-  horizontal,
-  ...props
-}: StepsProps) {
+export function Steps({ children, className, vertical, horizontal, ...props }: StepsProps) {
   const classes = clsx(
     'steps',
     {
@@ -45,13 +39,7 @@ export interface StepProps extends LiHTMLAttributes<HTMLLIElement> {
   dataContent?: string
 }
 
-export function Step({
-  children,
-  className,
-  variant,
-  dataContent,
-  ...props
-}: StepProps) {
+export function Step({ children, className, variant, dataContent, ...props }: StepProps) {
   const classes = clsx(
     'step',
     {

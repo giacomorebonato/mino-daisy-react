@@ -11,16 +11,7 @@ const meta = {
   argTypes: {
     variant: {
       control: 'select',
-      options: [
-        'neutral',
-        'primary',
-        'secondary',
-        'accent',
-        'info',
-        'success',
-        'warning',
-        'error',
-      ],
+      options: ['neutral', 'primary', 'secondary', 'accent', 'info', 'success', 'warning', 'error'],
     },
     size: {
       control: 'select',
@@ -92,9 +83,7 @@ export const Multiple: Story = {
   render: () => (
     <div className="flex flex-col gap-4 w-80">
       <div>
-        <label className="block text-sm font-medium mb-2">
-          Upload multiple files
-        </label>
+        <label className="block text-sm font-medium mb-2">Upload multiple files</label>
         <FileInput multiple variant="primary" />
       </div>
     </div>
@@ -113,9 +102,7 @@ export const WithAccept: Story = {
         <FileInput accept=".pdf" variant="secondary" />
       </div>
       <div>
-        <label className="block text-sm font-medium mb-2">
-          Documents (Word, PDF)
-        </label>
+        <label className="block text-sm font-medium mb-2">Documents (Word, PDF)</label>
         <FileInput accept=".doc,.docx,.pdf" variant="accent" />
       </div>
     </div>

@@ -11,16 +11,7 @@ const meta = {
   argTypes: {
     variant: {
       control: 'select',
-      options: [
-        'neutral',
-        'primary',
-        'secondary',
-        'accent',
-        'info',
-        'success',
-        'warning',
-        'error',
-      ],
+      options: ['neutral', 'primary', 'secondary', 'accent', 'info', 'success', 'warning', 'error'],
     },
     size: {
       control: 'select',
@@ -87,15 +78,11 @@ export const CustomRange: Story = {
   render: () => (
     <div className="flex flex-col gap-4 w-80">
       <div>
-        <label className="block text-sm font-medium mb-2">
-          Volume (0-100)
-        </label>
+        <label className="block text-sm font-medium mb-2">Volume (0-100)</label>
         <Range variant="primary" min={0} max={100} defaultValue={50} />
       </div>
       <div>
-        <label className="block text-sm font-medium mb-2">
-          Temperature (10-30°C)
-        </label>
+        <label className="block text-sm font-medium mb-2">Temperature (10-30°C)</label>
         <Range variant="secondary" min={10} max={30} defaultValue={20} />
       </div>
       <div>

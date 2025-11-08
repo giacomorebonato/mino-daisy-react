@@ -1,8 +1,7 @@
-import { type ProgressHTMLAttributes, forwardRef } from 'react'
 import clsx from 'clsx'
+import { forwardRef, type ProgressHTMLAttributes } from 'react'
 
-export interface ProgressProps
-  extends ProgressHTMLAttributes<HTMLProgressElement> {
+export interface ProgressProps extends ProgressHTMLAttributes<HTMLProgressElement> {
   variant?:
     | 'neutral'
     | 'primary'

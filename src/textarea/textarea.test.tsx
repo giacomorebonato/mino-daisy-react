@@ -10,23 +10,17 @@ describe('Textarea', () => {
 
   it('applies variant classes', () => {
     render(<Textarea variant="primary" placeholder="Primary textarea" />)
-    expect(screen.getByPlaceholderText('Primary textarea')).toHaveClass(
-      'textarea-primary',
-    )
+    expect(screen.getByPlaceholderText('Primary textarea')).toHaveClass('textarea-primary')
   })
 
   it('applies size classes', () => {
     render(<Textarea size="lg" placeholder="Large textarea" />)
-    expect(screen.getByPlaceholderText('Large textarea')).toHaveClass(
-      'textarea-lg',
-    )
+    expect(screen.getByPlaceholderText('Large textarea')).toHaveClass('textarea-lg')
   })
 
   it('applies ghost style when ghost prop is true', () => {
     render(<Textarea ghost placeholder="Ghost textarea" />)
-    expect(screen.getByPlaceholderText('Ghost textarea')).toHaveClass(
-      'textarea-ghost',
-    )
+    expect(screen.getByPlaceholderText('Ghost textarea')).toHaveClass('textarea-ghost')
   })
 
   it('disables textarea when disabled prop is true', () => {
