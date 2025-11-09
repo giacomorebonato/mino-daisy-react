@@ -49,6 +49,16 @@ This project wraps [DaisyUI](https://daisyui.com/) components into React.
 * `Swap`, `SwapOn`, `SwapOff`, `SwapIndeterminate` - Toggle between two elements
 * `Filter`, `FilterReset`, `FilterItem` - Radio button option filter
 
+### Visual & Media (8/10) ✅
+* `Avatar`, `AvatarGroup` - User thumbnail with online/offline status
+* `Carousel`, `CarouselItem` - Scrollable content slider
+* `Chat`, `ChatImage`, `ChatHeader`, `ChatFooter`, `ChatBubble` - Message bubble display
+* `Diff`, `DiffItem`, `DiffResizer` - Side-by-side comparison
+* `Divider` - Content separator with text
+* `Mask` - Shape cropping for images
+* `Indicator`, `IndicatorItem` - Corner element positioning
+* `Stack` - Layered element positioning
+
 ### Forms & Input (10/10) ✅
 * `Input` - Text entry field with variants and sizes
 * `Textarea` - Multi-line text entry
@@ -162,16 +172,16 @@ function MyForm() {
 
 ### Visual & Media
 
-- [ ] Avatar - User thumbnail image
-- [ ] Carousel - Scrollable content slider
-- [ ] Chat - Message bubble display
-- [ ] Diff - Side-by-side comparison
-- [ ] Divider - Content separator
-- [ ] Mask - Shape cropping element
+- [x] Avatar - User thumbnail image
+- [x] Carousel - Scrollable content slider
+- [x] Chat - Message bubble display
+- [x] Diff - Side-by-side comparison
+- [x] Divider - Content separator
+- [x] Mask - Shape cropping element
 - [ ] Hover-Gallery - Image preview on hover
-- [ ] Indicator - Corner element placement
+- [x] Indicator - Corner element placement
 - [ ] Status - Small status icon
-- [ ] Stack - Layered element positioning
+- [x] Stack - Layered element positioning
 
 ### Mockups & Prototyping
 
@@ -195,4 +205,4 @@ function MyForm() {
 
 ### Progress
 
-40/79 components implemented (50.6%)
+48/79 components implemented (60.8%)

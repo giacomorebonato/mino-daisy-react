@@ -14,6 +14,8 @@ export {
 } from './accordion'
 export type { AlertProps } from './alert'
 export { Alert } from './alert'
+export type { AvatarGroupProps, AvatarProps } from './avatar'
+export { Avatar, AvatarGroup } from './avatar'
 export type { BadgeProps } from './badge'
 export { Badge } from './badge'
 export type { BreadcrumbsProps } from './breadcrumbs'
@@ -27,6 +29,16 @@ export type {
   CardTitleProps,
 } from './card'
 export { Card, CardActions, CardBody, CardTitle } from './card'
+export type { CarouselItemProps, CarouselProps } from './carousel'
+export { Carousel, CarouselItem } from './carousel'
+export type {
+  ChatBubbleProps,
+  ChatFooterProps,
+  ChatHeaderProps,
+  ChatImageProps,
+  ChatProps,
+} from './chat'
+export { Chat, ChatBubble, ChatFooter, ChatHeader, ChatImage } from './chat'
 export type { CheckboxProps } from './checkbox'
 export { Checkbox } from './checkbox'
 export type {
@@ -43,6 +55,10 @@ export {
 } from './collapse'
 export type { CountdownProps } from './countdown'
 export { Countdown } from './countdown'
+export type { DiffItemProps, DiffProps, DiffResizerProps } from './diff'
+export { Diff, DiffItem, DiffResizer } from './diff'
+export type { DividerProps } from './divider'
+export { Divider } from './divider'
 export type { DockItemProps, DockProps } from './dock'
 export { Dock, DockItem } from './dock'
 export type {
@@ -71,12 +87,16 @@ export type { FilterItemProps, FilterProps, FilterResetProps } from './filter'
 export { Filter, FilterItem, FilterReset } from './filter'
 export type { FooterProps, FooterTitleProps } from './footer'
 export { Footer, FooterTitle } from './footer'
+export type { IndicatorItemProps, IndicatorProps } from './indicator'
+export { Indicator, IndicatorItem } from './indicator'
 export type { InputProps } from './input'
 export { Input } from './input'
 export type { LabelProps } from './label'
 export { Label } from './label'
 export type { ListProps, ListRowProps } from './list'
 export { List, ListRow } from './list'
+export type { MaskHalf, MaskProps, MaskShape } from './mask'
+export { Mask } from './mask'
 export type { MenuProps } from './menu'
 export { Menu } from './menu'
 export type {
@@ -102,6 +122,8 @@ export type { RatingItemProps, RatingProps } from './rating'
 export { Rating, RatingItem } from './rating'
 export type { SelectProps } from './select'
 export { Select } from './select'
+export type { StackProps } from './stack'
+export { Stack } from './stack'
 export type {
   StatDescProps,
   StatFigureProps,
