@@ -184,6 +184,11 @@ export { Table } from './table'
 export type { TextareaProps } from './textarea'
 export { Textarea } from './textarea'
 export type {
+  ThemeControllerProps,
+  ThemeControllerStyle,
+} from './theme-controller'
+export { ThemeController } from './theme-controller'
+export type {
   TimelineBoxProps,
   TimelineEndProps,
   TimelineItemProps,
@@ -205,3 +210,5 @@ export type { ToggleProps } from './toggle'
 export { Toggle } from './toggle'
 export type { TooltipContentProps, TooltipProps } from './tooltip'
 export { Tooltip, TooltipContent } from './tooltip'
+export type { ValidatorHintProps, ValidatorProps } from './validator'
+export { Validator, ValidatorHint } from './validator'

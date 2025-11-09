@@ -79,7 +79,7 @@ This project wraps [DaisyUI](https://daisyui.com/) components into React.
 * `Fieldset`, `FieldsetLegend` - Form section grouping
 * `Label` - Form field labeling (regular and floating)
 
-### Utilities & Special (7/10)
+### Utilities & Special (9/9) ✅
 * `Loading` - Activity animation with 6 type variants
 * `Skeleton` - Loading placeholder for content
 * `Kbd` - Keyboard shortcut display
@@ -87,6 +87,8 @@ This project wraps [DaisyUI](https://daisyui.com/) components into React.
 * `Join` - Item grouping container (horizontal/vertical)
 * `Hero`, `HeroContent`, `HeroOverlay` - Large banner section
 * `Fab`, `FabMainAction`, `FabClose` - Floating action button with speed dial
+* `Validator`, `ValidatorHint` - Form validation styling with HTML5 support
+* `ThemeController` - Theme switching control (checkbox, toggle, or swap)
 
 ## Usage Example
 
@@ -214,12 +216,12 @@ function MyForm() {
 - [x] Kbd - Keyboard shortcut display
 - [ ] Calendar - Date picker integration
 - [x] Link - Enhanced anchor styling
-- [ ] Validator - Form validation styling
-- [ ] Theme-Controller - Theme switching control
+- [x] Validator - Form validation styling
+- [x] Theme-Controller - Theme switching control
 - [x] Join - Item grouping container
 - [x] Hero - Large banner section
 - [x] FAB - Floating action button (includes Speed Dial)
 
 ### Progress
 
-60/79 components implemented (75.9%)
+62/78 components implemented (79.5%)
