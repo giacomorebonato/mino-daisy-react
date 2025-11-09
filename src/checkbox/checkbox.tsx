@@ -1,6 +1,5 @@
 import { clsx } from 'clsx'
 import type { InputHTMLAttributes } from 'react'
-import { forwardRef } from 'react'
 
 export interface CheckboxProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'> {
   variant?:
@@ -13,21 +12,18 @@ export interface CheckboxProps extends Omit<InputHTMLAttributes<HTMLInputElement
     | 'warning'
     | 'error'
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+  ref?: React.Ref<HTMLInputElement>
 }
 
-export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
-  ({ className, variant, size, ...props }, ref) => {
-    const classes = clsx(
-      'checkbox',
-      {
-        [`checkbox-${variant}`]: variant,
-        [`checkbox-${size}`]: size,
-      },
-      className,
-    )
+export function Checkbox({ className, variant, size, ref, ...props }: CheckboxProps) {
+  const classes = clsx(
+    'checkbox',
+    {
+      [`checkbox-${variant}`]: variant,
+      [`checkbox-${size}`]: size,
+    },
+    className,
+  )
 
-    return <input ref={ref} type="checkbox" className={classes} {...props} />
-  },
-)
-
-Checkbox.displayName = 'Checkbox'
+  return <input ref={ref} type="checkbox" className={classes} {...props} />
+}
