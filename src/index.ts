@@ -102,6 +102,25 @@ export { Mask } from './mask'
 export type { MenuProps } from './menu'
 export { Menu } from './menu'
 export type {
+  MockupBrowserProps,
+  MockupBrowserToolbarProps,
+} from './mockup-browser'
+export { MockupBrowser, MockupBrowserToolbar } from './mockup-browser'
+export type { MockupCodeProps } from './mockup-code'
+export { MockupCode } from './mockup-code'
+export type {
+  MockupPhoneCameraProps,
+  MockupPhoneDisplayProps,
+  MockupPhoneProps,
+} from './mockup-phone'
+export {
+  MockupPhone,
+  MockupPhoneCamera,
+  MockupPhoneDisplay,
+} from './mockup-phone'
+export type { MockupWindowProps } from './mockup-window'
+export { MockupWindow } from './mockup-window'
+export type {
   ModalActionProps,
   ModalBackdropProps,
   ModalBoxProps,

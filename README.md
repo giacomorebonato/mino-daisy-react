@@ -61,6 +61,12 @@ This project wraps [DaisyUI](https://daisyui.com/) components into React.
 * `Stack` - Layered element positioning
 * `Status` - Small status icon
 
+### Mockups & Prototyping (4/4) ✅
+* `MockupBrowser`, `MockupBrowserToolbar` - Browser window frame
+* `MockupPhone`, `MockupPhoneCamera`, `MockupPhoneDisplay` - iPhone device frame
+* `MockupCode` - Code editor appearance
+* `MockupWindow` - OS window frame
+
 ### Forms & Input (10/10) ✅
 * `Input` - Text entry field with variants and sizes
 * `Textarea` - Multi-line text entry
@@ -187,10 +193,10 @@ function MyForm() {
 
 ### Mockups & Prototyping
 
-- [ ] Mockup-Browser - Browser window frame
-- [ ] Mockup-Phone - iPhone device frame
-- [ ] Mockup-Code - Code editor appearance
-- [ ] Mockup-Window - OS window frame
+- [x] Mockup-Browser - Browser window frame
+- [x] Mockup-Phone - iPhone device frame
+- [x] Mockup-Code - Code editor appearance
+- [x] Mockup-Window - OS window frame
 
 ### Utilities & Special
 
@@ -207,4 +213,4 @@ function MyForm() {
 
 ### Progress
 
-50/79 components implemented (63.3%)
+54/79 components implemented (68.4%)
