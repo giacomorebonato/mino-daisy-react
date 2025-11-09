@@ -49,15 +49,17 @@ This project wraps [DaisyUI](https://daisyui.com/) components into React.
 * `Swap`, `SwapOn`, `SwapOff`, `SwapIndeterminate` - Toggle between two elements
 * `Filter`, `FilterReset`, `FilterItem` - Radio button option filter
 
-### Visual & Media (8/10) ✅
+### Visual & Media (10/10) ✅
 * `Avatar`, `AvatarGroup` - User thumbnail with online/offline status
 * `Carousel`, `CarouselItem` - Scrollable content slider
 * `Chat`, `ChatImage`, `ChatHeader`, `ChatFooter`, `ChatBubble` - Message bubble display
 * `Diff`, `DiffItem`, `DiffResizer` - Side-by-side comparison
 * `Divider` - Content separator with text
-* `Mask` - Shape cropping for images
+* `HoverGallery` - Image preview on hover
 * `Indicator`, `IndicatorItem` - Corner element positioning
+* `Mask` - Shape cropping for images
 * `Stack` - Layered element positioning
+* `Status` - Small status icon
 
 ### Forms & Input (10/10) ✅
 * `Input` - Text entry field with variants and sizes
@@ -177,11 +179,11 @@ function MyForm() {
 - [x] Chat - Message bubble display
 - [x] Diff - Side-by-side comparison
 - [x] Divider - Content separator
-- [x] Mask - Shape cropping element
-- [ ] Hover-Gallery - Image preview on hover
+- [x] Hover-Gallery - Image preview on hover
 - [x] Indicator - Corner element placement
-- [ ] Status - Small status icon
+- [x] Mask - Shape cropping element
 - [x] Stack - Layered element positioning
+- [x] Status - Small status icon
 
 ### Mockups & Prototyping
 
@@ -205,4 +207,4 @@ function MyForm() {
 
 ### Progress
 
-48/79 components implemented (60.8%)
+50/79 components implemented (63.3%)

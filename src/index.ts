@@ -87,6 +87,8 @@ export type { FilterItemProps, FilterProps, FilterResetProps } from './filter'
 export { Filter, FilterItem, FilterReset } from './filter'
 export type { FooterProps, FooterTitleProps } from './footer'
 export { Footer, FooterTitle } from './footer'
+export type { HoverGalleryProps } from './hover-gallery'
+export { HoverGallery } from './hover-gallery'
 export type { IndicatorItemProps, IndicatorProps } from './indicator'
 export { Indicator, IndicatorItem } from './indicator'
 export type { InputProps } from './input'
@@ -133,6 +135,8 @@ export type {
   StatValueProps,
 } from './stat'
 export { Stat, StatDesc, StatFigure, Stats, StatTitle, StatValue } from './stat'
+export type { StatusProps, StatusSize, StatusVariant } from './status'
+export { Status } from './status'
 export type { StepProps, StepsProps } from './steps'
 export { Step, Steps } from './steps'
 export type {
