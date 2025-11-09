@@ -79,10 +79,11 @@ This project wraps [DaisyUI](https://daisyui.com/) components into React.
 * `Fieldset`, `FieldsetLegend` - Form section grouping
 * `Label` - Form field labeling (regular and floating)
 
-### Utilities & Special (9/9) ✅
+### Utilities & Special (10/10) ✅
 * `Loading` - Activity animation with 6 type variants
 * `Skeleton` - Loading placeholder for content
 * `Kbd` - Keyboard shortcut display
+* `Calendar` - Date picker with React Day Picker integration and DaisyUI styling
 * `Link` - Enhanced anchor styling with color variants
 * `Join` - Item grouping container (horizontal/vertical)
 * `Hero`, `HeroContent`, `HeroOverlay` - Large banner section
@@ -214,7 +215,7 @@ function MyForm() {
 - [x] Loading - Activity animation
 - [x] Skeleton - Loading placeholder
 - [x] Kbd - Keyboard shortcut display
-- [ ] Calendar - Date picker integration
+- [x] Calendar - Date picker integration
 - [x] Link - Enhanced anchor styling
 - [x] Validator - Form validation styling
 - [x] Theme-Controller - Theme switching control
@@ -224,4 +225,4 @@ function MyForm() {
 
 ### Progress
 
-62/78 components implemented (79.5%)
+63/79 components implemented (79.7%)

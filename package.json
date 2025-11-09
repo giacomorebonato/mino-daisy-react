@@ -85,6 +85,7 @@
     "vitest": "^4.0.7"
   },
   "dependencies": {
-    "clsx": "^2.1.1"
+    "clsx": "^2.1.1",
+    "react-day-picker": "^9.11.1"
   }
 }

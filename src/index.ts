@@ -22,6 +22,8 @@ export type { BreadcrumbsProps } from './breadcrumbs'
 export { Breadcrumbs } from './breadcrumbs'
 export type { ButtonProps } from './button'
 export { Button } from './button'
+export type { CalendarProps } from './calendar'
+export { Calendar } from './calendar'
 export type {
   CardActionsProps,
   CardBodyProps,
