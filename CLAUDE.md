@@ -75,7 +75,7 @@ Each DaisyUI component wrapper should follow this pattern:
 
 1. **Component File** (`ComponentName.tsx`):
    - Use TypeScript with proper prop types extending HTML element types
-   - Use `forwardRef` for ref forwarding
+   - Do not use deprecated `forwardRef` for ref forwarding. Use React 19 ref property
    - Accept all DaisyUI variants and modifiers as props
    - Use `clsx` to conditionally apply DaisyUI classes
    - Spread remaining props to underlying element
@@ -106,10 +106,11 @@ Each DaisyUI component wrapper should follow this pattern:
 ### Peer Dependencies
 
 Consumers of this library must have:
-- `react` >= 18.0.0
-- `react-dom` >= 18.0.0
-- `tailwindcss` >= 3.0.0
-- `daisyui` >= 4.0.0
+
+- `react` >= 19.0.0
+- `react-dom` >= 19.0.0
+- `tailwindcss` >= 4.0.0
+- `daisyui` >= 5.0.0
 
 Consumers must configure Tailwind CSS in their project and include this library's components in their Tailwind content paths.
 
