@@ -10,10 +10,10 @@ This project wraps [DaisyUI](https://daisyui.com/) components into React compone
 
 - **TypeScript**: Strict mode enabled for type safety
 - **React 19**: Peer dependency (consumers must provide)
-- **Vite**: Library build tool with dual ESM/CJS output
+- **Bunit**: Library build tool with dual ESM/CJS output
 - **Tailwind CSS + DaisyUI**: Peer dependencies for styling
 - **Storybook**: Component development and documentation
-- **Vitest + React Testing Library**: Testing framework
+- **Bun Test + React Testing Library**: Testing framework
 - **clsx**: Utility for conditional class names
 
 ## Package Manager
@@ -116,9 +116,8 @@ Consumers must configure Tailwind CSS in their project and include this library'
 
 ### Testing
 
-- Unit tests use Vitest with jsdom environment
+- Unit tests use Bun test with HappyDom environment
 - Component tests use React Testing Library
-- Storybook stories can also be tested with @storybook/addon-vitest
 - Run `pnpm test` for watch mode during development
 
 ### Storybook Configuration
