@@ -2,21 +2,21 @@ import { clsx } from 'clsx'
 import type { InputHTMLAttributes } from 'react'
 import { forwardRef } from 'react'
 
-export type ThemeControllerStyle = 'checkbox' | 'toggle' | 'swap'
+export type ThemeControllerVariant = 'checkbox' | 'toggle' | 'swap'
 
 export interface ThemeControllerProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'type'> {
   theme: string
-  style?: ThemeControllerStyle
+  variant?: ThemeControllerVariant
 }
 
 export const ThemeController = forwardRef<HTMLInputElement, ThemeControllerProps>(
-  ({ className, theme, style = 'checkbox', ...props }, ref) => {
+  ({ className, theme, variant = 'checkbox', ...props }, ref) => {
     const classes = clsx(
       'theme-controller',
       {
-        checkbox: style === 'checkbox',
-        toggle: style === 'toggle',
-        swap: style === 'swap',
+        checkbox: variant === 'checkbox',
+        toggle: variant === 'toggle',
+        swap: variant === 'swap',
       },
       className,
     )

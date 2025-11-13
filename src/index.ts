@@ -187,7 +187,7 @@ export type { TextareaProps } from './textarea'
 export { Textarea } from './textarea'
 export type {
   ThemeControllerProps,
-  ThemeControllerStyle,
+  ThemeControllerVariant,
 } from './theme-controller'
 export { ThemeController } from './theme-controller'
 export type {
