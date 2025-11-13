@@ -1,6 +1,5 @@
 import { describe, expect, it } from 'bun:test'
 import { render, screen } from '@testing-library/react'
-import '../matchers'
 import {
   Accordion,
   AccordionContent,
@@ -8,7 +7,6 @@ import {
   AccordionRadio,
   AccordionTitle,
 } from './accordion'
-import '../matchers';
 
 describe('Accordion', () => {
   it('renders children correctly', () => {
