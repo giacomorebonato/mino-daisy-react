@@ -27,7 +27,7 @@
     "sourceMap": true,
 
     /* Testing */
-    "types": ["bun-types", "@testing-library/jest-dom"]
+    "types": ["bun-types"]
   },
   "include": ["src"],
   "exclude": ["src/**/*.test.tsx", "src/**/*.stories.tsx"]
