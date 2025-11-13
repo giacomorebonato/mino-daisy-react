@@ -1,5 +1,5 @@
 export type {
   ThemeControllerProps,
-  ThemeControllerStyle,
+  ThemeControllerVariant,
 } from './theme-controller'
 export { ThemeController } from './theme-controller'
