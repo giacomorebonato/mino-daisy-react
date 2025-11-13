@@ -1,6 +1,5 @@
 import { clsx } from 'clsx'
 import type { SelectHTMLAttributes } from 'react'
-import { forwardRef } from 'react'
 
 export interface SelectProps extends Omit<SelectHTMLAttributes<HTMLSelectElement>, 'size'> {
   variant?:
@@ -14,26 +13,25 @@ export interface SelectProps extends Omit<SelectHTMLAttributes<HTMLSelectElement
     | 'error'
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
   ghost?: boolean
+  ref?: React.Ref<HTMLSelectElement>
 }
 
-export const Select = forwardRef<HTMLSelectElement, SelectProps>(
-  ({ children, className, variant, size, ghost, ...props }, ref) => {
-    const classes = clsx(
-      'select',
-      {
-        [`select-${variant}`]: variant,
-        [`select-${size}`]: size,
-        'select-ghost': ghost,
-      },
-      className,
-    )
+export function Select({ children, className, variant, size, ghost, ref, ...props }: SelectProps) {
+  const classes = clsx(
+    'select',
+    {
+      [`select-${variant}`]: variant,
+      [`select-${size}`]: size,
+      'select-ghost': ghost,
+    },
+    className,
+  )
 
-    return (
-      <select ref={ref} className={classes} {...props}>
-        {children}
-      </select>
-    )
-  },
-)
+  return (
+    <select ref={ref} className={classes} {...props}>
+      {children}
+    </select>
+  )
+}
 
 Select.displayName = 'Select'

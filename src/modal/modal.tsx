@@ -1,10 +1,10 @@
 import { clsx } from 'clsx'
 import type { DialogHTMLAttributes, FormHTMLAttributes, HTMLAttributes } from 'react'
-import { forwardRef } from 'react'
 
 export interface ModalProps extends DialogHTMLAttributes<HTMLDialogElement> {
   open?: boolean
   placement?: 'top' | 'middle' | 'bottom' | 'start' | 'end'
+  ref?: React.Ref<HTMLDialogElement>
 }
 
 export interface ModalBoxProps extends HTMLAttributes<HTMLDivElement> {}
@@ -13,24 +13,22 @@ export interface ModalActionProps extends HTMLAttributes<HTMLDivElement> {}
 
 export interface ModalBackdropProps extends FormHTMLAttributes<HTMLFormElement> {}
 
-export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
-  ({ children, className, open, placement, ...props }, ref) => {
-    const classes = clsx(
-      'modal',
-      {
-        'modal-open': open,
-        [`modal-${placement}`]: placement,
-      },
-      className,
-    )
+export function Modal({ children, className, open, placement, ref, ...props }: ModalProps) {
+  const classes = clsx(
+    'modal',
+    {
+      'modal-open': open,
+      [`modal-${placement}`]: placement,
+    },
+    className,
+  )
 
-    return (
-      <dialog ref={ref} open={open} className={classes} {...props}>
-        {children}
-      </dialog>
-    )
-  },
-)
+  return (
+    <dialog ref={ref} open={open} className={classes} {...props}>
+      {children}
+    </dialog>
+  )
+}
 
 Modal.displayName = 'Modal'
 

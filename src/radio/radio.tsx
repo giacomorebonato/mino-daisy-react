@@ -1,6 +1,5 @@
 import { clsx } from 'clsx'
 import type { InputHTMLAttributes } from 'react'
-import { forwardRef } from 'react'
 
 export interface RadioProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'> {
   variant?:
@@ -13,21 +12,20 @@ export interface RadioProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 
     | 'warning'
     | 'error'
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+  ref?: React.Ref<HTMLInputElement>
 }
 
-export const Radio = forwardRef<HTMLInputElement, RadioProps>(
-  ({ className, variant, size, ...props }, ref) => {
-    const classes = clsx(
-      'radio',
-      {
-        [`radio-${variant}`]: variant,
-        [`radio-${size}`]: size,
-      },
-      className,
-    )
+export function Radio({ className, variant, size, ref, ...props }: RadioProps) {
+  const classes = clsx(
+    'radio',
+    {
+      [`radio-${variant}`]: variant,
+      [`radio-${size}`]: size,
+    },
+    className,
+  )
 
-    return <input ref={ref} type="radio" className={classes} {...props} />
-  },
-)
+  return <input ref={ref} type="radio" className={classes} {...props} />
+}
 
 Radio.displayName = 'Radio'

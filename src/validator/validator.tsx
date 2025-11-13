@@ -1,6 +1,5 @@
 import { clsx } from 'clsx'
 import type { InputHTMLAttributes, ReactNode } from 'react'
-import { forwardRef } from 'react'
 
 export interface ValidatorProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'> {
   variant?:
@@ -15,29 +14,36 @@ export interface ValidatorProps extends Omit<InputHTMLAttributes<HTMLInputElemen
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
   ghost?: boolean
   hint?: ReactNode
+  ref?: React.Ref<HTMLInputElement>
 }
 
-export const Validator = forwardRef<HTMLInputElement, ValidatorProps>(
-  ({ className, variant, size, ghost, hint, ...props }, ref) => {
-    const classes = clsx(
-      'input',
-      'validator',
-      {
-        [`input-${variant}`]: variant,
-        [`input-${size}`]: size,
-        'input-ghost': ghost,
-      },
-      className,
-    )
+export function Validator({
+  className,
+  variant,
+  size,
+  ghost,
+  hint,
+  ref,
+  ...props
+}: ValidatorProps) {
+  const classes = clsx(
+    'input',
+    'validator',
+    {
+      [`input-${variant}`]: variant,
+      [`input-${size}`]: size,
+      'input-ghost': ghost,
+    },
+    className,
+  )
 
-    return (
-      <>
-        <input ref={ref} className={classes} {...props} />
-        {hint && <p className="validator-hint">{hint}</p>}
-      </>
-    )
-  },
-)
+  return (
+    <>
+      <input ref={ref} className={classes} {...props} />
+      {hint && <p className="validator-hint">{hint}</p>}
+    </>
+  )
+}
 
 Validator.displayName = 'Validator'
 

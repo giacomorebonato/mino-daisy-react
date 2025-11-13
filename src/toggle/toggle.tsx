@@ -1,6 +1,5 @@
 import { clsx } from 'clsx'
 import type { InputHTMLAttributes } from 'react'
-import { forwardRef } from 'react'
 
 export interface ToggleProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'> {
   variant?:
@@ -13,21 +12,20 @@ export interface ToggleProps extends Omit<InputHTMLAttributes<HTMLInputElement>,
     | 'warning'
     | 'error'
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+  ref?: React.Ref<HTMLInputElement>
 }
 
-export const Toggle = forwardRef<HTMLInputElement, ToggleProps>(
-  ({ className, variant, size, ...props }, ref) => {
-    const classes = clsx(
-      'toggle',
-      {
-        [`toggle-${variant}`]: variant,
-        [`toggle-${size}`]: size,
-      },
-      className,
-    )
+export function Toggle({ className, variant, size, ref, ...props }: ToggleProps) {
+  const classes = clsx(
+    'toggle',
+    {
+      [`toggle-${variant}`]: variant,
+      [`toggle-${size}`]: size,
+    },
+    className,
+  )
 
-    return <input ref={ref} type="checkbox" className={classes} {...props} />
-  },
-)
+  return <input ref={ref} type="checkbox" className={classes} {...props} />
+}
 
 Toggle.displayName = 'Toggle'

@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import { forwardRef, type ProgressHTMLAttributes } from 'react'
+import type { ProgressHTMLAttributes } from 'react'
 
 export interface ProgressProps extends ProgressHTMLAttributes<HTMLProgressElement> {
   variant?:
@@ -11,19 +11,18 @@ export interface ProgressProps extends ProgressHTMLAttributes<HTMLProgressElemen
     | 'success'
     | 'warning'
     | 'error'
+  ref?: React.Ref<HTMLProgressElement>
 }
 
-export const Progress = forwardRef<HTMLProgressElement, ProgressProps>(
-  ({ className, variant, ...props }, ref) => {
-    const classes = clsx(
-      'progress',
-      {
-        [`progress-${variant}`]: variant,
-      },
-      className,
-    )
-    return <progress ref={ref} className={classes} max={100} {...props} />
-  },
-)
+export function Progress({ className, variant, ref, ...props }: ProgressProps) {
+  const classes = clsx(
+    'progress',
+    {
+      [`progress-${variant}`]: variant,
+    },
+    className,
+  )
+  return <progress ref={ref} className={classes} max={100} {...props} />
+}
 
 Progress.displayName = 'Progress'
