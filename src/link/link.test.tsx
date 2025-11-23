@@ -19,33 +19,33 @@ describe('Link', () => {
   })
 
   it('applies variant classes', () => {
-    const { container, rerender } = render(<Link variant="primary">Link</Link>)
+    const { container, rerender } = render(<Link className="link-primary">Link</Link>)
     expect(container.firstChild).toHaveClass('link-primary')
 
-    rerender(<Link variant="secondary">Link</Link>)
+    rerender(<Link className="link-secondary">Link</Link>)
     expect(container.firstChild).toHaveClass('link-secondary')
 
-    rerender(<Link variant="accent">Link</Link>)
+    rerender(<Link className="link-accent">Link</Link>)
     expect(container.firstChild).toHaveClass('link-accent')
 
-    rerender(<Link variant="neutral">Link</Link>)
+    rerender(<Link className="link-neutral">Link</Link>)
     expect(container.firstChild).toHaveClass('link-neutral')
 
-    rerender(<Link variant="success">Link</Link>)
+    rerender(<Link className="link-success">Link</Link>)
     expect(container.firstChild).toHaveClass('link-success')
 
-    rerender(<Link variant="info">Link</Link>)
+    rerender(<Link className="link-info">Link</Link>)
     expect(container.firstChild).toHaveClass('link-info')
 
-    rerender(<Link variant="warning">Link</Link>)
+    rerender(<Link className="link-warning">Link</Link>)
     expect(container.firstChild).toHaveClass('link-warning')
 
-    rerender(<Link variant="error">Link</Link>)
+    rerender(<Link className="link-error">Link</Link>)
     expect(container.firstChild).toHaveClass('link-error')
   })
 
   it('applies hover class when hover prop is true', () => {
-    const { container } = render(<Link hover>Link</Link>)
+    const { container } = render(<Link className="link-hover">Link</Link>)
     expect(container.firstChild).toHaveClass('link-hover')
   })
 

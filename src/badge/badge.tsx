@@ -3,31 +3,11 @@ import type { HTMLAttributes, ReactNode } from 'react'
 
 export interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
   children: ReactNode
-  variant?:
-    | 'neutral'
-    | 'primary'
-    | 'secondary'
-    | 'accent'
-    | 'info'
-    | 'success'
-    | 'warning'
-    | 'error'
-  size?: 'xs' | 'sm' | 'md' | 'lg'
-  outline?: boolean
 }
 
-export function Badge({ children, className, variant, size, outline, ...props }: BadgeProps) {
-  const classes = clsx(
-    'badge',
-    {
-      [`badge-${variant}`]: variant,
-      [`badge-${size}`]: size,
-      'badge-outline': outline,
-    },
-    className,
-  )
+export function Badge({ children, className, ...props }: BadgeProps) {
   return (
-    <span className={classes} {...props}>
+    <span className={clsx('badge', className)} {...props}>
       {children}
     </span>
   )

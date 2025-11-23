@@ -3,21 +3,11 @@ import type { HTMLAttributes, LiHTMLAttributes, ReactNode } from 'react'
 
 export interface StepsProps extends HTMLAttributes<HTMLUListElement> {
   children: ReactNode
-  vertical?: boolean
-  horizontal?: boolean
 }
 
-export function Steps({ children, className, vertical, horizontal, ...props }: StepsProps) {
-  const classes = clsx(
-    'steps',
-    {
-      'steps-vertical': vertical,
-      'steps-horizontal': horizontal,
-    },
-    className,
-  )
+export function Steps({ children, className, ...props }: StepsProps) {
   return (
-    <ul className={classes} {...props}>
+    <ul className={clsx('steps', className)} {...props}>
       {children}
     </ul>
   )
@@ -27,28 +17,12 @@ Steps.displayName = 'Steps'
 
 export interface StepProps extends LiHTMLAttributes<HTMLLIElement> {
   children: ReactNode
-  variant?:
-    | 'neutral'
-    | 'primary'
-    | 'secondary'
-    | 'accent'
-    | 'info'
-    | 'success'
-    | 'warning'
-    | 'error'
   dataContent?: string
 }
 
-export function Step({ children, className, variant, dataContent, ...props }: StepProps) {
-  const classes = clsx(
-    'step',
-    {
-      [`step-${variant}`]: variant,
-    },
-    className,
-  )
+export function Step({ children, className, dataContent, ...props }: StepProps) {
   return (
-    <li className={classes} data-content={dataContent} {...props}>
+    <li className={clsx('step', className)} data-content={dataContent} {...props}>
       {children}
     </li>
   )

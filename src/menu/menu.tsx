@@ -3,21 +3,11 @@ import type { HTMLAttributes, ReactNode } from 'react'
 
 export interface MenuProps extends HTMLAttributes<HTMLUListElement> {
   children: ReactNode
-  horizontal?: boolean
-  size?: 'xs' | 'sm' | 'md' | 'lg'
 }
 
-export function Menu({ children, className, horizontal, size, ...props }: MenuProps) {
-  const classes = clsx(
-    'menu',
-    {
-      'menu-horizontal': horizontal,
-      [`menu-${size}`]: size,
-    },
-    className,
-  )
+export function Menu({ children, className, ...props }: MenuProps) {
   return (
-    <ul className={classes} {...props}>
+    <ul className={clsx('menu', className)} {...props}>
       {children}
     </ul>
   )

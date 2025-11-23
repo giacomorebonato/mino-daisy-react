@@ -3,33 +3,11 @@ import type { HTMLAttributes, LiHTMLAttributes, ReactNode } from 'react'
 
 export interface TimelineProps extends HTMLAttributes<HTMLUListElement> {
   children: ReactNode
-  vertical?: boolean
-  horizontal?: boolean
-  snap?: boolean
-  compact?: boolean
 }
 
-export function Timeline({
-  children,
-  className,
-  vertical,
-  horizontal,
-  snap,
-  compact,
-  ...props
-}: TimelineProps) {
-  const classes = clsx(
-    'timeline',
-    {
-      'timeline-vertical': vertical,
-      'timeline-horizontal': horizontal,
-      'timeline-snap-icon': snap,
-      'timeline-compact': compact,
-    },
-    className,
-  )
+export function Timeline({ children, className, ...props }: TimelineProps) {
   return (
-    <ul className={classes} {...props}>
+    <ul className={clsx('timeline', className)} {...props}>
       {children}
     </ul>
   )

@@ -8,22 +8,34 @@ describe('Navbar', () => {
     expect(screen.getByText('Navbar content')).toBeInTheDocument()
   })
 
+  it('renders as nav element', () => {
+    const { container } = render(<Navbar>Content</Navbar>)
+    const navbar = container.querySelector('nav')
+    expect(navbar).toBeInTheDocument()
+  })
+
   it('applies navbar class', () => {
     const { container } = render(<Navbar>Content</Navbar>)
-    const navbar = container.querySelector('div')
+    const navbar = container.querySelector('nav')
     expect(navbar).toHaveClass('navbar')
   })
 
   it('merges custom className with component classes', () => {
     const { container } = render(<Navbar className="custom-class">Content</Navbar>)
-    const navbar = container.querySelector('div')
+    const navbar = container.querySelector('nav')
     expect(navbar).toHaveClass('navbar')
     expect(navbar).toHaveClass('custom-class')
   })
 
   it('passes through additional props', () => {
     const { container } = render(<Navbar data-testid="navbar-element">Content</Navbar>)
-    expect(container.querySelector('div')).toHaveAttribute('data-testid', 'navbar-element')
+    expect(container.querySelector('nav')).toHaveAttribute('data-testid', 'navbar-element')
+  })
+
+  it('forwards ref correctly', () => {
+    const ref = { current: null }
+    render(<Navbar ref={ref}>Content</Navbar>)
+    expect(ref.current).toBeInstanceOf(HTMLElement)
   })
 })
 
@@ -45,6 +57,12 @@ describe('NavbarStart', () => {
     expect(section).toHaveClass('navbar-start')
     expect(section).toHaveClass('custom')
   })
+
+  it('forwards ref correctly', () => {
+    const ref = { current: null }
+    render(<NavbarStart ref={ref}>Content</NavbarStart>)
+    expect(ref.current).toBeInstanceOf(HTMLDivElement)
+  })
 })
 
 describe('NavbarCenter', () => {
@@ -65,6 +83,12 @@ describe('NavbarCenter', () => {
     expect(section).toHaveClass('navbar-center')
     expect(section).toHaveClass('custom')
   })
+
+  it('forwards ref correctly', () => {
+    const ref = { current: null }
+    render(<NavbarCenter ref={ref}>Content</NavbarCenter>)
+    expect(ref.current).toBeInstanceOf(HTMLDivElement)
+  })
 })
 
 describe('NavbarEnd', () => {
@@ -84,5 +108,11 @@ describe('NavbarEnd', () => {
     const section = container.querySelector('div')
     expect(section).toHaveClass('navbar-end')
     expect(section).toHaveClass('custom')
+  })
+
+  it('forwards ref correctly', () => {
+    const ref = { current: null }
+    render(<NavbarEnd ref={ref}>Content</NavbarEnd>)
+    expect(ref.current).toBeInstanceOf(HTMLDivElement)
   })
 })

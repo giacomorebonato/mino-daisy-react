@@ -9,21 +9,17 @@ describe('Toast', () => {
   })
 
   it('applies horizontal position classes', () => {
-    render(<Toast horizontal="end">End toast</Toast>)
+    render(<Toast className="toast-end">End toast</Toast>)
     expect(screen.getByText('End toast')).toHaveClass('toast-end')
   })
 
   it('applies vertical position classes', () => {
-    render(<Toast vertical="top">Top toast</Toast>)
+    render(<Toast className="toast-top">Top toast</Toast>)
     expect(screen.getByText('Top toast')).toHaveClass('toast-top')
   })
 
   it('applies multiple position classes', () => {
-    render(
-      <Toast horizontal="end" vertical="top">
-        Top-end toast
-      </Toast>,
-    )
+    render(<Toast className="toast-end toast-top">Top-end toast</Toast>)
     const toast = screen.getByText('Top-end toast')
     expect(toast).toHaveClass('toast-end')
     expect(toast).toHaveClass('toast-top')
@@ -37,11 +33,7 @@ describe('Toast', () => {
   })
 
   it('applies center positioning', () => {
-    render(
-      <Toast horizontal="center" vertical="middle">
-        Center toast
-      </Toast>,
-    )
+    render(<Toast className="toast-center toast-middle">Center toast</Toast>)
     const toast = screen.getByText('Center toast')
     expect(toast).toHaveClass('toast-center')
     expect(toast).toHaveClass('toast-middle')

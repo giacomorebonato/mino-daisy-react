@@ -9,17 +9,17 @@ describe('Button', () => {
   })
 
   it('applies variant classes', () => {
-    render(<Button variant="primary">Primary</Button>)
+    render(<Button className="btn-primary">Primary</Button>)
     expect(screen.getByText('Primary')).toHaveClass('btn-primary')
   })
 
   it('applies size classes', () => {
-    render(<Button size="lg">Large</Button>)
+    render(<Button className="btn-lg">Large</Button>)
     expect(screen.getByText('Large')).toHaveClass('btn-lg')
   })
 
   it('applies outline class when outline prop is true', () => {
-    render(<Button outline>Outline</Button>)
+    render(<Button className="btn-outline">Outline</Button>)
     expect(screen.getByText('Outline')).toHaveClass('btn-outline')
   })
 
@@ -29,7 +29,7 @@ describe('Button', () => {
   })
 
   it('disables button when loading prop is true', () => {
-    render(<Button loading>Loading</Button>)
+    render(<Button disabled>Loading</Button>)
     expect(screen.getByText('Loading')).toBeDisabled()
   })
 

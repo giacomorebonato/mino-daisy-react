@@ -1,16 +1,17 @@
 import clsx from 'clsx'
 import type { HTMLAttributes, ReactNode } from 'react'
 
-export interface NavbarProps extends HTMLAttributes<HTMLDivElement> {
+export interface NavbarProps extends HTMLAttributes<HTMLElement> {
   children: ReactNode
+  ref?: React.Ref<HTMLElement>
 }
 
-export function Navbar({ children, className, ...props }: NavbarProps) {
+export function Navbar({ children, className, ref, ...props }: NavbarProps) {
   const classes = clsx('navbar', className)
   return (
-    <div className={classes} {...props}>
+    <nav ref={ref} className={classes} {...props}>
       {children}
-    </div>
+    </nav>
   )
 }
 
@@ -18,12 +19,13 @@ Navbar.displayName = 'Navbar'
 
 export interface NavbarSectionProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode
+  ref?: React.Ref<HTMLDivElement>
 }
 
-export function NavbarStart({ children, className, ...props }: NavbarSectionProps) {
+export function NavbarStart({ children, className, ref, ...props }: NavbarSectionProps) {
   const classes = clsx('navbar-start', className)
   return (
-    <div className={classes} {...props}>
+    <div ref={ref} className={classes} {...props}>
       {children}
     </div>
   )
@@ -31,10 +33,10 @@ export function NavbarStart({ children, className, ...props }: NavbarSectionProp
 
 NavbarStart.displayName = 'NavbarStart'
 
-export function NavbarCenter({ children, className, ...props }: NavbarSectionProps) {
+export function NavbarCenter({ children, className, ref, ...props }: NavbarSectionProps) {
   const classes = clsx('navbar-center', className)
   return (
-    <div className={classes} {...props}>
+    <div ref={ref} className={classes} {...props}>
       {children}
     </div>
   )
@@ -42,10 +44,10 @@ export function NavbarCenter({ children, className, ...props }: NavbarSectionPro
 
 NavbarCenter.displayName = 'NavbarCenter'
 
-export function NavbarEnd({ children, className, ...props }: NavbarSectionProps) {
+export function NavbarEnd({ children, className, ref, ...props }: NavbarSectionProps) {
   const classes = clsx('navbar-end', className)
   return (
-    <div className={classes} {...props}>
+    <div ref={ref} className={classes} {...props}>
       {children}
     </div>
   )

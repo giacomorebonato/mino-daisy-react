@@ -30,7 +30,7 @@ describe('Menu', () => {
 
   it('applies horizontal class when horizontal prop is true', () => {
     const { container } = render(
-      <Menu horizontal>
+      <Menu className="menu-horizontal">
         <li>Item</li>
       </Menu>,
     )
@@ -40,7 +40,7 @@ describe('Menu', () => {
 
   it('applies size classes', () => {
     const { container, rerender } = render(
-      <Menu size="xs">
+      <Menu className="menu-xs">
         <li>Item</li>
       </Menu>,
     )
@@ -48,7 +48,7 @@ describe('Menu', () => {
     expect(menu).toHaveClass('menu-xs')
 
     rerender(
-      <Menu size="sm">
+      <Menu className="menu-sm">
         <li>Item</li>
       </Menu>,
     )
@@ -56,7 +56,7 @@ describe('Menu', () => {
     expect(menu).toHaveClass('menu-sm')
 
     rerender(
-      <Menu size="md">
+      <Menu className="menu-md">
         <li>Item</li>
       </Menu>,
     )
@@ -64,7 +64,7 @@ describe('Menu', () => {
     expect(menu).toHaveClass('menu-md')
 
     rerender(
-      <Menu size="lg">
+      <Menu className="menu-lg">
         <li>Item</li>
       </Menu>,
     )

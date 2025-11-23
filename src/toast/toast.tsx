@@ -1,23 +1,11 @@
 import { clsx } from 'clsx'
 import type { HTMLAttributes } from 'react'
 
-export interface ToastProps extends HTMLAttributes<HTMLDivElement> {
-  horizontal?: 'start' | 'center' | 'end'
-  vertical?: 'top' | 'middle' | 'bottom'
-}
+export interface ToastProps extends HTMLAttributes<HTMLDivElement> {}
 
-export function Toast({ children, className, horizontal, vertical, ...props }: ToastProps) {
-  const classes = clsx(
-    'toast',
-    {
-      [`toast-${horizontal}`]: horizontal,
-      [`toast-${vertical}`]: vertical,
-    },
-    className,
-  )
-
+export function Toast({ children, className, ...props }: ToastProps) {
   return (
-    <div className={classes} {...props}>
+    <div className={clsx('toast', className)} {...props}>
       {children}
     </div>
   )

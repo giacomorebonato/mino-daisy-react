@@ -16,7 +16,7 @@ describe('Tooltip', () => {
 
   it('applies position classes', () => {
     render(
-      <Tooltip tip="Test" position="bottom">
+      <Tooltip tip="Test" className="tooltip-bottom">
         Content
       </Tooltip>,
     )
@@ -25,7 +25,7 @@ describe('Tooltip', () => {
 
   it('applies variant classes', () => {
     render(
-      <Tooltip tip="Test" variant="primary">
+      <Tooltip tip="Test" className="tooltip-primary">
         Content
       </Tooltip>,
     )
@@ -34,7 +34,7 @@ describe('Tooltip', () => {
 
   it('applies open class when open prop is true', () => {
     render(
-      <Tooltip tip="Test" open>
+      <Tooltip tip="Test" className="tooltip-open">
         Content
       </Tooltip>,
     )
@@ -54,7 +54,7 @@ describe('Tooltip', () => {
 
   it('applies multiple modifiers together', () => {
     render(
-      <Tooltip tip="Test" position="right" variant="success" open>
+      <Tooltip tip="Test" className="tooltip-right tooltip-success tooltip-open">
         Content
       </Tooltip>,
     )

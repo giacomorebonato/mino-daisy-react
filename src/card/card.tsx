@@ -3,33 +3,11 @@ import type { HTMLAttributes, ReactNode } from 'react'
 
 export interface CardProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode
-  compact?: boolean
-  side?: boolean
-  bordered?: boolean
-  imageFull?: boolean
 }
 
-export function Card({
-  children,
-  className,
-  compact,
-  side,
-  bordered,
-  imageFull,
-  ...props
-}: CardProps) {
-  const classes = clsx(
-    'card',
-    {
-      'card-compact': compact,
-      'card-side': side,
-      'card-bordered': bordered,
-      'image-full': imageFull,
-    },
-    className,
-  )
+export function Card({ children, className, ...props }: CardProps) {
   return (
-    <div className={classes} {...props}>
+    <div className={clsx('card', className)} {...props}>
       {children}
     </div>
   )

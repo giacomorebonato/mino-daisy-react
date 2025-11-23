@@ -18,17 +18,17 @@ describe('Carousel', () => {
   })
 
   it('applies carousel-vertical class when vertical prop is true', () => {
-    const { container } = render(<Carousel vertical>Content</Carousel>)
+    const { container } = render(<Carousel className="carousel-vertical">Content</Carousel>)
     expect(container.firstChild).toHaveClass('carousel', 'carousel-vertical')
   })
 
   it('applies carousel-center class when center prop is true', () => {
-    const { container } = render(<Carousel center>Content</Carousel>)
+    const { container } = render(<Carousel className="carousel-center">Content</Carousel>)
     expect(container.firstChild).toHaveClass('carousel', 'carousel-center')
   })
 
   it('applies carousel-end class when end prop is true', () => {
-    const { container } = render(<Carousel end>Content</Carousel>)
+    const { container } = render(<Carousel className="carousel-end">Content</Carousel>)
     expect(container.firstChild).toHaveClass('carousel', 'carousel-end')
   })
 

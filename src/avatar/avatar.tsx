@@ -1,44 +1,21 @@
 import { clsx } from 'clsx'
 import type { HTMLAttributes } from 'react'
 
-export interface AvatarProps extends HTMLAttributes<HTMLDivElement> {
-  online?: boolean
-  offline?: boolean
-  placeholder?: boolean
-}
+export interface AvatarProps extends HTMLAttributes<HTMLDivElement> {}
 
 export interface AvatarGroupProps extends HTMLAttributes<HTMLDivElement> {}
 
-export function Avatar({
-  children,
-  className,
-  online,
-  offline,
-  placeholder,
-  ...props
-}: AvatarProps) {
-  const classes = clsx(
-    'avatar',
-    {
-      'avatar-online': online,
-      'avatar-offline': offline,
-      'avatar-placeholder': placeholder,
-    },
-    className,
-  )
-
+export function Avatar({ children, className, ...props }: AvatarProps) {
   return (
-    <div className={classes} {...props}>
+    <div className={clsx('avatar', className)} {...props}>
       {children}
     </div>
   )
 }
 
 export function AvatarGroup({ children, className, ...props }: AvatarGroupProps) {
-  const classes = clsx('avatar-group', className)
-
   return (
-    <div className={classes} {...props}>
+    <div className={clsx('avatar-group', className)} {...props}>
       {children}
     </div>
   )

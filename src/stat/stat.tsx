@@ -3,21 +3,11 @@ import type { HTMLAttributes, ReactNode } from 'react'
 
 export interface StatsProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode
-  vertical?: boolean
-  horizontal?: boolean
 }
 
-export function Stats({ children, className, vertical, horizontal, ...props }: StatsProps) {
-  const classes = clsx(
-    'stats',
-    {
-      'stats-vertical': vertical,
-      'stats-horizontal': horizontal,
-    },
-    className,
-  )
+export function Stats({ children, className, ...props }: StatsProps) {
   return (
-    <div className={classes} {...props}>
+    <div className={clsx('stats', className)} {...props}>
       {children}
     </div>
   )

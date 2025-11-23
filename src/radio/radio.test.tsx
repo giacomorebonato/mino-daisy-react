@@ -11,12 +11,12 @@ describe('Radio', () => {
   })
 
   it('applies variant classes', () => {
-    render(<Radio variant="primary" data-testid="radio" />)
+    render(<Radio className="radio-primary" data-testid="radio" />)
     expect(screen.getByTestId('radio')).toHaveClass('radio-primary')
   })
 
   it('applies size classes', () => {
-    render(<Radio size="lg" data-testid="radio" />)
+    render(<Radio className="radio-lg" data-testid="radio" />)
     expect(screen.getByTestId('radio')).toHaveClass('radio-lg')
   })
 

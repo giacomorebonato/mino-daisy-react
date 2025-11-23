@@ -9,11 +9,11 @@ describe('Progress', () => {
   })
 
   it('applies variant classes', () => {
-    const { container, rerender } = render(<Progress variant="primary" value={50} />)
+    const { container, rerender } = render(<Progress className="progress-primary" value={50} />)
     let progress = container.querySelector('progress')
     expect(progress).toHaveClass('progress-primary')
 
-    rerender(<Progress variant="secondary" value={50} />)
+    rerender(<Progress className="progress-secondary" value={50} />)
     progress = container.querySelector('progress')
     expect(progress).toHaveClass('progress-secondary')
   })

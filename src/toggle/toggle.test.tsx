@@ -11,12 +11,12 @@ describe('Toggle', () => {
   })
 
   it('applies variant classes', () => {
-    render(<Toggle variant="primary" data-testid="toggle" />)
+    render(<Toggle className="toggle-primary" data-testid="toggle" />)
     expect(screen.getByTestId('toggle')).toHaveClass('toggle-primary')
   })
 
   it('applies size classes', () => {
-    render(<Toggle size="lg" data-testid="toggle" />)
+    render(<Toggle className="toggle-lg" data-testid="toggle" />)
     expect(screen.getByTestId('toggle')).toHaveClass('toggle-lg')
   })
 

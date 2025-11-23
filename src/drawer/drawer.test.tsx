@@ -15,7 +15,7 @@ describe('Drawer', () => {
   })
 
   it('applies drawer-end class when end prop is true', () => {
-    const { container } = render(<Drawer end>Content</Drawer>)
+    const { container } = render(<Drawer className="drawer-end">Content</Drawer>)
     const drawer = container.querySelector('div')
     expect(drawer).toHaveClass('drawer-end')
   })

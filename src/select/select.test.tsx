@@ -16,7 +16,7 @@ describe('Select', () => {
 
   it('applies variant classes', () => {
     render(
-      <Select variant="primary" data-testid="select">
+      <Select className="select-primary" data-testid="select">
         <option>Primary select</option>
       </Select>,
     )
@@ -25,7 +25,7 @@ describe('Select', () => {
 
   it('applies size classes', () => {
     render(
-      <Select size="lg" data-testid="select">
+      <Select className="select-lg" data-testid="select">
         <option>Large select</option>
       </Select>,
     )
@@ -34,7 +34,7 @@ describe('Select', () => {
 
   it('applies ghost style when ghost prop is true', () => {
     render(
-      <Select ghost data-testid="select">
+      <Select className="select-ghost" data-testid="select">
         <option>Ghost select</option>
       </Select>,
     )

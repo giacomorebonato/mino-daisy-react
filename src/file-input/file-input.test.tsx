@@ -11,17 +11,17 @@ describe('FileInput', () => {
   })
 
   it('applies variant classes', () => {
-    render(<FileInput variant="primary" data-testid="file-input" />)
+    render(<FileInput className="file-input-primary" data-testid="file-input" />)
     expect(screen.getByTestId('file-input')).toHaveClass('file-input-primary')
   })
 
   it('applies size classes', () => {
-    render(<FileInput size="lg" data-testid="file-input" />)
+    render(<FileInput className="file-input-lg" data-testid="file-input" />)
     expect(screen.getByTestId('file-input')).toHaveClass('file-input-lg')
   })
 
   it('applies ghost style when ghost prop is true', () => {
-    render(<FileInput ghost data-testid="file-input" />)
+    render(<FileInput className="file-input-ghost" data-testid="file-input" />)
     expect(screen.getByTestId('file-input')).toHaveClass('file-input-ghost')
   })
 

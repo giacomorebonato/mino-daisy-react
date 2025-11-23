@@ -25,7 +25,7 @@ describe('Tabs', () => {
 
   it('applies style classes', () => {
     render(
-      <Tabs tabsStyle="boxed">
+      <Tabs className="tabs-boxed">
         <Tab>Tab</Tab>
       </Tabs>,
     )
@@ -34,7 +34,7 @@ describe('Tabs', () => {
 
   it('applies placement classes', () => {
     render(
-      <Tabs placement="bottom">
+      <Tabs className="tabs-bottom">
         <Tab>Tab</Tab>
       </Tabs>,
     )
@@ -65,7 +65,7 @@ describe('Tab', () => {
   })
 
   it('applies active class when active prop is true', () => {
-    render(<Tab active>Active Tab</Tab>)
+    render(<Tab className="tab-active">Active Tab</Tab>)
     expect(screen.getByRole('tab')).toHaveClass('tab-active')
   })
 
@@ -76,8 +76,8 @@ describe('Tab', () => {
     expect(tab).toBeDisabled()
   })
 
-  it('sets aria-selected when active', () => {
-    render(<Tab active>Active</Tab>)
+  it('sets aria-selected when passed as attribute', () => {
+    render(<Tab aria-selected="true">Active</Tab>)
     expect(screen.getByRole('tab')).toHaveAttribute('aria-selected', 'true')
   })
 

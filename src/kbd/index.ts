@@ -1,2 +1,2 @@
-export type { KbdProps, KbdSize } from './kbd'
+export type { KbdProps } from './kbd'
 export { Kbd } from './kbd'

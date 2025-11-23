@@ -16,7 +16,7 @@ describe('Rating', () => {
 
   it('applies size classes', () => {
     render(
-      <Rating size="lg">
+      <Rating className="rating-lg">
         <RatingItem data-testid="rating-item" />
       </Rating>,
     )
@@ -26,7 +26,7 @@ describe('Rating', () => {
 
   it('applies half class when half prop is true', () => {
     render(
-      <Rating half>
+      <Rating className="rating-half">
         <RatingItem data-testid="rating-item" />
       </Rating>,
     )
@@ -65,14 +65,14 @@ describe('RatingItem', () => {
   })
 
   it('applies mask classes', () => {
-    render(<RatingItem mask="mask-star" data-testid="rating-item" />)
+    render(<RatingItem className="mask mask-star" data-testid="rating-item" />)
     const item = screen.getByTestId('rating-item')
     expect(item).toHaveClass('mask')
     expect(item).toHaveClass('mask-star')
   })
 
   it('applies hidden class when hidden prop is true', () => {
-    render(<RatingItem hidden data-testid="rating-item" />)
+    render(<RatingItem className="rating-hidden" data-testid="rating-item" />)
     expect(screen.getByTestId('rating-item')).toHaveClass('rating-hidden')
   })
 

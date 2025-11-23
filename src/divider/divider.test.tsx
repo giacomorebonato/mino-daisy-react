@@ -19,28 +19,28 @@ describe('Divider', () => {
     > = ['neutral', 'primary', 'secondary', 'accent', 'info', 'success', 'warning', 'error']
 
     for (const variant of variants) {
-      const { container } = render(<Divider variant={variant} />)
+      const { container } = render(<Divider className={`divider-${variant}`} />)
       expect(container.firstChild).toHaveClass('divider', `divider-${variant}`)
     }
   })
 
   it('applies divider-vertical class when vertical prop is true', () => {
-    const { container } = render(<Divider vertical />)
+    const { container } = render(<Divider className="divider-vertical" />)
     expect(container.firstChild).toHaveClass('divider', 'divider-vertical')
   })
 
   it('applies divider-horizontal class when horizontal prop is true', () => {
-    const { container } = render(<Divider horizontal />)
+    const { container } = render(<Divider className="divider-horizontal" />)
     expect(container.firstChild).toHaveClass('divider', 'divider-horizontal')
   })
 
   it('applies divider-start class when start prop is true', () => {
-    const { container } = render(<Divider start />)
+    const { container } = render(<Divider className="divider-start" />)
     expect(container.firstChild).toHaveClass('divider', 'divider-start')
   })
 
   it('applies divider-end class when end prop is true', () => {
-    const { container } = render(<Divider end />)
+    const { container } = render(<Divider className="divider-end" />)
     expect(container.firstChild).toHaveClass('divider', 'divider-end')
   })
 

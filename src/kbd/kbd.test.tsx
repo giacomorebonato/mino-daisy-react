@@ -19,16 +19,16 @@ describe('Kbd', () => {
   })
 
   it('applies size classes', () => {
-    const { container, rerender } = render(<Kbd size="xs">K</Kbd>)
+    const { container, rerender } = render(<Kbd className="kbd-xs">K</Kbd>)
     expect(container.firstChild).toHaveClass('kbd-xs')
 
-    rerender(<Kbd size="sm">K</Kbd>)
+    rerender(<Kbd className="kbd-sm">K</Kbd>)
     expect(container.firstChild).toHaveClass('kbd-sm')
 
-    rerender(<Kbd size="md">K</Kbd>)
+    rerender(<Kbd className="kbd-md">K</Kbd>)
     expect(container.firstChild).toHaveClass('kbd-md')
 
-    rerender(<Kbd size="lg">K</Kbd>)
+    rerender(<Kbd className="kbd-lg">K</Kbd>)
     expect(container.firstChild).toHaveClass('kbd-lg')
   })
 

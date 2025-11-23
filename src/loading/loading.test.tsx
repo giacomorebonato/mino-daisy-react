@@ -14,41 +14,41 @@ describe('Loading', () => {
   })
 
   it('applies spinner type by default', () => {
-    const { container } = render(<Loading />)
+    const { container } = render(<Loading className="loading-spinner" />)
     expect(container.firstChild).toHaveClass('loading-spinner')
   })
 
   it('applies different loading types', () => {
-    const { container, rerender } = render(<Loading type="spinner" />)
+    const { container, rerender } = render(<Loading className="loading-spinner" />)
     expect(container.firstChild).toHaveClass('loading-spinner')
 
-    rerender(<Loading type="dots" />)
+    rerender(<Loading className="loading-dots" />)
     expect(container.firstChild).toHaveClass('loading-dots')
 
-    rerender(<Loading type="ring" />)
+    rerender(<Loading className="loading-ring" />)
     expect(container.firstChild).toHaveClass('loading-ring')
 
-    rerender(<Loading type="ball" />)
+    rerender(<Loading className="loading-ball" />)
     expect(container.firstChild).toHaveClass('loading-ball')
 
-    rerender(<Loading type="bars" />)
+    rerender(<Loading className="loading-bars" />)
     expect(container.firstChild).toHaveClass('loading-bars')
 
-    rerender(<Loading type="infinity" />)
+    rerender(<Loading className="loading-infinity" />)
     expect(container.firstChild).toHaveClass('loading-infinity')
   })
 
   it('applies size classes', () => {
-    const { container, rerender } = render(<Loading size="xs" />)
+    const { container, rerender } = render(<Loading className="loading-xs" />)
     expect(container.firstChild).toHaveClass('loading-xs')
 
-    rerender(<Loading size="sm" />)
+    rerender(<Loading className="loading-sm" />)
     expect(container.firstChild).toHaveClass('loading-sm')
 
-    rerender(<Loading size="md" />)
+    rerender(<Loading className="loading-md" />)
     expect(container.firstChild).toHaveClass('loading-md')
 
-    rerender(<Loading size="lg" />)
+    rerender(<Loading className="loading-lg" />)
     expect(container.firstChild).toHaveClass('loading-lg')
   })
 
@@ -63,7 +63,7 @@ describe('Loading', () => {
   })
 
   it('combines type and size', () => {
-    const { container } = render(<Loading type="dots" size="lg" />)
+    const { container } = render(<Loading className="loading-dots loading-lg" />)
     expect(container.firstChild).toHaveClass('loading', 'loading-dots', 'loading-lg')
   })
 })

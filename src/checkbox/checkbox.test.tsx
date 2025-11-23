@@ -11,12 +11,12 @@ describe('Checkbox', () => {
   })
 
   it('applies variant classes', () => {
-    render(<Checkbox variant="primary" data-testid="checkbox" />)
+    render(<Checkbox className="checkbox-primary" data-testid="checkbox" />)
     expect(screen.getByTestId('checkbox')).toHaveClass('checkbox-primary')
   })
 
   it('applies size classes', () => {
-    render(<Checkbox size="lg" data-testid="checkbox" />)
+    render(<Checkbox className="checkbox-lg" data-testid="checkbox" />)
     expect(screen.getByTestId('checkbox')).toHaveClass('checkbox-lg')
   })
 

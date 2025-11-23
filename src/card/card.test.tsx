@@ -15,25 +15,25 @@ describe('Card', () => {
   })
 
   it('applies compact class when compact prop is true', () => {
-    const { container } = render(<Card compact>Content</Card>)
+    const { container } = render(<Card className="card-compact">Content</Card>)
     const card = container.querySelector('div')
     expect(card).toHaveClass('card-compact')
   })
 
   it('applies side class when side prop is true', () => {
-    const { container } = render(<Card side>Content</Card>)
+    const { container } = render(<Card className="card-side">Content</Card>)
     const card = container.querySelector('div')
     expect(card).toHaveClass('card-side')
   })
 
   it('applies bordered class when bordered prop is true', () => {
-    const { container } = render(<Card bordered>Content</Card>)
+    const { container } = render(<Card className="card-bordered">Content</Card>)
     const card = container.querySelector('div')
     expect(card).toHaveClass('card-bordered')
   })
 
   it('applies image-full class when imageFull prop is true', () => {
-    const { container } = render(<Card imageFull>Content</Card>)
+    const { container } = render(<Card className="image-full">Content</Card>)
     const card = container.querySelector('div')
     expect(card).toHaveClass('image-full')
   })

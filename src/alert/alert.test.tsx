@@ -14,17 +14,17 @@ describe('Alert', () => {
   })
 
   it('applies variant classes', () => {
-    render(<Alert variant="success">Success alert</Alert>)
+    render(<Alert className="alert-success">Success alert</Alert>)
     expect(screen.getByRole('alert')).toHaveClass('alert-success')
   })
 
   it('applies style classes', () => {
-    render(<Alert alertStyle="outline">Outline alert</Alert>)
+    render(<Alert className="alert-outline">Outline alert</Alert>)
     expect(screen.getByRole('alert')).toHaveClass('alert-outline')
   })
 
   it('applies direction classes', () => {
-    render(<Alert direction="vertical">Vertical alert</Alert>)
+    render(<Alert className="alert-vertical">Vertical alert</Alert>)
     expect(screen.getByRole('alert')).toHaveClass('alert-vertical')
   })
 
@@ -36,11 +36,7 @@ describe('Alert', () => {
   })
 
   it('applies multiple modifiers together', () => {
-    render(
-      <Alert variant="info" alertStyle="soft" direction="horizontal">
-        Combined alert
-      </Alert>,
-    )
+    render(<Alert className="alert-info alert-soft alert-horizontal">Combined alert</Alert>)
     const alert = screen.getByRole('alert')
     expect(alert).toHaveClass('alert-info')
     expect(alert).toHaveClass('alert-soft')

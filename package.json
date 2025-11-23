@@ -4,19 +4,11 @@
     "type": "git",
     "url": "https://github.com/giacomorebonato/mino-daisy-react.git"
   },
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "React component library wrapping DaisyUI components",
   "type": "module",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
+  "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
-    }
-  },
   "files": [
     "dist"
   ],

@@ -14,12 +14,12 @@ describe('Stats', () => {
   })
 
   it('applies vertical class when vertical prop is true', () => {
-    const { container } = render(<Stats vertical>Content</Stats>)
+    const { container } = render(<Stats className="stats-vertical">Content</Stats>)
     expect(container.querySelector('div')).toHaveClass('stats-vertical')
   })
 
   it('applies horizontal class when horizontal prop is true', () => {
-    const { container } = render(<Stats horizontal>Content</Stats>)
+    const { container } = render(<Stats className="stats-horizontal">Content</Stats>)
     expect(container.querySelector('div')).toHaveClass('stats-horizontal')
   })
 })

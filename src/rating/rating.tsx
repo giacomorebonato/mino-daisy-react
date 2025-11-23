@@ -1,47 +1,18 @@
 import { clsx } from 'clsx'
 import type { HTMLAttributes, InputHTMLAttributes } from 'react'
 
-export interface RatingProps extends HTMLAttributes<HTMLDivElement> {
-  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
-  half?: boolean
-}
+export interface RatingProps extends HTMLAttributes<HTMLDivElement> {}
 
-export interface RatingItemProps extends InputHTMLAttributes<HTMLInputElement> {
-  mask?: string
-  hidden?: boolean
-}
+export interface RatingItemProps extends InputHTMLAttributes<HTMLInputElement> {}
 
-export function Rating({ children, className, size, half, ...props }: RatingProps) {
-  const classes = clsx(
-    'rating',
-    {
-      [`rating-${size}`]: size,
-      'rating-half': half,
-    },
-    className,
-  )
-
+export function Rating({ children, className, ...props }: RatingProps) {
   return (
-    <div className={classes} {...props}>
+    <div className={clsx('rating', className)} {...props}>
       {children}
     </div>
   )
 }
 
-export function RatingItem({
-  className,
-  mask,
-  hidden,
-  name = 'rating',
-  ...props
-}: RatingItemProps) {
-  const classes = clsx(
-    {
-      'rating-hidden': hidden,
-      [`mask ${mask}`]: mask,
-    },
-    className,
-  )
-
-  return <input type="radio" name={name} className={classes} {...props} />
+export function RatingItem({ className, name = 'rating', ...props }: RatingItemProps) {
+  return <input type="radio" name={name} className={className} {...props} />
 }

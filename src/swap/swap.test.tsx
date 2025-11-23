@@ -25,7 +25,7 @@ describe('Swap', () => {
 
   it('applies active class when active prop is true', () => {
     render(
-      <Swap active data-testid="swap">
+      <Swap className="swap-active" data-testid="swap">
         <SwapOn>On</SwapOn>
       </Swap>,
     )
@@ -34,7 +34,7 @@ describe('Swap', () => {
 
   it('applies rotate class when rotate prop is true', () => {
     render(
-      <Swap rotate data-testid="swap">
+      <Swap className="swap-rotate" data-testid="swap">
         <SwapOn>On</SwapOn>
       </Swap>,
     )
@@ -43,7 +43,7 @@ describe('Swap', () => {
 
   it('applies flip class when flip prop is true', () => {
     render(
-      <Swap flip data-testid="swap">
+      <Swap className="swap-flip" data-testid="swap">
         <SwapOn>On</SwapOn>
       </Swap>,
     )

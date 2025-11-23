@@ -1,33 +1,12 @@
 import { clsx } from 'clsx'
 import type { InputHTMLAttributes } from 'react'
 
-export interface InputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'> {
-  variant?:
-    | 'neutral'
-    | 'primary'
-    | 'secondary'
-    | 'accent'
-    | 'info'
-    | 'success'
-    | 'warning'
-    | 'error'
-  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
-  ghost?: boolean
+export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   ref?: React.Ref<HTMLInputElement>
 }
 
-export function Input({ className, variant, size, ghost, ref, ...props }: InputProps) {
-  const classes = clsx(
-    'input',
-    {
-      [`input-${variant}`]: variant,
-      [`input-${size}`]: size,
-      'input-ghost': ghost,
-    },
-    className,
-  )
-
-  return <input ref={ref} className={classes} {...props} />
+export function Input({ className, ref, ...props }: InputProps) {
+  return <input ref={ref} className={clsx('input', className)} {...props} />
 }
 
 Input.displayName = 'Input'

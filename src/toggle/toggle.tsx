@@ -1,31 +1,12 @@
 import { clsx } from 'clsx'
 import type { InputHTMLAttributes } from 'react'
 
-export interface ToggleProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'> {
-  variant?:
-    | 'neutral'
-    | 'primary'
-    | 'secondary'
-    | 'accent'
-    | 'info'
-    | 'success'
-    | 'warning'
-    | 'error'
-  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+export interface ToggleProps extends InputHTMLAttributes<HTMLInputElement> {
   ref?: React.Ref<HTMLInputElement>
 }
 
-export function Toggle({ className, variant, size, ref, ...props }: ToggleProps) {
-  const classes = clsx(
-    'toggle',
-    {
-      [`toggle-${variant}`]: variant,
-      [`toggle-${size}`]: size,
-    },
-    className,
-  )
-
-  return <input ref={ref} type="checkbox" className={classes} {...props} />
+export function Toggle({ className, ref, ...props }: ToggleProps) {
+  return <input ref={ref} type="checkbox" className={clsx('toggle', className)} {...props} />
 }
 
 Toggle.displayName = 'Toggle'

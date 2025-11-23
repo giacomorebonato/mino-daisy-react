@@ -33,7 +33,7 @@ describe('Dropdown', () => {
       <Dropdown
         trigger={<button type="button">Click me</button>}
         content={<div>Content</div>}
-        placement="end"
+        className="dropdown-end"
       />,
     )
 
@@ -46,7 +46,7 @@ describe('Dropdown', () => {
       <Dropdown
         trigger={<button type="button">Click me</button>}
         content={<div>Content</div>}
-        position="top"
+        className="dropdown-top"
       />,
     )
 
@@ -59,7 +59,7 @@ describe('Dropdown', () => {
       <Dropdown
         trigger={<button type="button">Click me</button>}
         content={<div>Content</div>}
-        hover
+        className="dropdown-hover"
       />,
     )
 
@@ -72,7 +72,7 @@ describe('Dropdown', () => {
       <Dropdown
         trigger={<button type="button">Click me</button>}
         content={<div>Content</div>}
-        forceOpen
+        className="dropdown-open"
       />,
     )
 
@@ -111,9 +111,7 @@ describe('Dropdown', () => {
       <Dropdown
         trigger={<button type="button">Click me</button>}
         content={<div>Content</div>}
-        placement="end"
-        position="top"
-        hover
+        className="dropdown-end dropdown-top dropdown-hover"
       />,
     )
 

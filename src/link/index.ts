@@ -1,2 +1,2 @@
-export type { LinkProps, LinkVariant } from './link'
+export type { LinkProps } from './link'
 export { Link } from './link'

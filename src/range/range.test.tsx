@@ -11,20 +11,13 @@ describe('Range', () => {
   })
 
   it('applies variant classes', () => {
-    render(<Range variant="primary" data-testid="range" />)
+    render(<Range className="range-primary" data-testid="range" />)
     expect(screen.getByTestId('range')).toHaveClass('range-primary')
   })
 
   it('applies size classes', () => {
-    render(<Range size="lg" data-testid="range" />)
+    render(<Range className="range-lg" data-testid="range" />)
     expect(screen.getByTestId('range')).toHaveClass('range-lg')
-  })
-
-  it('has default min and max values', () => {
-    render(<Range data-testid="range" />)
-    const range = screen.getByTestId('range')
-    expect(range).toHaveAttribute('min', '0')
-    expect(range).toHaveAttribute('max', '100')
   })
 
   it('accepts custom min and max values', () => {

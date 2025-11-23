@@ -24,7 +24,7 @@ describe('Modal', () => {
 
   it('applies placement classes', () => {
     render(
-      <Modal open placement="top">
+      <Modal open className="modal-top">
         <ModalBox>Top modal</ModalBox>
       </Modal>,
     )

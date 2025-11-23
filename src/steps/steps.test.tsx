@@ -26,7 +26,7 @@ describe('Step', () => {
   })
 
   it('applies variant classes', () => {
-    const { container } = render(<Step variant="primary">Step</Step>)
+    const { container } = render(<Step className="step-primary">Step</Step>)
     expect(container.querySelector('li')).toHaveClass('step-primary')
   })
 

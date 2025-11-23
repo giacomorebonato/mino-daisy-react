@@ -23,7 +23,7 @@ describe('Fab', () => {
 
   it('applies flower class when flower prop is true', () => {
     const { container } = render(
-      <Fab flower>
+      <Fab className="fab-flower">
         <button type="button">Action</button>
       </Fab>,
     )

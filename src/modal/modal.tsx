@@ -3,7 +3,6 @@ import type { DialogHTMLAttributes, FormHTMLAttributes, HTMLAttributes } from 'r
 
 export interface ModalProps extends DialogHTMLAttributes<HTMLDialogElement> {
   open?: boolean
-  placement?: 'top' | 'middle' | 'bottom' | 'start' | 'end'
   ref?: React.Ref<HTMLDialogElement>
 }
 
@@ -13,12 +12,11 @@ export interface ModalActionProps extends HTMLAttributes<HTMLDivElement> {}
 
 export interface ModalBackdropProps extends FormHTMLAttributes<HTMLFormElement> {}
 
-export function Modal({ children, className, open, placement, ref, ...props }: ModalProps) {
+export function Modal({ children, className, open, ref, ...props }: ModalProps) {
   const classes = clsx(
     'modal',
     {
       'modal-open': open,
-      [`modal-${placement}`]: placement,
     },
     className,
   )

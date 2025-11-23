@@ -18,12 +18,12 @@ describe('Chat', () => {
   })
 
   it('applies chat-start class when start prop is true', () => {
-    const { container } = render(<Chat start>Content</Chat>)
+    const { container } = render(<Chat className="chat-start">Content</Chat>)
     expect(container.firstChild).toHaveClass('chat', 'chat-start')
   })
 
   it('applies chat-end class when end prop is true', () => {
-    const { container } = render(<Chat end>Content</Chat>)
+    const { container } = render(<Chat className="chat-end">Content</Chat>)
     expect(container.firstChild).toHaveClass('chat', 'chat-end')
   })
 
@@ -122,7 +122,9 @@ describe('ChatBubble', () => {
     > = ['neutral', 'primary', 'secondary', 'accent', 'info', 'success', 'warning', 'error']
 
     for (const variant of variants) {
-      const { container } = render(<ChatBubble variant={variant}>Content</ChatBubble>)
+      const { container } = render(
+        <ChatBubble className={`chat-bubble-${variant}`}>Content</ChatBubble>,
+      )
       expect(container.firstChild).toHaveClass('chat-bubble', `chat-bubble-${variant}`)
     }
   })

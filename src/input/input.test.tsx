@@ -9,17 +9,17 @@ describe('Input', () => {
   })
 
   it('applies variant classes', () => {
-    render(<Input variant="primary" placeholder="Primary input" />)
+    render(<Input className="input-primary" placeholder="Primary input" />)
     expect(screen.getByPlaceholderText('Primary input')).toHaveClass('input-primary')
   })
 
   it('applies size classes', () => {
-    render(<Input size="lg" placeholder="Large input" />)
+    render(<Input className="input-lg" placeholder="Large input" />)
     expect(screen.getByPlaceholderText('Large input')).toHaveClass('input-lg')
   })
 
   it('applies ghost style when ghost prop is true', () => {
-    render(<Input ghost placeholder="Ghost input" />)
+    render(<Input className="input-ghost" placeholder="Ghost input" />)
     expect(screen.getByPlaceholderText('Ghost input')).toHaveClass('input-ghost')
   })
 

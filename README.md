@@ -91,6 +91,20 @@ This project wraps [DaisyUI](https://daisyui.com/) components into React.
 * `Validator`, `ValidatorHint` - Form validation styling with HTML5 support
 * `ThemeController` - Theme switching control (checkbox, toggle, or swap)
 
+## Design Philosophy
+
+This library provides **minimal React wrappers** around DaisyUI components. Components only include:
+- Base DaisyUI class (e.g., `btn`, `input`, `modal`)
+- Essential behavioral props (e.g., `open`, `disabled`, `checked`)
+- Standard HTML attributes
+- Ref forwarding (React 19 pattern)
+
+**All styling is done via className** using DaisyUI's utility classes. This gives you:
+- Direct access to DaisyUI's full power
+- No abstraction layer to learn
+- Smaller bundle size
+- Type-safe HTML attributes
+
 ## Usage Example
 
 ```tsx
@@ -107,35 +121,69 @@ function MyForm() {
   return (
     <div>
       <Label>
-        <span className="label">Email</span>
+        <span className="label-text">Email</span>
         <Input
           type="email"
-          variant="primary"
+          className="input-bordered input-primary"
           placeholder="you@example.com"
         />
       </Label>
 
       <Label>
-        <span className="label">Country</span>
-        <Select variant="primary">
+        <span className="label-text">Country</span>
+        <Select className="select-bordered select-primary">
           <option>United States</option>
           <option>Canada</option>
           <option>Mexico</option>
         </Select>
       </Label>
 
-      <Label className="flex items-center gap-2">
-        <Toggle variant="primary" />
-        <span>Enable notifications</span>
+      <Label className="flex items-center gap-2 cursor-pointer">
+        <Toggle className="toggle-primary" />
+        <span className="label-text">Enable notifications</span>
       </Label>
 
-      <Button variant="primary" size="lg">
+      <Button className="btn-primary btn-lg btn-wide">
         Submit
       </Button>
     </div>
   )
 }
 ```
+
+### More Examples
+
+```tsx
+// Button variations
+<Button className="btn-primary">Primary</Button>
+<Button className="btn-secondary btn-outline">Secondary Outline</Button>
+<Button className="btn-accent btn-sm" disabled>Small Disabled</Button>
+<Button className="btn-ghost btn-circle">👍</Button>
+
+// Modal with behavioral prop
+<Modal open={isOpen} className="modal-bottom sm:modal-middle">
+  <div className="modal-box">
+    <h3 className="font-bold text-lg">Hello!</h3>
+    <p className="py-4">This is a modal</p>
+  </div>
+</Modal>
+
+// Form inputs
+<Input className="input-bordered input-error" placeholder="Error state" />
+<Textarea className="textarea-bordered textarea-lg" rows={4} />
+<Checkbox className="checkbox-primary checkbox-lg" />
+<Range className="range-primary range-lg" min={0} max={100} />
+
+// Cards and layouts
+<Card className="card-bordered shadow-xl bg-base-100">
+  <CardBody>
+    <CardTitle>Card Title</CardTitle>
+    <p>Card content goes here</p>
+  </CardBody>
+</Card>
+```
+
+For all available DaisyUI classes, see the [DaisyUI documentation](https://daisyui.com/).
 
 ## Component Implementation Status
 

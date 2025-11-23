@@ -3,13 +3,11 @@ import type { HTMLAttributes, InputHTMLAttributes, LabelHTMLAttributes, ReactNod
 
 export interface DrawerProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode
-  end?: boolean
 }
 
-export function Drawer({ children, className, end, ...props }: DrawerProps) {
-  const classes = clsx('drawer', { 'drawer-end': end }, className)
+export function Drawer({ children, className, ...props }: DrawerProps) {
   return (
-    <div className={classes} {...props}>
+    <div className={clsx('drawer', className)} {...props}>
       {children}
     </div>
   )

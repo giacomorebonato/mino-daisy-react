@@ -18,17 +18,17 @@ describe('Avatar', () => {
   })
 
   it('applies avatar-online class when online prop is true', () => {
-    const { container } = render(<Avatar online>Content</Avatar>)
+    const { container } = render(<Avatar className="avatar-online">Content</Avatar>)
     expect(container.firstChild).toHaveClass('avatar', 'avatar-online')
   })
 
   it('applies avatar-offline class when offline prop is true', () => {
-    const { container } = render(<Avatar offline>Content</Avatar>)
+    const { container } = render(<Avatar className="avatar-offline">Content</Avatar>)
     expect(container.firstChild).toHaveClass('avatar', 'avatar-offline')
   })
 
   it('applies avatar-placeholder class when placeholder prop is true', () => {
-    const { container } = render(<Avatar placeholder>Content</Avatar>)
+    const { container } = render(<Avatar className="avatar-placeholder">Content</Avatar>)
     expect(container.firstChild).toHaveClass('avatar', 'avatar-placeholder')
   })
 

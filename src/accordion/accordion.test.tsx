@@ -50,7 +50,7 @@ describe('AccordionItem', () => {
 
   it('applies icon classes', () => {
     render(
-      <AccordionItem icon="arrow">
+      <AccordionItem className="collapse-arrow">
         <AccordionTitle>Title</AccordionTitle>
       </AccordionItem>,
     )

@@ -1,32 +1,11 @@
 import { clsx } from 'clsx'
 import type { HTMLAttributes } from 'react'
 
-export interface AlertProps extends HTMLAttributes<HTMLDivElement> {
-  variant?: 'info' | 'success' | 'warning' | 'error'
-  alertStyle?: 'outline' | 'dash' | 'soft'
-  direction?: 'vertical' | 'horizontal'
-}
+export interface AlertProps extends HTMLAttributes<HTMLDivElement> {}
 
-export function Alert({
-  children,
-  className,
-  variant,
-  alertStyle,
-  direction,
-  ...props
-}: AlertProps) {
-  const classes = clsx(
-    'alert',
-    {
-      [`alert-${variant}`]: variant,
-      [`alert-${alertStyle}`]: alertStyle,
-      [`alert-${direction}`]: direction,
-    },
-    className,
-  )
-
+export function Alert({ children, className, ...props }: AlertProps) {
   return (
-    <div role="alert" className={classes} {...props}>
+    <div role="alert" className={clsx('alert', className)} {...props}>
       {children}
     </div>
   )

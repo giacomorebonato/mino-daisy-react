@@ -16,7 +16,7 @@ describe('Collapse', () => {
 
   it('applies icon classes', () => {
     render(
-      <Collapse icon="arrow">
+      <Collapse className="collapse-arrow">
         <CollapseTitle>Title</CollapseTitle>
       </Collapse>,
     )
@@ -26,7 +26,7 @@ describe('Collapse', () => {
 
   it('applies open class when open prop is true', () => {
     render(
-      <Collapse open>
+      <Collapse className="collapse-open">
         <CollapseTitle>Open</CollapseTitle>
       </Collapse>,
     )
@@ -36,7 +36,7 @@ describe('Collapse', () => {
 
   it('applies close class when open prop is false', () => {
     render(
-      <Collapse open={false}>
+      <Collapse className="collapse-close">
         <CollapseTitle>Closed</CollapseTitle>
       </Collapse>,
     )
