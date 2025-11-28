@@ -67,7 +67,7 @@ This project wraps [DaisyUI](https://daisyui.com/) components into React.
 * `MockupCode` - Code editor appearance
 * `MockupWindow` - OS window frame
 
-### Forms & Input (10/10) ✅
+### Forms & Input (11/11) ✅
 * `Input` - Text entry field with variants and sizes
 * `Textarea` - Multi-line text entry
 * `Select` - Dropdown option picker with optgroup support
@@ -78,6 +78,7 @@ This project wraps [DaisyUI](https://daisyui.com/) components into React.
 * `FileInput` - File upload field
 * `Fieldset`, `FieldsetLegend` - Form section grouping
 * `Label` - Form field labeling (regular and floating)
+* `RichTextEditor` - WYSIWYG rich text editor with Lexical integration
 
 ### Utilities & Special (10/10) ✅
 * `Loading` - Activity animation with 6 type variants
@@ -209,6 +210,7 @@ For all available DaisyUI classes, see the [DaisyUI documentation](https://daisy
 - [x] File-Input - File upload field
 - [x] Fieldset - Form section grouping
 - [x] Label - Input field labeling
+- [x] RichTextEditor - WYSIWYG rich text editor with Lexical
 
 ### Data Display
 
@@ -273,4 +275,4 @@ For all available DaisyUI classes, see the [DaisyUI documentation](https://daisy
 
 ### Progress
 
-63/79 components implemented (79.7%)
+64/80 components implemented (80.0%)
