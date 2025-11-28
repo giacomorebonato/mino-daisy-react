@@ -29,7 +29,6 @@
   ],
   "author": "Giacomo Rebonato",
   "license": "MIT",
-  "packageManager": "pnpm@10.20.0",
   "peerDependencies": {
     "daisyui": ">=5.0.0",
     "react": ">=19.0.0",
