@@ -1,14 +1,18 @@
 import { $generateHtmlFromNodes, $generateNodesFromDOM } from '@lexical/html'
+import { $convertFromMarkdownString, $convertToMarkdownString } from '@lexical/markdown'
 import { useLexicalComposerContext } from '@lexical/react/LexicalComposerContext'
+import { MarkdownShortcutPlugin as LexicalMarkdownShortcutPlugin } from '@lexical/react/LexicalMarkdownShortcutPlugin'
 import type { LexicalEditor } from 'lexical'
 import { $getRoot } from 'lexical'
 import { useEffect, useRef } from 'react'
+import { MARKDOWN_TRANSFORMERS } from './markdown-transformers'
 
 export interface OnChangePluginProps {
-  onChange?: (html: string) => void
+  onChange?: (content: string) => void
+  contentFormat?: 'html' | 'markdown'
 }
 
-export function OnChangePlugin({ onChange }: OnChangePluginProps) {
+export function OnChangePlugin({ onChange, contentFormat = 'html' }: OnChangePluginProps) {
   const [editor] = useLexicalComposerContext()
 
   useEffect(() => {
@@ -16,11 +20,16 @@ export function OnChangePlugin({ onChange }: OnChangePluginProps) {
 
     return editor.registerUpdateListener(({ editorState }) => {
       editorState.read(() => {
-        const html = $generateHtmlFromNodes(editor)
-        onChange(html)
+        if (contentFormat === 'markdown') {
+          const markdown = $convertToMarkdownString(MARKDOWN_TRANSFORMERS)
+          onChange(markdown)
+        } else {
+          const html = $generateHtmlFromNodes(editor)
+          onChange(html)
+        }
       })
     })
-  }, [editor, onChange])
+  }, [editor, onChange, contentFormat])
 
   return null
 }
@@ -47,9 +56,13 @@ export function RefPlugin({ editorRef }: RefPluginProps) {
 
 export interface InitialContentPluginProps {
   content?: string
+  contentFormat?: 'html' | 'markdown'
 }
 
-export function InitialContentPlugin({ content }: InitialContentPluginProps) {
+export function InitialContentPlugin({
+  content,
+  contentFormat = 'html',
+}: InitialContentPluginProps) {
   const [editor] = useLexicalComposerContext()
   const isInitialized = useRef(false)
 
@@ -58,14 +71,28 @@ export function InitialContentPlugin({ content }: InitialContentPluginProps) {
 
     isInitialized.current = true
     editor.update(() => {
-      const parser = new DOMParser()
-      const dom = parser.parseFromString(content, 'text/html')
-      const nodes = $generateNodesFromDOM(editor, dom)
-      $getRoot()
-        .clear()
-        .append(...nodes)
+      if (contentFormat === 'markdown') {
+        $convertFromMarkdownString(content, MARKDOWN_TRANSFORMERS)
+      } else {
+        const parser = new DOMParser()
+        const dom = parser.parseFromString(content, 'text/html')
+        const nodes = $generateNodesFromDOM(editor, dom)
+        $getRoot()
+          .clear()
+          .append(...nodes)
+      }
     })
-  }, [content, editor])
+  }, [content, contentFormat, editor])
 
   return null
+}
+
+export interface MarkdownShortcutsPluginProps {
+  enabled?: boolean
+}
+
+export function MarkdownShortcutsPlugin({ enabled = false }: MarkdownShortcutsPluginProps) {
+  if (!enabled) return null
+
+  return <LexicalMarkdownShortcutPlugin transformers={MARKDOWN_TRANSFORMERS} />
 }
