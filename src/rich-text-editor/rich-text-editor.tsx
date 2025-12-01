@@ -11,21 +11,54 @@ import { HeadingNode, QuoteNode } from '@lexical/rich-text'
 import { clsx } from 'clsx'
 import type { LexicalEditor } from 'lexical'
 import type { HTMLAttributes } from 'react'
-import { InitialContentPlugin, OnChangePlugin, RefPlugin } from './plugins'
+import { InitialContentPlugin, MarkdownShortcutsPlugin, OnChangePlugin, RefPlugin } from './plugins'
 import { Toolbar } from './toolbar'
 
 export interface RichTextEditorProps extends Omit<HTMLAttributes<HTMLDivElement>, 'onChange'> {
   /**
-   * Initial HTML content for the editor.
+   * Initial content for the editor.
+   * Format depends on contentFormat prop.
    * For empty state, use empty string or undefined.
    */
   initialContent?: string
 
   /**
    * Callback fired when editor content changes.
-   * Receives HTML string representation of content.
+   * Receives content string in format specified by contentFormat prop.
    */
-  onChange?: (html: string) => void
+  onChange?: (content: string) => void
+
+  /**
+   * Content format for initialContent and onChange output.
+   * - 'html': Accept/export HTML (default, backwards compatible)
+   * - 'markdown': Accept/export markdown while editing in WYSIWYG mode
+   *
+   * Note: When using 'markdown', complex HTML styling may be lost during conversion.
+   * The editor always displays in WYSIWYG mode regardless of format.
+   *
+   * @default 'html'
+   */
+  contentFormat?: 'html' | 'markdown'
+
+  /**
+   * Enable real-time markdown shortcut conversion while typing.
+   * Works independently of contentFormat - you can use markdown shortcuts
+   * even when outputting HTML.
+   *
+   * Supported shortcuts:
+   * - Headings: # H1, ## H2, ### H3, etc.
+   * - Blockquotes: > quote text
+   * - Bold: **text** or __text__
+   * - Italic: *text* or _text_
+   * - Strikethrough: ~~text~~
+   * - Inline code: `code`
+   * - Links: [text](url)
+   * - Unordered lists: - item or * item
+   * - Ordered lists: 1. item
+   *
+   * @default false
+   */
+  enableMarkdownShortcuts?: boolean
 
   /**
    * If true, editor is read-only and toolbar is hidden.
@@ -84,6 +117,8 @@ const editorTheme = {
 export function RichTextEditor({
   initialContent,
   onChange,
+  contentFormat = 'html',
+  enableMarkdownShortcuts = false,
   disabled = false,
   placeholder = 'Start typing...',
   toolbarClassName,
@@ -129,9 +164,12 @@ export function RichTextEditor({
         <HistoryPlugin />
         <ListPlugin />
         <LinkPlugin />
-        <OnChangePlugin onChange={onChange} />
+        <OnChangePlugin onChange={onChange} contentFormat={contentFormat} />
         <RefPlugin editorRef={ref} />
-        {initialContent && <InitialContentPlugin content={initialContent} />}
+        {initialContent && (
+          <InitialContentPlugin content={initialContent} contentFormat={contentFormat} />
+        )}
+        <MarkdownShortcutsPlugin enabled={enableMarkdownShortcuts} />
       </LexicalComposer>
     </div>
   )
