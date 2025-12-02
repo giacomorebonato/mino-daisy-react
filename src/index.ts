@@ -18,6 +18,18 @@ export type { AvatarGroupProps, AvatarProps } from './avatar'
 export { Avatar, AvatarGroup } from './avatar'
 export type { BadgeProps } from './badge'
 export { Badge } from './badge'
+export type {
+  BottomSheetActionsProps,
+  BottomSheetBackdropProps,
+  BottomSheetContentProps,
+  BottomSheetProps,
+} from './bottom-sheet'
+export {
+  BottomSheet,
+  BottomSheetActions,
+  BottomSheetBackdrop,
+  BottomSheetContent,
+} from './bottom-sheet'
 export type { BreadcrumbsProps } from './breadcrumbs'
 export { Breadcrumbs } from './breadcrumbs'
 export type { ButtonProps } from './button'

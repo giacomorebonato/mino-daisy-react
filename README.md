@@ -35,10 +35,11 @@ This project wraps [DaisyUI](https://daisyui.com/) components into React.
 * `Steps`, `Step` - Process progression indicator
 * `List`, `ListRow` - Vertical information layout
 
-### Interactive & Feedback (12/12) ✅
+### Interactive & Feedback (13/13) ✅
 * `Button` - Action trigger with variants, sizes, and states
 * `Alert` - Important message notification
 * `Modal`, `ModalBox`, `ModalAction`, `ModalBackdrop` - Dialog box overlay
+* `BottomSheet`, `BottomSheetContent`, `BottomSheetBackdrop`, `BottomSheetActions` - Sheet that slides up from bottom
 * `Dropdown` - Click-triggered menu
 * `Tab`, `Tabs`, `TabContent` - Tabbed content switcher
 * `Collapse`, `CollapseTitle`, `CollapseContent`, `CollapseCheckbox` - Expandable content section
@@ -227,8 +228,9 @@ For all available DaisyUI classes, see the [DaisyUI documentation](https://daisy
 
 ### Interactive & Feedback
 
-- [x] Button - Action trigger
 - [x] Alert - Important message notification
+- [x] BottomSheet - Sheet that slides up from bottom
+- [x] Button - Action trigger
 - [x] Modal - Dialog box overlay
 - [x] Dropdown - Click-triggered menu
 - [x] Tab - Tabbed content switcher
@@ -275,4 +277,4 @@ For all available DaisyUI classes, see the [DaisyUI documentation](https://daisy
 
 ### Progress
 
-64/80 components implemented (80.0%)
+65/80 components implemented (81.25%)

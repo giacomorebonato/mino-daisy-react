@@ -3,12 +3,7 @@ await Bun.build({
   outdir: './dist',
   target: 'browser',
   format: 'esm',
-  external: [
-    'react',
-    'react-dom',
-    'react/jsx-runtime',
-    'react/jsx-dev-runtime',
-  ],
+  external: ['react', 'react-dom', 'react/jsx-runtime', 'react/jsx-dev-runtime'],
 })
 
 export {}
