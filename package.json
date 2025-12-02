@@ -17,6 +17,7 @@
     "dev": "bun build src/index.ts --watch",
     "test": "bun test",
     "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
     "format": "biome check --write",
     "release": "release-it"
   },

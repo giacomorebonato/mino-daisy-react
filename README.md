@@ -12,6 +12,12 @@ This project wraps [DaisyUI](https://daisyui.com/) components into React.
 * uses TypeScript
 * read updated [DaisyUI documentation](https://daisyui.com/llms.txt)
 
+## Storybook
+
+View the live component documentation and examples at: **https://giacomorebonato.github.io/mino-daisy-react/**
+
+The Storybook is automatically deployed to GitHub Pages on every push to the main branch.
+
 ## Available Components
 
 ### Navigation & Layout (7/7) ✅
