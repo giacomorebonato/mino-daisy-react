@@ -11,7 +11,14 @@ import { HeadingNode, QuoteNode } from '@lexical/rich-text'
 import { clsx } from 'clsx'
 import type { LexicalEditor } from 'lexical'
 import type { HTMLAttributes } from 'react'
-import { InitialContentPlugin, MarkdownShortcutsPlugin, OnChangePlugin, RefPlugin } from './plugins'
+import { ImageNode } from './image-node'
+import {
+  ImagePlugin,
+  InitialContentPlugin,
+  MarkdownShortcutsPlugin,
+  OnChangePlugin,
+  RefPlugin,
+} from './plugins'
 import { Toolbar } from './toolbar'
 
 export interface RichTextEditorProps extends Omit<HTMLAttributes<HTMLDivElement>, 'onChange'> {
@@ -112,6 +119,7 @@ const editorTheme = {
     code: 'font-mono bg-base-200 px-1 rounded',
   },
   paragraph: 'my-2',
+  image: 'my-4',
 }
 
 export function RichTextEditor({
@@ -129,7 +137,7 @@ export function RichTextEditor({
 }: RichTextEditorProps) {
   const initialConfig = {
     namespace: 'RichTextEditor',
-    nodes: [HeadingNode, QuoteNode, ListNode, ListItemNode, LinkNode],
+    nodes: [HeadingNode, QuoteNode, ListNode, ListItemNode, LinkNode, ImageNode],
     onError: (error: Error) => {
       console.error('Lexical error:', error)
     },
@@ -164,6 +172,7 @@ export function RichTextEditor({
         <HistoryPlugin />
         <ListPlugin />
         <LinkPlugin />
+        <ImagePlugin />
         <OnChangePlugin onChange={onChange} contentFormat={contentFormat} />
         <RefPlugin editorRef={ref} />
         {initialContent && (
