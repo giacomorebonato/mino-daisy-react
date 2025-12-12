@@ -12,7 +12,31 @@ import {
   QUOTE,
   STRIKETHROUGH,
   UNORDERED_LIST,
+  type TextMatchTransformer,
 } from '@lexical/markdown'
+import { $createImageNode, $isImageNode, ImageNode } from './image-node'
+
+/**
+ * Image transformer for markdown format: ![alt](src)
+ */
+export const IMAGE: TextMatchTransformer = {
+  dependencies: [ImageNode],
+  export: (node) => {
+    if (!$isImageNode(node)) {
+      return null
+    }
+    return `![${node.getAlt() || ''}](${node.getSrc()})`
+  },
+  importRegExp: /!(?:\[([^\]]*)\])(?:\(([^)]+)\))/,
+  regExp: /!(?:\[([^\]]*)\])(?:\(([^)]+)\))$/,
+  replace: (textNode, match) => {
+    const [, alt, src] = match
+    const imageNode = $createImageNode({ src, alt: alt || '' })
+    textNode.replace(imageNode)
+  },
+  trigger: ')',
+  type: 'text-match',
+}
 
 /**
  * Markdown transformers matching RichTextEditor's supported nodes.
@@ -31,10 +55,12 @@ import {
  * - Strikethrough: ~~strikethrough~~
  * - Inline code: `code`
  * - Links: [text](url)
+ * - Images: ![alt](src)
  * - Unordered lists: - item or * item
  * - Ordered lists: 1. item
  */
 export const MARKDOWN_TRANSFORMERS = [
+  IMAGE,
   HEADING,
   QUOTE,
   BOLD_STAR,
