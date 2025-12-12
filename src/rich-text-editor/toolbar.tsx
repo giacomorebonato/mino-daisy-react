@@ -31,6 +31,7 @@ import {
   NumberedListIcon,
   UnderlineIcon,
 } from './icons'
+import { INSERT_IMAGE_COMMAND } from './plugins'
 
 export interface ToolbarProps {
   className?: string
@@ -150,13 +151,9 @@ export function Toolbar({ className }: ToolbarProps) {
   const insertImageFromUrl = useCallback(() => {
     const url = prompt('Enter image URL:')
     if (url) {
-      editor.update(() => {
-        const selection = $getSelection()
-        if ($isRangeSelection(selection)) {
-          // For now, insert as HTML - full ImageNode implementation requires more setup
-          const img = `<img src="${url}" alt="Image" />`
-          selection.insertRawText(img)
-        }
+      editor.dispatchCommand(INSERT_IMAGE_COMMAND, {
+        src: url,
+        alt: 'Image',
       })
     }
   }, [editor])
@@ -165,30 +162,77 @@ export function Toolbar({ className }: ToolbarProps) {
     fileInputRef.current?.click()
   }, [])
 
+  const resizeImage = useCallback((file: File, maxWidth: number): Promise<string> => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader()
+      reader.onload = (e) => {
+        const img = new Image()
+        img.onload = () => {
+          // Calculate new dimensions
+          let width = img.width
+          let height = img.height
+
+          if (width > maxWidth) {
+            height = (height * maxWidth) / width
+            width = maxWidth
+          }
+
+          // Create canvas and resize
+          const canvas = document.createElement('canvas')
+          canvas.width = width
+          canvas.height = height
+
+          const ctx = canvas.getContext('2d')
+          if (!ctx) {
+            reject(new Error('Could not get canvas context'))
+            return
+          }
+
+          ctx.drawImage(img, 0, 0, width, height)
+
+          // Convert to data URL with quality setting
+          const resizedDataUrl = canvas.toDataURL('image/jpeg', 0.9)
+          resolve(resizedDataUrl)
+        }
+        img.onerror = () => reject(new Error('Failed to load image'))
+        img.src = e.target?.result as string
+      }
+      reader.onerror = () => reject(new Error('Failed to read file'))
+      reader.readAsDataURL(file)
+    })
+  }, [])
+
   const handleFileUpload = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
+    async (e: React.ChangeEvent<HTMLInputElement>) => {
       const file = e.target.files?.[0]
       if (!file) return
 
-      const reader = new FileReader()
-      reader.onload = (event) => {
-        const dataUrl = event.target?.result as string
-        if (dataUrl) {
-          editor.update(() => {
-            const selection = $getSelection()
-            if ($isRangeSelection(selection)) {
-              const img = `<img src="${dataUrl}" alt="${file.name}" />`
-              selection.insertRawText(img)
-            }
-          })
+      try {
+        const resizedDataUrl = await resizeImage(file, 800)
+        editor.dispatchCommand(INSERT_IMAGE_COMMAND, {
+          src: resizedDataUrl,
+          alt: file.name,
+        })
+      } catch (error) {
+        console.error('Error resizing image:', error)
+        // Fallback to original if resize fails
+        const reader = new FileReader()
+        reader.onload = (event) => {
+          const dataUrl = event.target?.result as string
+          if (dataUrl) {
+            editor.dispatchCommand(INSERT_IMAGE_COMMAND, {
+              src: dataUrl,
+              alt: file.name,
+            })
+          }
         }
+        reader.readAsDataURL(file)
+      } finally {
+        // Reset input
+        e.target.value = ''
       }
-      reader.readAsDataURL(file)
-
-      // Reset input
-      e.target.value = ''
     },
-    [editor],
+    [editor, resizeImage],
   )
 
   return (
@@ -226,7 +270,7 @@ export function Toolbar({ className }: ToolbarProps) {
 
         {/* Heading selector */}
         <Select
-          className="join-item select-sm select-bordered"
+          className="join-item select-sm select-bordered w-32"
           value={blockType}
           onChange={formatHeading}
         >

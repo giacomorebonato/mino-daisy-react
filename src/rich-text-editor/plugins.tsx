@@ -2,10 +2,21 @@ import { $generateHtmlFromNodes, $generateNodesFromDOM } from '@lexical/html'
 import { $convertFromMarkdownString, $convertToMarkdownString } from '@lexical/markdown'
 import { useLexicalComposerContext } from '@lexical/react/LexicalComposerContext'
 import { MarkdownShortcutPlugin as LexicalMarkdownShortcutPlugin } from '@lexical/react/LexicalMarkdownShortcutPlugin'
-import type { LexicalEditor } from 'lexical'
-import { $getRoot } from 'lexical'
+import {
+  $getRoot,
+  $getSelection,
+  $isRangeSelection,
+  COMMAND_PRIORITY_EDITOR,
+  createCommand,
+  type LexicalCommand,
+  type LexicalEditor,
+} from 'lexical'
 import { useEffect, useRef } from 'react'
+import { $createImageNode, type ImagePayload } from './image-node'
 import { MARKDOWN_TRANSFORMERS } from './markdown-transformers'
+
+export const INSERT_IMAGE_COMMAND: LexicalCommand<ImagePayload> =
+  createCommand('INSERT_IMAGE_COMMAND')
 
 export interface OnChangePluginProps {
   onChange?: (content: string) => void
@@ -95,4 +106,25 @@ export function MarkdownShortcutsPlugin({ enabled = false }: MarkdownShortcutsPl
   if (!enabled) return null
 
   return <LexicalMarkdownShortcutPlugin transformers={MARKDOWN_TRANSFORMERS} />
+}
+
+export function ImagePlugin() {
+  const [editor] = useLexicalComposerContext()
+
+  useEffect(() => {
+    return editor.registerCommand<ImagePayload>(
+      INSERT_IMAGE_COMMAND,
+      (payload) => {
+        const imageNode = $createImageNode(payload)
+        const selection = $getSelection()
+        if ($isRangeSelection(selection)) {
+          selection.insertNodes([imageNode])
+        }
+        return true
+      },
+      COMMAND_PRIORITY_EDITOR,
+    )
+  }, [editor])
+
+  return null
 }
