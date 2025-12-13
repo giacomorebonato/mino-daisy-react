@@ -1,0 +1,646 @@
+﻿2025-12-13T20:40:14.8266450Z Current runner version: '2.329.0'
+2025-12-13T20:40:14.8291785Z ##[group]Runner Image Provisioner
+2025-12-13T20:40:14.8292575Z Hosted Compute Agent
+2025-12-13T20:40:14.8293177Z Version: 20251202.455
+2025-12-13T20:40:14.8293782Z Commit: 6c10caca4910e198df60de23adf20ad317c474e3
+2025-12-13T20:40:14.8294460Z Build Date: 2025-12-02T15:56:59Z
+2025-12-13T20:40:14.8295051Z Worker ID: {4ead0710-36a5-4865-9799-1dc53cca7990}
+2025-12-13T20:40:14.8295800Z ##[endgroup]
+2025-12-13T20:40:14.8296286Z ##[group]Operating System
+2025-12-13T20:40:14.8297068Z Ubuntu
+2025-12-13T20:40:14.8297623Z 24.04.3
+2025-12-13T20:40:14.8298075Z LTS
+2025-12-13T20:40:14.8298489Z ##[endgroup]
+2025-12-13T20:40:14.8299055Z ##[group]Runner Image
+2025-12-13T20:40:14.8299591Z Image: ubuntu-24.04
+2025-12-13T20:40:14.8300050Z Version: 20251208.163.1
+2025-12-13T20:40:14.8301099Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20251208.163/images/ubuntu/Ubuntu2404-Readme.md
+2025-12-13T20:40:14.8302596Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20251208.163
+2025-12-13T20:40:14.8303642Z ##[endgroup]
+2025-12-13T20:40:14.8304592Z ##[group]GITHUB_TOKEN Permissions
+2025-12-13T20:40:14.8306947Z Contents: write
+2025-12-13T20:40:14.8307538Z Metadata: read
+2025-12-13T20:40:14.8307996Z ##[endgroup]
+2025-12-13T20:40:14.8310151Z Secret source: Actions
+2025-12-13T20:40:14.8311095Z Prepare workflow directory
+2025-12-13T20:40:14.8660121Z Prepare all required actions
+2025-12-13T20:40:14.8700623Z Getting action download info
+2025-12-13T20:40:15.2062263Z Download action repository 'actions/checkout@v5' (SHA:93cb6efe18208431cddfb8368fd83d5badbf9bfd)
+2025-12-13T20:40:15.3209825Z Download action repository 'oven-sh/setup-bun@v2' (SHA:735343b667d3e6f658f44d0eca948eb6282f2b76)
+2025-12-13T20:40:15.8792107Z Complete job name: release
+2025-12-13T20:40:15.9562313Z ##[group]Run actions/checkout@v5
+2025-12-13T20:40:15.9563134Z with:
+2025-12-13T20:40:15.9563501Z   fetch-depth: 0
+2025-12-13T20:40:15.9563961Z   repository: giacomorebonato/mino-daisy-react
+2025-12-13T20:40:15.9564677Z   token: ***
+2025-12-13T20:40:15.9565054Z   ssh-strict: true
+2025-12-13T20:40:15.9565440Z   ssh-user: git
+2025-12-13T20:40:15.9565841Z   persist-credentials: true
+2025-12-13T20:40:15.9566276Z   clean: true
+2025-12-13T20:40:15.9566667Z   sparse-checkout-cone-mode: true
+2025-12-13T20:40:15.9567340Z   fetch-tags: false
+2025-12-13T20:40:15.9567742Z   show-progress: true
+2025-12-13T20:40:15.9568135Z   lfs: false
+2025-12-13T20:40:15.9568498Z   submodules: false
+2025-12-13T20:40:15.9568887Z   set-safe-directory: true
+2025-12-13T20:40:15.9569572Z ##[endgroup]
+2025-12-13T20:40:16.0638800Z Syncing repository: giacomorebonato/mino-daisy-react
+2025-12-13T20:40:16.0640552Z ##[group]Getting Git version info
+2025-12-13T20:40:16.0641428Z Working directory is '/home/runner/work/mino-daisy-react/mino-daisy-react'
+2025-12-13T20:40:16.0642490Z [command]/usr/bin/git version
+2025-12-13T20:40:16.3233857Z git version 2.52.0
+2025-12-13T20:40:16.3263896Z ##[endgroup]
+2025-12-13T20:40:16.3282904Z Temporarily overriding HOME='/home/runner/work/_temp/434e4a2d-9951-4995-ad19-3b4c39642ca5' before making global git config changes
+2025-12-13T20:40:16.3285152Z Adding repository directory to the temporary git global config as a safe directory
+2025-12-13T20:40:16.3290500Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/mino-daisy-react/mino-daisy-react
+2025-12-13T20:40:16.3336566Z Deleting the contents of '/home/runner/work/mino-daisy-react/mino-daisy-react'
+2025-12-13T20:40:16.3340469Z ##[group]Initializing the repository
+2025-12-13T20:40:16.3345655Z [command]/usr/bin/git init /home/runner/work/mino-daisy-react/mino-daisy-react
+2025-12-13T20:40:16.3453259Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-12-13T20:40:16.3454897Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2025-12-13T20:40:16.3456343Z hint: to use in all of your new repositories, which will suppress this warning,
+2025-12-13T20:40:16.3457984Z hint: call:
+2025-12-13T20:40:16.3458551Z hint:
+2025-12-13T20:40:16.3459287Z hint: 	git config --global init.defaultBranch <name>
+2025-12-13T20:40:16.3460306Z hint:
+2025-12-13T20:40:16.3461015Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-12-13T20:40:16.3462428Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-12-13T20:40:16.3463644Z hint:
+2025-12-13T20:40:16.3464279Z hint: 	git branch -m <name>
+2025-12-13T20:40:16.3464967Z hint:
+2025-12-13T20:40:16.3465892Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-12-13T20:40:16.3467993Z Initialized empty Git repository in /home/runner/work/mino-daisy-react/mino-daisy-react/.git/
+2025-12-13T20:40:16.3470396Z [command]/usr/bin/git remote add origin https://github.com/giacomorebonato/mino-daisy-react
+2025-12-13T20:40:16.3503039Z ##[endgroup]
+2025-12-13T20:40:16.3504168Z ##[group]Disabling automatic garbage collection
+2025-12-13T20:40:16.3505906Z [command]/usr/bin/git config --local gc.auto 0
+2025-12-13T20:40:16.3532850Z ##[endgroup]
+2025-12-13T20:40:16.3533888Z ##[group]Setting up auth
+2025-12-13T20:40:16.3539458Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-12-13T20:40:16.3569552Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-12-13T20:40:16.3924409Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-12-13T20:40:16.3955067Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-12-13T20:40:16.4173595Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2025-12-13T20:40:16.4205685Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2025-12-13T20:40:16.4427962Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-12-13T20:40:16.4461907Z ##[endgroup]
+2025-12-13T20:40:16.4462769Z ##[group]Fetching the repository
+2025-12-13T20:40:16.4472010Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+2025-12-13T20:40:16.9457065Z From https://github.com/giacomorebonato/mino-daisy-react
+2025-12-13T20:40:16.9458476Z  * [new branch]      bun             -> origin/bun
+2025-12-13T20:40:16.9460135Z  * [new branch]      chore/externalize-react-dependencies -> origin/chore/externalize-react-dependencies
+2025-12-13T20:40:16.9463144Z  * [new branch]      claude/fix-typescript-errors-011CV5d97tqubt7X79kmYt6g -> origin/claude/fix-typescript-errors-011CV5d97tqubt7X79kmYt6g
+2025-12-13T20:40:16.9466581Z  * [new branch]      feat/rich-text-editor-markdown-support -> origin/feat/rich-text-editor-markdown-support
+2025-12-13T20:40:16.9469397Z  * [new branch]      feat/storybook-github-pages -> origin/feat/storybook-github-pages
+2025-12-13T20:40:16.9471160Z  * [new branch]      image-rich-text -> origin/image-rich-text
+2025-12-13T20:40:16.9472434Z  * [new branch]      main            -> origin/main
+2025-12-13T20:40:16.9473637Z  * [new branch]      update-deps     -> origin/update-deps
+2025-12-13T20:40:16.9474793Z  * [new tag]         1.0.4           -> 1.0.4
+2025-12-13T20:40:16.9475789Z  * [new tag]         1.1.0           -> 1.1.0
+2025-12-13T20:40:16.9476980Z  * [new tag]         1.1.1           -> 1.1.1
+2025-12-13T20:40:16.9478198Z  * [new tag]         1.1.3           -> 1.1.3
+2025-12-13T20:40:16.9479299Z  * [new tag]         1.1.4           -> 1.1.4
+2025-12-13T20:40:16.9480453Z  * [new tag]         1.1.5           -> 1.1.5
+2025-12-13T20:40:16.9481538Z  * [new tag]         1.1.6           -> 1.1.6
+2025-12-13T20:40:16.9482632Z  * [new tag]         v1.1.7          -> v1.1.7
+2025-12-13T20:40:16.9483987Z  * [new tag]         v1.1.8          -> v1.1.8
+2025-12-13T20:40:16.9514756Z [command]/usr/bin/git branch --list --remote origin/main
+2025-12-13T20:40:16.9542101Z   origin/main
+2025-12-13T20:40:16.9552773Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+2025-12-13T20:40:16.9574553Z beb0913fa078ad72cf895f9c898001a0d7738669
+2025-12-13T20:40:16.9581390Z ##[endgroup]
+2025-12-13T20:40:16.9583166Z ##[group]Determining the checkout info
+2025-12-13T20:40:16.9585680Z ##[endgroup]
+2025-12-13T20:40:16.9587389Z [command]/usr/bin/git sparse-checkout disable
+2025-12-13T20:40:16.9627896Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-12-13T20:40:16.9654491Z ##[group]Checking out the ref
+2025-12-13T20:40:16.9657423Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-12-13T20:40:16.9845442Z Switched to a new branch 'main'
+2025-12-13T20:40:16.9849018Z branch 'main' set up to track 'origin/main'.
+2025-12-13T20:40:16.9857093Z ##[endgroup]
+2025-12-13T20:40:16.9901418Z [command]/usr/bin/git log -1 --format=%H
+2025-12-13T20:40:16.9925627Z beb0913fa078ad72cf895f9c898001a0d7738669
+2025-12-13T20:40:17.0137440Z ##[group]Run git config user.name "github-actions[bot]"
+2025-12-13T20:40:17.0139088Z [36;1mgit config user.name "github-actions[bot]"[0m
+2025-12-13T20:40:17.0141049Z [36;1mgit config user.email "41898282+github-actions[bot]@users.noreply.github.com"[0m
+2025-12-13T20:40:17.0179468Z shell: /usr/bin/bash -e {0}
+2025-12-13T20:40:17.0180530Z ##[endgroup]
+2025-12-13T20:40:17.0421777Z ##[group]Run oven-sh/setup-bun@v2
+2025-12-13T20:40:17.0422865Z with:
+2025-12-13T20:40:17.0423636Z   bun-version: latest
+2025-12-13T20:40:17.0424510Z   no-cache: false
+2025-12-13T20:40:17.0425327Z ##[endgroup]
+2025-12-13T20:40:17.1694552Z Downloading a new version of Bun: https://bun.sh/download/latest/linux/x64?avx2=true&profile=false
+2025-12-13T20:40:17.9014449Z [command]/usr/bin/unzip -o -q /home/runner/work/_temp/de85dfc5-a432-4dc5-88ce-be1253e4314d.zip
+2025-12-13T20:40:18.6666892Z [command]/home/runner/.bun/bin/bun --revision
+2025-12-13T20:40:18.6703281Z 1.3.4+5eb2145b3
+2025-12-13T20:40:18.6821428Z ##[group]Run bun install --frozen-lockfile
+2025-12-13T20:40:18.6821835Z [36;1mbun install --frozen-lockfile[0m
+2025-12-13T20:40:18.6857594Z shell: /usr/bin/bash -e {0}
+2025-12-13T20:40:18.6857831Z ##[endgroup]
+2025-12-13T20:40:18.6933929Z bun install v1.3.4 (5eb2145b)
+2025-12-13T20:40:20.8211092Z 
+2025-12-13T20:40:20.8211888Z + @biomejs/biome@2.3.5
+2025-12-13T20:40:20.8212574Z + @chromatic-com/storybook@4.1.2
+2025-12-13T20:40:20.8213670Z + @happy-dom/global-registrator@20.0.10
+2025-12-13T20:40:20.8216253Z + @storybook/addon-a11y@10.0.7
+2025-12-13T20:40:20.8217174Z + @storybook/addon-docs@10.0.7
+2025-12-13T20:40:20.8217550Z + @storybook/react-vite@10.0.7
+2025-12-13T20:40:20.8217900Z + @tailwindcss/vite@4.1.17
+2025-12-13T20:40:20.8218245Z + @testing-library/dom@10.4.1
+2025-12-13T20:40:20.8218597Z + @testing-library/jest-dom@6.9.1
+2025-12-13T20:40:20.8219009Z + @testing-library/react@16.3.0
+2025-12-13T20:40:20.8219350Z + @testing-library/user-event@14.6.1
+2025-12-13T20:40:20.8219758Z + @types/bun@1.3.2
+2025-12-13T20:40:20.8220032Z + @types/node@24.10.1
+2025-12-13T20:40:20.8220319Z + @types/react@19.2.4
+2025-12-13T20:40:20.8220603Z + @types/react-dom@19.2.3
+2025-12-13T20:40:20.8220985Z + @typescript/native-preview@7.0.0-dev.20251212.1
+2025-12-13T20:40:20.8221397Z + daisyui@5.5.2
+2025-12-13T20:40:20.8221681Z + playwright@1.56.1
+2025-12-13T20:40:20.8221972Z + react@19.2.0
+2025-12-13T20:40:20.8222237Z + react-dom@19.2.0
+2025-12-13T20:40:20.8222544Z + release-it@19.0.6
+2025-12-13T20:40:20.8222828Z + storybook@10.0.7
+2025-12-13T20:40:20.8223112Z + tailwindcss@4.1.17
+2025-12-13T20:40:20.8223424Z + typescript@5.9.3
+2025-12-13T20:40:20.8223703Z + @lexical/html@0.38.2
+2025-12-13T20:40:20.8223993Z + @lexical/link@0.38.2
+2025-12-13T20:40:20.8224276Z + @lexical/list@0.38.2
+2025-12-13T20:40:20.8224678Z + @lexical/markdown@0.38.2
+2025-12-13T20:40:20.8225411Z + @lexical/react@0.38.2
+2025-12-13T20:40:20.8225701Z + @lexical/rich-text@0.38.2
+2025-12-13T20:40:20.8226027Z + @lexical/selection@0.38.2
+2025-12-13T20:40:20.8226333Z + @lexical/utils@0.38.2
+2025-12-13T20:40:20.8226615Z + clsx@2.1.1
+2025-12-13T20:40:20.8227040Z + lexical@0.38.2
+2025-12-13T20:40:20.8227340Z + react-day-picker@9.11.1
+2025-12-13T20:40:20.8227553Z 
+2025-12-13T20:40:20.8227697Z 410 packages installed [2.13s]
+2025-12-13T20:40:20.8429071Z ##[group]Run bunx release-it patch --ci
+2025-12-13T20:40:20.8429417Z [36;1mbunx release-it patch --ci[0m
+2025-12-13T20:40:20.8464148Z shell: /usr/bin/bash -e {0}
+2025-12-13T20:40:20.8464390Z env:
+2025-12-13T20:40:20.8465182Z   GITHUB_TOKEN: ***
+2025-12-13T20:40:20.8465418Z   NPM_CONFIG_PROVENANCE: true
+2025-12-13T20:40:20.8465704Z ##[endgroup]
+2025-12-13T20:40:21.6288544Z - bun run build
+2025-12-13T20:40:27.2294370Z [32m✔[39m bun run build
+2025-12-13T20:40:27.4708053Z 🚀 Let's release mino-daisy-react (1.1.8...1.1.9)
+2025-12-13T20:40:27.4710948Z Changelog:
+2025-12-13T20:40:27.4711546Z * Fix release it on CI (beb0913)
+2025-12-13T20:40:27.4712137Z * release with bun (42e8520)
+2025-12-13T20:40:27.4712636Z * add release it (8528376)
+2025-12-13T20:40:27.4713991Z * Fix production build (cb8211e)
+2025-12-13T20:40:27.4749573Z - npm version
+2025-12-13T20:40:28.1852383Z [32m✔[39m npm version
+2025-12-13T20:40:28.1957286Z Changeset:
+2025-12-13T20:40:28.1957814Z  M package.json
+2025-12-13T20:40:28.2037888Z - npm publish
+2025-12-13T20:40:30.2907514Z [31m✖[39m npm publish
+2025-12-13T20:40:30.2980593Z ERROR npm warn publish npm auto-corrected some errors in your package.json when publishing.  Please run "npm pkg fix" to address these errors.
+2025-12-13T20:40:30.2981682Z npm warn publish errors corrected:
+2025-12-13T20:40:30.2984659Z npm warn publish "repository.url" was normalized to "git+https://github.com/giacomorebonato/mino-daisy-react.git"
+2025-12-13T20:40:30.2985740Z npm notice
+2025-12-13T20:40:30.2986258Z npm notice 📦  mino-daisy-react@1.1.9
+2025-12-13T20:40:30.2986916Z npm notice Tarball Contents
+2025-12-13T20:40:30.2987299Z npm notice 10.3kB README.md
+2025-12-13T20:40:30.2987698Z npm notice 1.2kB dist/accordion/accordion.d.ts
+2025-12-13T20:40:30.2988231Z npm notice 856B dist/accordion/accordion.d.ts.map
+2025-12-13T20:40:30.2988734Z npm notice 55B dist/accordion/accordion.test.d.ts
+2025-12-13T20:40:30.2989249Z npm notice 136B dist/accordion/accordion.test.d.ts.map
+2025-12-13T20:40:30.2989738Z npm notice 279B dist/accordion/index.d.ts
+2025-12-13T20:40:30.2990190Z npm notice 292B dist/accordion/index.d.ts.map
+2025-12-13T20:40:30.2990592Z npm notice 270B dist/alert/alert.d.ts
+2025-12-13T20:40:30.2990840Z npm notice 289B dist/alert/alert.d.ts.map
+2025-12-13T20:40:30.2991124Z npm notice 51B dist/alert/alert.test.d.ts
+2025-12-13T20:40:30.2991392Z npm notice 124B dist/alert/alert.test.d.ts.map
+2025-12-13T20:40:30.2991660Z npm notice 111B dist/alert/index.d.ts
+2025-12-13T20:40:30.2991900Z npm notice 193B dist/alert/index.d.ts.map
+2025-12-13T20:40:30.2992152Z npm notice 482B dist/avatar/avatar.d.ts
+2025-12-13T20:40:30.2992412Z npm notice 426B dist/avatar/avatar.d.ts.map
+2025-12-13T20:40:30.2992676Z npm notice 52B dist/avatar/avatar.test.d.ts
+2025-12-13T20:40:30.2992943Z npm notice 127B dist/avatar/avatar.test.d.ts.map
+2025-12-13T20:40:30.2993215Z npm notice 146B dist/avatar/index.d.ts
+2025-12-13T20:40:30.2993458Z npm notice 216B dist/avatar/index.d.ts.map
+2025-12-13T20:40:30.2993721Z npm notice 371B dist/badge/badge.d.ts
+2025-12-13T20:40:30.2993971Z npm notice 336B dist/badge/badge.d.ts.map
+2025-12-13T20:40:30.2994223Z npm notice 51B dist/badge/badge.test.d.ts
+2025-12-13T20:40:30.2994490Z npm notice 124B dist/badge/badge.test.d.ts.map
+2025-12-13T20:40:30.2994750Z npm notice 111B dist/badge/index.d.ts
+2025-12-13T20:40:30.2994995Z npm notice 193B dist/badge/index.d.ts.map
+2025-12-13T20:40:30.2995293Z npm notice 1.1kB dist/bottom-sheet/bottom-sheet.d.ts
+2025-12-13T20:40:30.2995617Z npm notice 843B dist/bottom-sheet/bottom-sheet.d.ts.map
+2025-12-13T20:40:30.2995933Z npm notice 58B dist/bottom-sheet/bottom-sheet.test.d.ts
+2025-12-13T20:40:30.2996517Z npm notice 145B dist/bottom-sheet/bottom-sheet.test.d.ts.map
+2025-12-13T20:40:30.2997082Z npm notice 276B dist/bottom-sheet/index.d.ts
+2025-12-13T20:40:30.2997447Z npm notice 285B dist/bottom-sheet/index.d.ts.map
+2025-12-13T20:40:30.2997882Z npm notice 400B dist/breadcrumbs/breadcrumbs.d.ts
+2025-12-13T20:40:30.2998393Z npm notice 358B dist/breadcrumbs/breadcrumbs.d.ts.map
+2025-12-13T20:40:30.2998721Z npm notice 57B dist/breadcrumbs/breadcrumbs.test.d.ts
+2025-12-13T20:40:30.2999045Z npm notice 142B dist/breadcrumbs/breadcrumbs.test.d.ts.map
+2025-12-13T20:40:30.2999355Z npm notice 135B dist/breadcrumbs/index.d.ts
+2025-12-13T20:40:30.2999631Z npm notice 201B dist/breadcrumbs/index.d.ts.map
+2025-12-13T20:40:30.2999895Z npm notice 324B dist/button/button.d.ts
+2025-12-13T20:40:30.3000150Z npm notice 356B dist/button/button.d.ts.map
+2025-12-13T20:40:30.3000427Z npm notice 52B dist/button/button.test.d.ts
+2025-12-13T20:40:30.3000716Z npm notice 127B dist/button/button.test.d.ts.map
+2025-12-13T20:40:30.3000984Z npm notice 115B dist/button/index.d.ts
+2025-12-13T20:40:30.3001259Z npm notice 194B dist/button/index.d.ts.map
+2025-12-13T20:40:30.3001547Z npm notice 392B dist/calendar/calendar.d.ts
+2025-12-13T20:40:30.3001817Z npm notice 393B dist/calendar/calendar.d.ts.map
+2025-12-13T20:40:30.3002094Z npm notice 54B dist/calendar/calendar.test.d.ts
+2025-12-13T20:40:30.3002399Z npm notice 133B dist/calendar/calendar.test.d.ts.map
+2025-12-13T20:40:30.3002700Z npm notice 123B dist/calendar/index.d.ts
+2025-12-13T20:40:30.3002967Z npm notice 196B dist/calendar/index.d.ts.map
+2025-12-13T20:40:30.3003228Z npm notice 1.3kB dist/card/card.d.ts
+2025-12-13T20:40:30.3003470Z npm notice 849B dist/card/card.d.ts.map
+2025-12-13T20:40:30.3003719Z npm notice 50B dist/card/card.test.d.ts
+2025-12-13T20:40:30.3003967Z npm notice 121B dist/card/card.test.d.ts.map
+2025-12-13T20:40:30.3004217Z npm notice 191B dist/card/index.d.ts
+2025-12-13T20:40:30.3004458Z npm notice 254B dist/card/index.d.ts.map
+2025-12-13T20:40:30.3004709Z npm notice 493B dist/carousel/carousel.d.ts
+2025-12-13T20:40:30.3004980Z npm notice 432B dist/carousel/carousel.d.ts.map
+2025-12-13T20:40:30.3005256Z npm notice 54B dist/carousel/carousel.test.d.ts
+2025-12-13T20:40:30.3005564Z npm notice 133B dist/carousel/carousel.test.d.ts.map
+2025-12-13T20:40:30.3005887Z npm notice 156B dist/carousel/index.d.ts
+2025-12-13T20:40:30.3006144Z npm notice 218B dist/carousel/index.d.ts.map
+2025-12-13T20:40:30.3006397Z npm notice 1.1kB dist/chat/chat.d.ts
+2025-12-13T20:40:30.3006627Z npm notice 809B dist/chat/chat.d.ts.map
+2025-12-13T20:40:30.3007153Z npm notice 50B dist/chat/chat.test.d.ts
+2025-12-13T20:40:30.3007418Z npm notice 121B dist/chat/chat.test.d.ts.map
+2025-12-13T20:40:30.3007677Z npm notice 222B dist/chat/index.d.ts
+2025-12-13T20:40:30.3007917Z npm notice 271B dist/chat/index.d.ts.map
+2025-12-13T20:40:30.3008190Z npm notice 328B dist/checkbox/checkbox.d.ts
+2025-12-13T20:40:30.3008467Z npm notice 362B dist/checkbox/checkbox.d.ts.map
+2025-12-13T20:40:30.3008752Z npm notice 54B dist/checkbox/checkbox.test.d.ts
+2025-12-13T20:40:30.3009050Z npm notice 133B dist/checkbox/checkbox.test.d.ts.map
+2025-12-13T20:40:30.3009331Z npm notice 123B dist/checkbox/index.d.ts
+2025-12-13T20:40:30.3009592Z npm notice 196B dist/checkbox/index.d.ts.map
+2025-12-13T20:40:30.3009868Z npm notice 991B dist/collapse/collapse.d.ts
+2025-12-13T20:40:30.3010146Z npm notice 751B dist/collapse/collapse.d.ts.map
+2025-12-13T20:40:30.3010421Z npm notice 54B dist/collapse/collapse.test.d.ts
+2025-12-13T20:40:30.3010715Z npm notice 133B dist/collapse/collapse.test.d.ts.map
+2025-12-13T20:40:30.3011004Z npm notice 240B dist/collapse/index.d.ts
+2025-12-13T20:40:30.3011257Z npm notice 268B dist/collapse/index.d.ts.map
+2025-12-13T20:40:30.3011528Z npm notice 320B dist/countdown/countdown.d.ts
+2025-12-13T20:40:30.3011805Z npm notice 346B dist/countdown/countdown.d.ts.map
+2025-12-13T20:40:30.3012094Z npm notice 55B dist/countdown/countdown.test.d.ts
+2025-12-13T20:40:30.3012547Z npm notice 136B dist/countdown/countdown.test.d.ts.map
+2025-12-13T20:40:30.3012835Z npm notice 127B dist/countdown/index.d.ts
+2025-12-13T20:40:30.3013096Z npm notice 197B dist/countdown/index.d.ts.map
+2025-12-13T20:40:30.3013353Z npm notice 686B dist/diff/diff.d.ts
+2025-12-13T20:40:30.3013593Z npm notice 585B dist/diff/diff.d.ts.map
+2025-12-13T20:40:30.3013833Z npm notice 50B dist/diff/diff.test.d.ts
+2025-12-13T20:40:30.3014247Z npm notice 121B dist/diff/diff.test.d.ts.map
+2025-12-13T20:40:30.3014503Z npm notice 163B dist/diff/index.d.ts
+2025-12-13T20:40:30.3014748Z npm notice 234B dist/diff/index.d.ts.map
+2025-12-13T20:40:30.3014995Z npm notice 278B dist/divider/divider.d.ts
+2025-12-13T20:40:30.3015259Z npm notice 295B dist/divider/divider.d.ts.map
+2025-12-13T20:40:30.3015522Z npm notice 53B dist/divider/divider.test.d.ts
+2025-12-13T20:40:30.3015804Z npm notice 130B dist/divider/divider.test.d.ts.map
+2025-12-13T20:40:30.3016080Z npm notice 119B dist/divider/index.d.ts
+2025-12-13T20:40:30.3016330Z npm notice 195B dist/divider/index.d.ts.map
+2025-12-13T20:40:30.3016579Z npm notice 831B dist/dock/dock.d.ts
+2025-12-13T20:40:30.3017043Z npm notice 748B dist/dock/dock.d.ts.map
+2025-12-13T20:40:30.3017402Z npm notice 50B dist/dock/dock.test.d.ts
+2025-12-13T20:40:30.3017664Z npm notice 121B dist/dock/dock.test.d.ts.map
+2025-12-13T20:40:30.3017925Z npm notice 132B dist/dock/index.d.ts
+2025-12-13T20:40:30.3018170Z npm notice 212B dist/dock/index.d.ts.map
+2025-12-13T20:40:30.3018424Z npm notice 1.6kB dist/drawer/drawer.d.ts
+2025-12-13T20:40:30.3018686Z npm notice 1.1kB dist/drawer/drawer.d.ts.map
+2025-12-13T20:40:30.3018949Z npm notice 52B dist/drawer/drawer.test.d.ts
+2025-12-13T20:40:30.3019228Z npm notice 127B dist/drawer/drawer.test.d.ts.map
+2025-12-13T20:40:30.3019493Z npm notice 249B dist/drawer/index.d.ts
+2025-12-13T20:40:30.3019745Z npm notice 283B dist/drawer/index.d.ts.map
+2025-12-13T20:40:30.3020000Z npm notice 691B dist/dropdown/dropdown.d.ts
+2025-12-13T20:40:30.3020273Z npm notice 557B dist/dropdown/dropdown.d.ts.map
+2025-12-13T20:40:30.3020558Z npm notice 54B dist/dropdown/dropdown.test.d.ts
+2025-12-13T20:40:30.3020860Z npm notice 133B dist/dropdown/dropdown.test.d.ts.map
+2025-12-13T20:40:30.3021147Z npm notice 123B dist/dropdown/index.d.ts
+2025-12-13T20:40:30.3021403Z npm notice 196B dist/dropdown/index.d.ts.map
+2025-12-13T20:40:30.3021661Z npm notice 764B dist/fab/fab.d.ts
+2025-12-13T20:40:30.3021895Z npm notice 637B dist/fab/fab.d.ts.map
+2025-12-13T20:40:30.3022138Z npm notice 49B dist/fab/fab.test.d.ts
+2025-12-13T20:40:30.3022378Z npm notice 118B dist/fab/fab.test.d.ts.map
+2025-12-13T20:40:30.3022630Z npm notice 163B dist/fab/index.d.ts
+2025-12-13T20:40:30.3022865Z npm notice 233B dist/fab/index.d.ts.map
+2025-12-13T20:40:30.3023120Z npm notice 600B dist/fieldset/fieldset.d.ts
+2025-12-13T20:40:30.3023391Z npm notice 512B dist/fieldset/fieldset.d.ts.map
+2025-12-13T20:40:30.3023673Z npm notice 54B dist/fieldset/fieldset.test.d.ts
+2025-12-13T20:40:30.3023966Z npm notice 133B dist/fieldset/fieldset.test.d.ts.map
+2025-12-13T20:40:30.3024254Z npm notice 160B dist/fieldset/index.d.ts
+2025-12-13T20:40:30.3024513Z npm notice 218B dist/fieldset/index.d.ts.map
+2025-12-13T20:40:30.3024781Z npm notice 401B dist/file-input/file-input.d.ts
+2025-12-13T20:40:30.3025076Z npm notice 379B dist/file-input/file-input.d.ts.map
+2025-12-13T20:40:30.3025416Z npm notice 56B dist/file-input/file-input.test.d.ts
+2025-12-13T20:40:30.3025744Z npm notice 139B dist/file-input/file-input.test.d.ts.map
+2025-12-13T20:40:30.3026039Z npm notice 129B dist/file-input/index.d.ts
+2025-12-13T20:40:30.3026310Z npm notice 198B dist/file-input/index.d.ts.map
+2025-12-13T20:40:30.3026576Z npm notice 1.0kB dist/filter/filter.d.ts
+2025-12-13T20:40:30.3027008Z npm notice 709B dist/filter/filter.d.ts.map
+2025-12-13T20:40:30.3027276Z npm notice 52B dist/filter/filter.test.d.ts
+2025-12-13T20:40:30.3027549Z npm notice 127B dist/filter/filter.test.d.ts.map
+2025-12-13T20:40:30.3027819Z npm notice 175B dist/filter/index.d.ts
+2025-12-13T20:40:30.3028064Z npm notice 236B dist/filter/index.d.ts.map
+2025-12-13T20:40:30.3028552Z npm notice 747B dist/footer/footer.d.ts
+2025-12-13T20:40:30.3028802Z npm notice 598B dist/footer/footer.d.ts.map
+2025-12-13T20:40:30.3029064Z npm notice 52B dist/footer/footer.test.d.ts
+2025-12-13T20:40:30.3029335Z npm notice 127B dist/footer/footer.test.d.ts.map
+2025-12-13T20:40:30.3029602Z npm notice 146B dist/footer/index.d.ts
+2025-12-13T20:40:30.3029960Z npm notice 216B dist/footer/index.d.ts.map
+2025-12-13T20:40:30.3030210Z npm notice 49B dist/happydom.d.ts
+2025-12-13T20:40:30.3030448Z npm notice 110B dist/happydom.d.ts.map
+2025-12-13T20:40:30.3030688Z npm notice 672B dist/hero/hero.d.ts
+2025-12-13T20:40:30.3030925Z npm notice 544B dist/hero/hero.d.ts.map
+2025-12-13T20:40:30.3031167Z npm notice 50B dist/hero/hero.test.d.ts
+2025-12-13T20:40:30.3031424Z npm notice 121B dist/hero/hero.test.d.ts.map
+2025-12-13T20:40:30.3031678Z npm notice 170B dist/hero/index.d.ts
+2025-12-13T20:40:30.3031916Z npm notice 237B dist/hero/index.d.ts.map
+2025-12-13T20:40:30.3032201Z npm notice 330B dist/hover-gallery/hover-gallery.d.ts
+2025-12-13T20:40:30.3032528Z npm notice 360B dist/hover-gallery/hover-gallery.d.ts.map
+2025-12-13T20:40:30.3032866Z npm notice 59B dist/hover-gallery/hover-gallery.test.d.ts
+2025-12-13T20:40:30.3033213Z npm notice 148B dist/hover-gallery/hover-gallery.test.d.ts.map
+2025-12-13T20:40:30.3033539Z npm notice 141B dist/hover-gallery/index.d.ts
+2025-12-13T20:40:30.3033820Z npm notice 207B dist/hover-gallery/index.d.ts.map
+2025-12-13T20:40:30.3034088Z npm notice 7.6kB dist/index.d.ts
+2025-12-13T20:40:30.3034317Z npm notice 6.9kB dist/index.d.ts.map
+2025-12-13T20:40:30.3034546Z npm notice 744.2kB dist/index.js
+2025-12-13T20:40:30.3034781Z npm notice 162B dist/indicator/index.d.ts
+2025-12-13T20:40:30.3035045Z npm notice 219B dist/indicator/index.d.ts.map
+2025-12-13T20:40:30.3035315Z npm notice 612B dist/indicator/indicator.d.ts
+2025-12-13T20:40:30.3035585Z npm notice 559B dist/indicator/indicator.d.ts.map
+2025-12-13T20:40:30.3035875Z npm notice 55B dist/indicator/indicator.test.d.ts
+2025-12-13T20:40:30.3036179Z npm notice 136B dist/indicator/indicator.test.d.ts.map
+2025-12-13T20:40:30.3036465Z npm notice 111B dist/input/index.d.ts
+2025-12-13T20:40:30.3036839Z npm notice 193B dist/input/index.d.ts.map
+2025-12-13T20:40:30.3037153Z npm notice 380B dist/input/input.d.ts
+2025-12-13T20:40:30.3037483Z npm notice 364B dist/input/input.d.ts.map
+2025-12-13T20:40:30.3037738Z npm notice 51B dist/input/input.test.d.ts
+2025-12-13T20:40:30.3038009Z npm notice 124B dist/input/input.test.d.ts.map
+2025-12-13T20:40:30.3038262Z npm notice 124B dist/join/index.d.ts
+2025-12-13T20:40:30.3038502Z npm notice 202B dist/join/index.d.ts.map
+2025-12-13T20:40:30.3038740Z npm notice 371B dist/join/join.d.ts
+2025-12-13T20:40:30.3038976Z npm notice 373B dist/join/join.d.ts.map
+2025-12-13T20:40:30.3039225Z npm notice 50B dist/join/join.test.d.ts
+2025-12-13T20:40:30.3039475Z npm notice 121B dist/join/join.test.d.ts.map
+2025-12-13T20:40:30.3039728Z npm notice 103B dist/kbd/index.d.ts
+2025-12-13T20:40:30.3039958Z npm notice 191B dist/kbd/index.d.ts.map
+2025-12-13T20:40:30.3040194Z npm notice 259B dist/kbd/kbd.d.ts
+2025-12-13T20:40:30.3040418Z npm notice 283B dist/kbd/kbd.d.ts.map
+2025-12-13T20:40:30.3040655Z npm notice 49B dist/kbd/kbd.test.d.ts
+2025-12-13T20:40:30.3040893Z npm notice 118B dist/kbd/kbd.test.d.ts.map
+2025-12-13T20:40:30.3041155Z npm notice 111B dist/label/index.d.ts
+2025-12-13T20:40:30.3041400Z npm notice 193B dist/label/index.d.ts.map
+2025-12-13T20:40:30.3041647Z npm notice 352B dist/label/label.d.ts
+2025-12-13T20:40:30.3041879Z npm notice 372B dist/label/label.d.ts.map
+2025-12-13T20:40:30.3042136Z npm notice 51B dist/label/label.test.d.ts
+2025-12-13T20:40:30.3042397Z npm notice 124B dist/label/label.test.d.ts.map
+2025-12-13T20:40:30.3042655Z npm notice 107B dist/link/index.d.ts
+2025-12-13T20:40:30.3042888Z npm notice 192B dist/link/index.d.ts.map
+2025-12-13T20:40:30.3043135Z npm notice 281B dist/link/link.d.ts
+2025-12-13T20:40:30.3043365Z npm notice 292B dist/link/link.d.ts.map
+2025-12-13T20:40:30.3043760Z npm notice 50B dist/link/link.test.d.ts
+2025-12-13T20:40:30.3044018Z npm notice 121B dist/link/link.test.d.ts.map
+2025-12-13T20:40:30.3044266Z npm notice 130B dist/list/index.d.ts
+2025-12-13T20:40:30.3044504Z npm notice 212B dist/list/index.d.ts.map
+2025-12-13T20:40:30.3044738Z npm notice 547B dist/list/list.d.ts
+2025-12-13T20:40:30.3044970Z npm notice 514B dist/list/list.d.ts.map
+2025-12-13T20:40:30.3045307Z npm notice 50B dist/list/list.test.d.ts
+2025-12-13T20:40:30.3045570Z npm notice 121B dist/list/list.test.d.ts.map
+2025-12-13T20:40:30.3045818Z npm notice 119B dist/loading/index.d.ts
+2025-12-13T20:40:30.3046065Z npm notice 195B dist/loading/index.d.ts.map
+2025-12-13T20:40:30.3046323Z npm notice 269B dist/loading/loading.d.ts
+2025-12-13T20:40:30.3046579Z npm notice 285B dist/loading/loading.d.ts.map
+2025-12-13T20:40:30.3047058Z npm notice 53B dist/loading/loading.test.d.ts
+2025-12-13T20:40:30.3047338Z npm notice 130B dist/loading/loading.test.d.ts.map
+2025-12-13T20:40:30.3047617Z npm notice 128B dist/mask/index.d.ts
+2025-12-13T20:40:30.3047847Z npm notice 212B dist/mask/index.d.ts.map
+2025-12-13T20:40:30.3048090Z npm notice 652B dist/mask/mask.d.ts
+2025-12-13T20:40:30.3048312Z npm notice 636B dist/mask/mask.d.ts.map
+2025-12-13T20:40:30.3048549Z npm notice 50B dist/mask/mask.test.d.ts
+2025-12-13T20:40:30.3048793Z npm notice 121B dist/mask/mask.test.d.ts.map
+2025-12-13T20:40:30.3049049Z npm notice 107B dist/menu/index.d.ts
+2025-12-13T20:40:30.3049282Z npm notice 192B dist/menu/index.d.ts.map
+2025-12-13T20:40:30.3049514Z npm notice 367B dist/menu/menu.d.ts
+2025-12-13T20:40:30.3049741Z npm notice 335B dist/menu/menu.d.ts.map
+2025-12-13T20:40:30.3049972Z npm notice 50B dist/menu/menu.test.d.ts
+2025-12-13T20:40:30.3050216Z npm notice 121B dist/menu/menu.test.d.ts.map
+2025-12-13T20:40:30.3050481Z npm notice 195B dist/mockup-browser/index.d.ts
+2025-12-13T20:40:30.3050767Z npm notice 234B dist/mockup-browser/index.d.ts.map
+2025-12-13T20:40:30.3051077Z npm notice 538B dist/mockup-browser/mockup-browser.d.ts
+2025-12-13T20:40:30.3051419Z npm notice 456B dist/mockup-browser/mockup-browser.d.ts.map
+2025-12-13T20:40:30.3051774Z npm notice 60B dist/mockup-browser/mockup-browser.test.d.ts
+2025-12-13T20:40:30.3052137Z npm notice 151B dist/mockup-browser/mockup-browser.test.d.ts.map
+2025-12-13T20:40:30.3052465Z npm notice 133B dist/mockup-code/index.d.ts
+2025-12-13T20:40:30.3052735Z npm notice 199B dist/mockup-code/index.d.ts.map
+2025-12-13T20:40:30.3053022Z npm notice 291B dist/mockup-code/mockup-code.d.ts
+2025-12-13T20:40:30.3053323Z npm notice 308B dist/mockup-code/mockup-code.d.ts.map
+2025-12-13T20:40:30.3053638Z npm notice 57B dist/mockup-code/mockup-code.test.d.ts
+2025-12-13T20:40:30.3053966Z npm notice 142B dist/mockup-code/mockup-code.test.d.ts.map
+2025-12-13T20:40:30.3054274Z npm notice 227B dist/mockup-phone/index.d.ts
+2025-12-13T20:40:30.3054550Z npm notice 259B dist/mockup-phone/index.d.ts.map
+2025-12-13T20:40:30.3054840Z npm notice 740B dist/mockup-phone/mockup-phone.d.ts
+2025-12-13T20:40:30.3055160Z npm notice 576B dist/mockup-phone/mockup-phone.d.ts.map
+2025-12-13T20:40:30.3055479Z npm notice 58B dist/mockup-phone/mockup-phone.test.d.ts
+2025-12-13T20:40:30.3055822Z npm notice 145B dist/mockup-phone/mockup-phone.test.d.ts.map
+2025-12-13T20:40:30.3056141Z npm notice 141B dist/mockup-window/index.d.ts
+2025-12-13T20:40:30.3056424Z npm notice 207B dist/mockup-window/index.d.ts.map
+2025-12-13T20:40:30.3056875Z npm notice 299B dist/mockup-window/mockup-window.d.ts
+2025-12-13T20:40:30.3057222Z npm notice 317B dist/mockup-window/mockup-window.d.ts.map
+2025-12-13T20:40:30.3057565Z npm notice 59B dist/mockup-window/mockup-window.test.d.ts
+2025-12-13T20:40:30.3057916Z npm notice 148B dist/mockup-window/mockup-window.test.d.ts.map
+2025-12-13T20:40:30.3058233Z npm notice 203B dist/modal/index.d.ts
+2025-12-13T20:40:30.3058486Z npm notice 259B dist/modal/index.d.ts.map
+2025-12-13T20:40:30.3058745Z npm notice 1.1kB dist/modal/modal.d.ts
+2025-12-13T20:40:30.3058992Z npm notice 840B dist/modal/modal.d.ts.map
+2025-12-13T20:40:30.3059380Z npm notice 51B dist/modal/modal.test.d.ts
+2025-12-13T20:40:30.3059647Z npm notice 124B dist/modal/modal.test.d.ts.map
+2025-12-13T20:40:30.3059910Z npm notice 174B dist/navbar/index.d.ts
+2025-12-13T20:40:30.3060178Z npm notice 236B dist/navbar/index.d.ts.map
+2025-12-13T20:40:30.3060430Z npm notice 1.2kB dist/navbar/navbar.d.ts
+2025-12-13T20:40:30.3060690Z npm notice 855B dist/navbar/navbar.d.ts.map
+2025-12-13T20:40:30.3061052Z npm notice 52B dist/navbar/navbar.test.d.ts
+2025-12-13T20:40:30.3061331Z npm notice 127B dist/navbar/navbar.test.d.ts.map
+2025-12-13T20:40:30.3061604Z npm notice 131B dist/pagination/index.d.ts
+2025-12-13T20:40:30.3061878Z npm notice 198B dist/pagination/index.d.ts.map
+2025-12-13T20:40:30.3062162Z npm notice 395B dist/pagination/pagination.d.ts
+2025-12-13T20:40:30.3062456Z npm notice 352B dist/pagination/pagination.d.ts.map
+2025-12-13T20:40:30.3062764Z npm notice 56B dist/pagination/pagination.test.d.ts
+2025-12-13T20:40:30.3063082Z npm notice 139B dist/pagination/pagination.test.d.ts.map
+2025-12-13T20:40:30.3063392Z npm notice 123B dist/progress/index.d.ts
+2025-12-13T20:40:30.3063653Z npm notice 196B dist/progress/index.d.ts.map
+2025-12-13T20:40:30.3063921Z npm notice 407B dist/progress/progress.d.ts
+2025-12-13T20:40:30.3064194Z npm notice 373B dist/progress/progress.d.ts.map
+2025-12-13T20:40:30.3064479Z npm notice 54B dist/progress/progress.test.d.ts
+2025-12-13T20:40:30.3064782Z npm notice 133B dist/progress/progress.test.d.ts.map
+2025-12-13T20:40:30.3065080Z npm notice 149B dist/radial-progress/index.d.ts
+2025-12-13T20:40:30.3065371Z npm notice 209B dist/radial-progress/index.d.ts.map
+2025-12-13T20:40:30.3065687Z npm notice 552B dist/radial-progress/radial-progress.d.ts
+2025-12-13T20:40:30.3066045Z npm notice 571B dist/radial-progress/radial-progress.d.ts.map
+2025-12-13T20:40:30.3066408Z npm notice 61B dist/radial-progress/radial-progress.test.d.ts
+2025-12-13T20:40:30.3067000Z npm notice 154B dist/radial-progress/radial-progress.test.d.ts.map
+2025-12-13T20:40:30.3067343Z npm notice 111B dist/radio/index.d.ts
+2025-12-13T20:40:30.3067585Z npm notice 193B dist/radio/index.d.ts.map
+2025-12-13T20:40:30.3067834Z npm notice 380B dist/radio/radio.d.ts
+2025-12-13T20:40:30.3068084Z npm notice 364B dist/radio/radio.d.ts.map
+2025-12-13T20:40:30.3068332Z npm notice 51B dist/radio/radio.test.d.ts
+2025-12-13T20:40:30.3068590Z npm notice 124B dist/radio/radio.test.d.ts.map
+2025-12-13T20:40:30.3068853Z npm notice 111B dist/range/index.d.ts
+2025-12-13T20:40:30.3069088Z npm notice 193B dist/range/index.d.ts.map
+2025-12-13T20:40:30.3069329Z npm notice 380B dist/range/range.d.ts
+2025-12-13T20:40:30.3069569Z npm notice 364B dist/range/range.d.ts.map
+2025-12-13T20:40:30.3069813Z npm notice 51B dist/range/range.test.d.ts
+2025-12-13T20:40:30.3070075Z npm notice 124B dist/range/range.test.d.ts.map
+2025-12-13T20:40:30.3070332Z npm notice 144B dist/rating/index.d.ts
+2025-12-13T20:40:30.3070583Z npm notice 214B dist/rating/index.d.ts.map
+2025-12-13T20:40:30.3070836Z npm notice 503B dist/rating/rating.d.ts
+2025-12-13T20:40:30.3071097Z npm notice 439B dist/rating/rating.d.ts.map
+2025-12-13T20:40:30.3071352Z npm notice 52B dist/rating/rating.test.d.ts
+2025-12-13T20:40:30.3071624Z npm notice 127B dist/rating/rating.test.d.ts.map
+2025-12-13T20:40:30.3071907Z npm notice 596B dist/rich-text-editor/icons.d.ts
+2025-12-13T20:40:30.3072206Z npm notice 298B dist/rich-text-editor/icons.d.ts.map
+2025-12-13T20:40:30.3072530Z npm notice 1.5kB dist/rich-text-editor/image-node.d.ts
+2025-12-13T20:40:30.3072860Z npm notice 1.6kB dist/rich-text-editor/image-node.d.ts.map
+2025-12-13T20:40:30.3073177Z npm notice 151B dist/rich-text-editor/index.d.ts
+2025-12-13T20:40:30.3073469Z npm notice 210B dist/rich-text-editor/index.d.ts.map
+2025-12-13T20:40:30.3073818Z npm notice 1.8kB dist/rich-text-editor/markdown-transformers.d.ts
+2025-12-13T20:40:30.3074218Z npm notice 331B dist/rich-text-editor/markdown-transformers.d.ts.map
+2025-12-13T20:40:30.3074581Z npm notice 1.1kB dist/rich-text-editor/plugins.d.ts
+2025-12-13T20:40:30.3075019Z npm notice 931B dist/rich-text-editor/plugins.d.ts.map
+2025-12-13T20:40:30.3075350Z npm notice 2.5kB dist/rich-text-editor/rich-text-editor.d.ts
+2025-12-13T20:40:30.3075719Z npm notice 972B dist/rich-text-editor/rich-text-editor.d.ts.map
+2025-12-13T20:40:30.3076088Z npm notice 62B dist/rich-text-editor/rich-text-editor.test.d.ts
+2025-12-13T20:40:30.3076574Z npm notice 157B dist/rich-text-editor/rich-text-editor.test.d.ts.map
+2025-12-13T20:40:30.3077153Z npm notice 198B dist/rich-text-editor/toolbar.d.ts
+2025-12-13T20:40:30.3077461Z npm notice 241B dist/rich-text-editor/toolbar.d.ts.map
+2025-12-13T20:40:30.3077745Z npm notice 115B dist/select/index.d.ts
+2025-12-13T20:40:30.3077988Z npm notice 194B dist/select/index.d.ts.map
+2025-12-13T20:40:30.3078242Z npm notice 389B dist/select/select.d.ts
+2025-12-13T20:40:30.3078489Z npm notice 367B dist/select/select.d.ts.map
+2025-12-13T20:40:30.3078747Z npm notice 52B dist/select/select.test.d.ts
+2025-12-13T20:40:30.3079014Z npm notice 127B dist/select/select.test.d.ts.map
+2025-12-13T20:40:30.3079291Z npm notice 123B dist/skeleton/index.d.ts
+2025-12-13T20:40:30.3079549Z npm notice 196B dist/skeleton/index.d.ts.map
+2025-12-13T20:40:30.3079809Z npm notice 272B dist/skeleton/skeleton.d.ts
+2025-12-13T20:40:30.3080080Z npm notice 288B dist/skeleton/skeleton.d.ts.map
+2025-12-13T20:40:30.3080356Z npm notice 54B dist/skeleton/skeleton.test.d.ts
+2025-12-13T20:40:30.3080655Z npm notice 133B dist/skeleton/skeleton.test.d.ts.map
+2025-12-13T20:40:30.3080931Z npm notice 111B dist/stack/index.d.ts
+2025-12-13T20:40:30.3081176Z npm notice 193B dist/stack/index.d.ts.map
+2025-12-13T20:40:30.3081420Z npm notice 376B dist/stack/stack.d.ts
+2025-12-13T20:40:30.3081662Z npm notice 451B dist/stack/stack.d.ts.map
+2025-12-13T20:40:30.3081911Z npm notice 51B dist/stack/stack.test.d.ts
+2025-12-13T20:40:30.3082177Z npm notice 124B dist/stack/stack.test.d.ts.map
+2025-12-13T20:40:30.3082433Z npm notice 236B dist/stat/index.d.ts
+2025-12-13T20:40:30.3082675Z npm notice 291B dist/stat/index.d.ts.map
+2025-12-13T20:40:30.3082923Z npm notice 1.8kB dist/stat/stat.d.ts
+2025-12-13T20:40:30.3083151Z npm notice 1.2kB dist/stat/stat.d.ts.map
+2025-12-13T20:40:30.3083400Z npm notice 50B dist/stat/stat.test.d.ts
+2025-12-13T20:40:30.3083654Z npm notice 121B dist/stat/stat.test.d.ts.map
+2025-12-13T20:40:30.3083910Z npm notice 142B dist/status/index.d.ts
+2025-12-13T20:40:30.3084152Z npm notice 214B dist/status/index.d.ts.map
+2025-12-13T20:40:30.3084410Z npm notice 510B dist/status/status.d.ts
+2025-12-13T20:40:30.3084657Z npm notice 547B dist/status/status.d.ts.map
+2025-12-13T20:40:30.3084916Z npm notice 52B dist/status/status.test.d.ts
+2025-12-13T20:40:30.3085188Z npm notice 127B dist/status/status.test.d.ts.map
+2025-12-13T20:40:30.3085451Z npm notice 128B dist/steps/index.d.ts
+2025-12-13T20:40:30.3085696Z npm notice 213B dist/steps/index.d.ts.map
+2025-12-13T20:40:30.3085938Z npm notice 705B dist/steps/steps.d.ts
+2025-12-13T20:40:30.3086180Z npm notice 563B dist/steps/steps.d.ts.map
+2025-12-13T20:40:30.3086429Z npm notice 51B dist/steps/steps.test.d.ts
+2025-12-13T20:40:30.3086698Z npm notice 124B dist/steps/steps.test.d.ts.map
+2025-12-13T20:40:30.3087211Z npm notice 195B dist/swap/index.d.ts
+2025-12-13T20:40:30.3087444Z npm notice 256B dist/swap/index.d.ts.map
+2025-12-13T20:40:30.3087689Z npm notice 909B dist/swap/swap.d.ts
+2025-12-13T20:40:30.3087923Z npm notice 698B dist/swap/swap.d.ts.map
+2025-12-13T20:40:30.3088175Z npm notice 50B dist/swap/swap.test.d.ts
+2025-12-13T20:40:30.3088426Z npm notice 121B dist/swap/swap.test.d.ts.map
+2025-12-13T20:40:30.3088680Z npm notice 149B dist/tab/index.d.ts
+2025-12-13T20:40:30.3088906Z npm notice 231B dist/tab/index.d.ts.map
+2025-12-13T20:40:30.3089144Z npm notice 695B dist/tab/tab.d.ts
+2025-12-13T20:40:30.3089370Z npm notice 570B dist/tab/tab.d.ts.map
+2025-12-13T20:40:30.3089605Z npm notice 49B dist/tab/tab.test.d.ts
+2025-12-13T20:40:30.3089845Z npm notice 118B dist/tab/tab.test.d.ts.map
+2025-12-13T20:40:30.3090090Z npm notice 111B dist/table/index.d.ts
+2025-12-13T20:40:30.3090469Z npm notice 193B dist/table/index.d.ts.map
+2025-12-13T20:40:30.3090720Z npm notice 518B dist/table/table.d.ts
+2025-12-13T20:40:30.3090974Z npm notice 537B dist/table/table.d.ts.map
+2025-12-13T20:40:30.3091228Z npm notice 51B dist/table/table.test.d.ts
+2025-12-13T20:40:30.3091491Z npm notice 124B dist/table/table.test.d.ts.map
+2025-12-13T20:40:30.3091758Z npm notice 56B dist/testing-library.d.ts
+2025-12-13T20:40:30.3092136Z npm notice 124B dist/testing-library.d.ts.map
+2025-12-13T20:40:30.3092405Z npm notice 123B dist/textarea/index.d.ts
+2025-12-13T20:40:30.3092658Z npm notice 196B dist/textarea/index.d.ts.map
+2025-12-13T20:40:30.3092923Z npm notice 407B dist/textarea/textarea.d.ts
+2025-12-13T20:40:30.3093197Z npm notice 373B dist/textarea/textarea.d.ts.map
+2025-12-13T20:40:30.3093483Z npm notice 54B dist/textarea/textarea.test.d.ts
+2025-12-13T20:40:30.3093780Z npm notice 133B dist/textarea/textarea.test.d.ts.map
+2025-12-13T20:40:30.3094084Z npm notice 178B dist/theme-controller/index.d.ts
+2025-12-13T20:40:30.3094379Z npm notice 224B dist/theme-controller/index.d.ts.map
+2025-12-13T20:40:30.3094712Z npm notice 587B dist/theme-controller/theme-controller.d.ts
+2025-12-13T20:40:30.3095079Z npm notice 566B dist/theme-controller/theme-controller.d.ts.map
+2025-12-13T20:40:30.3095450Z npm notice 62B dist/theme-controller/theme-controller.test.d.ts
+2025-12-13T20:40:30.3095846Z npm notice 157B dist/theme-controller/theme-controller.test.d.ts.map
+2025-12-13T20:40:30.3096183Z npm notice 292B dist/timeline/index.d.ts
+2025-12-13T20:40:30.3096449Z npm notice 311B dist/timeline/index.d.ts.map
+2025-12-13T20:40:30.3096877Z npm notice 1.9kB dist/timeline/timeline.d.ts
+2025-12-13T20:40:30.3097197Z npm notice 1.2kB dist/timeline/timeline.d.ts.map
+2025-12-13T20:40:30.3097488Z npm notice 54B dist/timeline/timeline.test.d.ts
+2025-12-13T20:40:30.3097784Z npm notice 133B dist/timeline/timeline.test.d.ts.map
+2025-12-13T20:40:30.3098076Z npm notice 111B dist/toast/index.d.ts
+2025-12-13T20:40:30.3098331Z npm notice 193B dist/toast/index.d.ts.map
+2025-12-13T20:40:30.3098588Z npm notice 270B dist/toast/toast.d.ts
+2025-12-13T20:40:30.3098830Z npm notice 289B dist/toast/toast.d.ts.map
+2025-12-13T20:40:30.3099080Z npm notice 51B dist/toast/toast.test.d.ts
+2025-12-13T20:40:30.3099349Z npm notice 124B dist/toast/toast.test.d.ts.map
+2025-12-13T20:40:30.3099615Z npm notice 115B dist/toggle/index.d.ts
+2025-12-13T20:40:30.3099868Z npm notice 194B dist/toggle/index.d.ts.map
+2025-12-13T20:40:30.3100128Z npm notice 385B dist/toggle/toggle.d.ts
+2025-12-13T20:40:30.3100379Z npm notice 367B dist/toggle/toggle.d.ts.map
+2025-12-13T20:40:30.3100641Z npm notice 52B dist/toggle/toggle.test.d.ts
+2025-12-13T20:40:30.3100911Z npm notice 127B dist/toggle/toggle.test.d.ts.map
+2025-12-13T20:40:30.3101182Z npm notice 156B dist/tooltip/index.d.ts
+2025-12-13T20:40:30.3101428Z npm notice 217B dist/tooltip/index.d.ts.map
+2025-12-13T20:40:30.3101685Z npm notice 518B dist/tooltip/tooltip.d.ts
+2025-12-13T20:40:30.3101945Z npm notice 469B dist/tooltip/tooltip.d.ts.map
+2025-12-13T20:40:30.3102224Z npm notice 53B dist/tooltip/tooltip.test.d.ts
+2025-12-13T20:40:30.3102514Z npm notice 130B dist/tooltip/tooltip.test.d.ts.map
+2025-12-13T20:40:30.3102787Z npm notice 162B dist/validator/index.d.ts
+2025-12-13T20:40:30.3103052Z npm notice 219B dist/validator/index.d.ts.map
+2025-12-13T20:40:30.3103312Z npm notice 872B dist/validator/validator.d.ts
+2025-12-13T20:40:30.3103596Z npm notice 836B dist/validator/validator.d.ts.map
+2025-12-13T20:40:30.3103884Z npm notice 55B dist/validator/validator.test.d.ts
+2025-12-13T20:40:30.3104187Z npm notice 136B dist/validator/validator.test.d.ts.map
+2025-12-13T20:40:30.3104465Z npm notice 2.3kB package.json
+2025-12-13T20:40:30.3104687Z npm notice Tarball Details
+2025-12-13T20:40:30.3104897Z npm notice name: mino-daisy-react
+2025-12-13T20:40:30.3105128Z npm notice version: 1.1.9
+2025-12-13T20:40:30.3105369Z npm notice filename: mino-daisy-react-1.1.9.tgz
+2025-12-13T20:40:30.3105636Z npm notice package size: 205.8 kB
+2025-12-13T20:40:30.3105873Z npm notice unpacked size: 892.9 kB
+2025-12-13T20:40:30.3106286Z npm notice shasum: 8fd0de901b29b3249ed418d3a088b543e84ac893
+2025-12-13T20:40:30.3106644Z npm notice integrity: sha512-GcKNsG0TGT/gZ[...]6dqnzmM/7KopQ==
+2025-12-13T20:40:30.3107161Z npm notice total files: 409
+2025-12-13T20:40:30.3107364Z npm notice
+2025-12-13T20:40:30.3107527Z npm error code ENEEDAUTH
+2025-12-13T20:40:30.3108016Z npm error need auth This command requires you to be logged in to https://registry.npmjs.org/
+2025-12-13T20:40:30.3108532Z npm error need auth You need to authorize this machine using `npm adduser`
+2025-12-13T20:40:30.3109059Z npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2025-12-13T20_40_28_257Z-debug-0.log
+2025-12-13T20:40:30.3109415Z 
+2025-12-13T20:40:30.3119097Z ##[error]Process completed with exit code 1.
+2025-12-13T20:40:30.3218087Z Post job cleanup.
+2025-12-13T20:40:30.3991885Z [command]/usr/bin/git version
+2025-12-13T20:40:30.4060237Z git version 2.52.0
+2025-12-13T20:40:30.4096978Z Temporarily overriding HOME='/home/runner/work/_temp/f1867a12-8db9-4d9e-be1a-739d0965cbb9' before making global git config changes
+2025-12-13T20:40:30.4097987Z Adding repository directory to the temporary git global config as a safe directory
+2025-12-13T20:40:30.4102659Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/mino-daisy-react/mino-daisy-react
+2025-12-13T20:40:30.4138208Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-12-13T20:40:30.4171353Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-12-13T20:40:30.4407009Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-12-13T20:40:30.4431289Z http.https://github.com/.extraheader
+2025-12-13T20:40:30.4442388Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-12-13T20:40:30.4474069Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-12-13T20:40:30.4696689Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2025-12-13T20:40:30.4726099Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2025-12-13T20:40:30.5062126Z Cleaning up orphan processes
