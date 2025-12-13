@@ -34,6 +34,7 @@ jobs:
         run: bun install --frozen-lockfile
 
       - name: Release
-        run: bunx release-it ${{ inputs.increment }} --ci
+        # run: bunx release-it ${{ inputs.increment }} --ci
+        run: npm run release -- ${{ inputs.increment }} --ci
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
