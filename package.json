@@ -13,7 +13,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "bun build.ts && tsc --emitDeclarationOnly --declaration --declarationDir dist --noemit false",
+    "build": "NODE_ENV=production bun build.ts && tsc --emitDeclarationOnly --declaration --declarationDir dist --noemit false",
     "dev": "bun build src/index.ts --watch",
     "test": "bun test",
     "storybook": "storybook dev -p 6006",
