@@ -24,31 +24,31 @@ This project uses **pnpm@10.15.1** (specified in package.json). Always use `pnpm
 
 ```bash
 # Install dependencies
-pnpm install
+bun runinstall
 
 # Development server (Vite dev mode)
-pnpm dev
+bun rundev
 
 # Build library for NPM
-pnpm build
+bun runbuild
 
 # Preview build output
-pnpm preview
+bun runpreview
 
 # Run tests (watch mode)
-pnpm test
+bun runtest
 
 # Run tests with UI
-pnpm test:ui
+bun runtest:ui
 
 # Run tests with coverage
-pnpm test:coverage
+bun runtest:coverage
 
 # Run Storybook (component development)
-pnpm storybook
+bun runstorybook
 
 # Build Storybook for deployment
-pnpm build-storybook
+bun runbuild-storybook
 ```
 
 ## Project Structure
@@ -213,7 +213,7 @@ Consumers must configure Tailwind CSS in their project and include this library'
 
 - Unit tests use Bun test with HappyDom environment
 - Component tests use React Testing Library
-- Run `pnpm test` for watch mode during development
+- Run `bun runtest` for watch mode during development
 
 ### Storybook Configuration
 
@@ -224,7 +224,7 @@ The Storybook configuration includes a `viteFinal` hook that explicitly sets `pr
 - Write only files in lowercase kebab-case (e.g., `button.tsx`, not `Button.tsx`)
 - Always read updated DaisyUI doc on https://daisyui.com/llms.txt
 - Always update README.md when new components are added
-- Each time you make changes or create code. Run `pnpm format` to ensure that you're following the rules.
+- Each time you make changes or create code. Run `bun runformat` to ensure that you're following the rules.
 
 ### Component Usage Pattern
 

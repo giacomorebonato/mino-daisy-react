@@ -73,7 +73,7 @@ The workflow uses the default `GITHUB_TOKEN` which is automatically provided.
 
 ```bash
 # Install dependencies
-pnpm install
+bun runinstall
 
 # Run release locally (requires environment variables)
 GITHUB_TOKEN=xxx NPM_TOKEN=xxx npx semantic-release
@@ -83,8 +83,8 @@ GITHUB_TOKEN=xxx NPM_TOKEN=xxx npx semantic-release
 
 Before publishing, the workflow runs:
 
-- ✓ Build (`pnpm build`)
-- ✓ Tests (`pnpm test run`)
-- ✓ Format check (`pnpm format`)
+- ✓ Build (`bun runbuild`)
+- ✓ Tests (`bun runtest run`)
+- ✓ Format check (`bun runformat`)
 
 If any check fails, the release is aborted.
