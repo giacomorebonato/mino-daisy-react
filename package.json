@@ -1,5 +1,8 @@
 {
   "name": "mino-daisy-react",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/giacomorebonato/mino-daisy-react.git"
