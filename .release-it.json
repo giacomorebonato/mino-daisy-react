@@ -7,11 +7,6 @@
   },
   "npm": {
     "publish": true,
-    "publishArgs": [
-      "--provenance",
-      "--access",
-      "public"
-    ],
     "skipChecks": true
   },
   "github": {
