@@ -2,8 +2,7 @@
   "git": {
     "commitMessage": "Release ${version}",
     "tagName": "${version}",
-    "push": true,
-    "requireCleanWorkingDir": false
+    "push": true
   },
   "npm": {
     "publish": true,
