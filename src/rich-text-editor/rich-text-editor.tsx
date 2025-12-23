@@ -158,6 +158,7 @@ export function RichTextEditor({
                   'prose max-w-none p-4 min-h-[200px] focus:outline-none',
                   editorClassName,
                 )}
+                style={{ cursor: 'text' }}
               />
             }
             placeholder={
