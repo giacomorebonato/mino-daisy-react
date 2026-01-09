@@ -11,8 +11,8 @@ import {
   ORDERED_LIST,
   QUOTE,
   STRIKETHROUGH,
-  UNORDERED_LIST,
   type TextMatchTransformer,
+  UNORDERED_LIST,
 } from '@lexical/markdown'
 import { $createImageNode, $isImageNode, ImageNode } from './image-node'
 

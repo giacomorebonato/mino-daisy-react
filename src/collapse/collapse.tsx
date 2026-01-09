@@ -3,6 +3,7 @@ import type { HTMLAttributes, InputHTMLAttributes } from 'react'
 
 export interface CollapseProps extends HTMLAttributes<HTMLDivElement> {
   checkbox?: boolean
+  open?: boolean
 }
 
 export interface CollapseTitleProps extends HTMLAttributes<HTMLDivElement> {}
@@ -11,8 +12,15 @@ export interface CollapseContentProps extends HTMLAttributes<HTMLDivElement> {}
 
 export interface CollapseCheckboxProps extends InputHTMLAttributes<HTMLInputElement> {}
 
-export function Collapse({ children, className, checkbox = false, ...props }: CollapseProps) {
-  const classes = clsx('collapse', className)
+export function Collapse({ children, className, checkbox = false, open, ...props }: CollapseProps) {
+  const classes = clsx(
+    'collapse',
+    {
+      'collapse-open': open === true,
+      'collapse-close': open === false,
+    },
+    className,
+  )
 
   if (checkbox) {
     return (

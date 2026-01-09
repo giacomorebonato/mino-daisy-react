@@ -13,8 +13,6 @@
     "releaseName": "Release ${version}"
   },
   "hooks": {
-    "before:init": [
-      "bun run build"
-    ]
+    "before:init": ["bun run build"]
   }
 }

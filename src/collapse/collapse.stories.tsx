@@ -10,10 +10,6 @@ const meta = {
   },
   tags: ['autodocs'],
   argTypes: {
-    icon: {
-      control: 'select',
-      options: ['arrow', 'plus'],
-    },
     open: {
       control: 'boolean',
     },
@@ -29,7 +25,7 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
   render: () => (
     <div className="w-96">
-      <Collapse>
+      <Collapse className="bg-base-200">
         <CollapseTitle>Click to expand</CollapseTitle>
         <CollapseContent>
           <p>This is the collapsible content area.</p>
@@ -42,7 +38,7 @@ export const Default: Story = {
 export const WithArrow: Story = {
   render: () => (
     <div className="w-96">
-      <Collapse icon="arrow">
+      <Collapse className="collapse-arrow bg-base-200">
         <CollapseTitle>Click to expand</CollapseTitle>
         <CollapseContent>
           <p>This collapse has an arrow icon.</p>
@@ -55,7 +51,7 @@ export const WithArrow: Story = {
 export const WithPlus: Story = {
   render: () => (
     <div className="w-96">
-      <Collapse icon="plus">
+      <Collapse className="collapse-plus bg-base-200">
         <CollapseTitle>Click to expand</CollapseTitle>
         <CollapseContent>
           <p>This collapse has a plus icon.</p>
@@ -68,7 +64,7 @@ export const WithPlus: Story = {
 export const Open: Story = {
   render: () => (
     <div className="w-96">
-      <Collapse icon="arrow" open>
+      <Collapse className="collapse-arrow bg-base-200" open>
         <CollapseTitle>This is open by default</CollapseTitle>
         <CollapseContent>
           <p>The content is visible initially.</p>
@@ -81,7 +77,7 @@ export const Open: Story = {
 export const Closed: Story = {
   render: () => (
     <div className="w-96">
-      <Collapse icon="arrow" open={false}>
+      <Collapse className="collapse-arrow bg-base-200" open={false}>
         <CollapseTitle>This is closed</CollapseTitle>
         <CollapseContent>
           <p>The content is hidden.</p>
@@ -94,7 +90,7 @@ export const Closed: Story = {
 export const WithCheckbox: Story = {
   render: () => (
     <div className="w-96">
-      <Collapse checkbox icon="arrow">
+      <Collapse checkbox className="collapse-arrow bg-base-200">
         <CollapseCheckbox />
         <CollapseTitle>Click to expand (checkbox controlled)</CollapseTitle>
         <CollapseContent>
@@ -114,7 +110,7 @@ export const Controlled: Story = {
         <button type="button" className="btn btn-primary" onClick={() => setOpen(!open)}>
           {open ? 'Close' : 'Open'} Collapse
         </button>
-        <Collapse icon="arrow" open={open}>
+        <Collapse className="collapse-arrow bg-base-200" open={open}>
           <CollapseTitle>Controlled Collapse</CollapseTitle>
           <CollapseContent>
             <p>This collapse is controlled by external state.</p>
@@ -128,19 +124,19 @@ export const Controlled: Story = {
 export const Multiple: Story = {
   render: () => (
     <div className="w-96 space-y-2">
-      <Collapse icon="arrow" className="bg-base-200">
+      <Collapse className="collapse-arrow bg-base-200">
         <CollapseTitle>Section 1</CollapseTitle>
         <CollapseContent>
           <p>Content for section 1</p>
         </CollapseContent>
       </Collapse>
-      <Collapse icon="arrow" className="bg-base-200">
+      <Collapse className="collapse-arrow bg-base-200">
         <CollapseTitle>Section 2</CollapseTitle>
         <CollapseContent>
           <p>Content for section 2</p>
         </CollapseContent>
       </Collapse>
-      <Collapse icon="arrow" className="bg-base-200">
+      <Collapse className="collapse-arrow bg-base-200">
         <CollapseTitle>Section 3</CollapseTitle>
         <CollapseContent>
           <p>Content for section 3</p>
@@ -153,7 +149,7 @@ export const Multiple: Story = {
 export const Styled: Story = {
   render: () => (
     <div className="w-96">
-      <Collapse icon="plus" className="border border-base-300 bg-base-100 rounded-box">
+      <Collapse className="collapse-plus border border-base-300 bg-base-100 rounded-box">
         <CollapseTitle className="text-xl font-medium">Styled Collapse</CollapseTitle>
         <CollapseContent>
           <p>This collapse has custom styling applied.</p>
