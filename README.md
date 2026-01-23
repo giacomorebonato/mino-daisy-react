@@ -74,7 +74,7 @@ The Storybook is automatically deployed to GitHub Pages on every push to the mai
 * `MockupCode` - Code editor appearance
 * `MockupWindow` - OS window frame
 
-### Forms & Input (11/11) ✅
+### Forms & Input (12/12) ✅
 * `Input` - Text entry field with variants and sizes
 * `Textarea` - Multi-line text entry
 * `Select` - Dropdown option picker with optgroup support
@@ -84,6 +84,7 @@ The Storybook is automatically deployed to GitHub Pages on every push to the mai
 * `Range` - Slider for value selection
 * `FileInput` - File upload field
 * `Fieldset`, `FieldsetLegend` - Form section grouping
+* `FormControl`, `Legend`, `Hint` - Form field wrapper with label and hint/error text
 * `Label` - Form field labeling (regular and floating)
 * `RichTextEditor` - WYSIWYG rich text editor with Lexical integration
 
@@ -216,6 +217,7 @@ For all available DaisyUI classes, see the [DaisyUI documentation](https://daisy
 - [x] Range - Slider for value selection
 - [x] File-Input - File upload field
 - [x] Fieldset - Form section grouping
+- [x] FormControl - Form field wrapper (FormControl, Legend, Hint)
 - [x] Label - Input field labeling
 - [x] RichTextEditor - WYSIWYG rich text editor with Lexical
 
@@ -283,4 +285,4 @@ For all available DaisyUI classes, see the [DaisyUI documentation](https://daisy
 
 ### Progress
 
-65/80 components implemented (81.25%)
+66/80 components implemented (82.5%)
