@@ -6,7 +6,7 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 export function Input({ className, ref, ...props }: InputProps) {
-  return <input ref={ref} className={clsx('input', className)} {...props} />
+  return <input ref={ref} className={clsx('input w-full', className)} {...props} />
 }
 
 Input.displayName = 'Input'

@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { useState } from 'react'
+import { Button } from '../button'
 import { Input } from '../input'
+import { Select } from '../select'
 import { FormControl, Hint, Legend } from './form-control'
 
 const meta = {
@@ -148,6 +150,68 @@ export const MultipleInputs: Story = {
         <Input className="input-error" placeholder="Error input" />
         <Hint className="text-error">This field is required</Hint>
       </FormControl>
+    </div>
+  ),
+}
+
+export const AllInputTypesWithErrors: Story = {
+  render: () => (
+    <div className="w-96 p-6 bg-base-200 rounded-lg">
+      <h2 className="text-2xl font-bold mb-4">Form with Various Input Types</h2>
+      <div className="flex flex-col gap-2">
+        <FormControl>
+          <Legend>Email (text)</Legend>
+          <Input
+            type="email"
+            className="input-error"
+            placeholder="you@example.com"
+            defaultValue="invalid-email"
+          />
+          <Hint className="text-error">Please enter a valid email address</Hint>
+        </FormControl>
+
+        <FormControl>
+          <Legend>Birth Date</Legend>
+          <Input type="date" className="input-error" defaultValue="2025-01-01" />
+          <Hint className="text-error">You must be at least 18 years old</Hint>
+        </FormControl>
+
+        <FormControl>
+          <Legend>Quantity</Legend>
+          <Input type="number" className="input-error" placeholder="0" defaultValue="-5" min="0" />
+          <Hint className="text-error">Quantity must be a positive number</Hint>
+        </FormControl>
+
+        <FormControl>
+          <Legend>Country</Legend>
+          <Select className="select-error w-full">
+            <option disabled selected>
+              Select your country
+            </option>
+            <option>United States</option>
+            <option>Canada</option>
+            <option>United Kingdom</option>
+            <option>Other</option>
+          </Select>
+          <Hint className="text-error">Please select a country</Hint>
+        </FormControl>
+
+        <FormControl>
+          <Legend>Terms and Conditions</Legend>
+          <label className="label cursor-pointer justify-start gap-2">
+            <input type="checkbox" className="checkbox checkbox-error" />
+            <span className="label-text whitespace-break-spaces">
+              I agree to the terms and conditions. I agree to the terms and conditions. I agree to
+              the terms and conditions
+            </span>
+          </label>
+          <Hint className="text-error">You must accept the terms and conditions</Hint>
+        </FormControl>
+
+        <Button type="button" className="btn btn-primary mt-2">
+          Submit
+        </Button>
+      </div>
     </div>
   ),
 }
