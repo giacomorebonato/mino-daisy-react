@@ -190,6 +190,8 @@ export type { StatusProps, StatusSize, StatusVariant } from './status'
 export { Status } from './status'
 export type { StepProps, StepsProps } from './steps'
 export { Step, Steps } from './steps'
+export type { SubmitButtonProps } from './submit-button'
+export { SubmitButton } from './submit-button'
 export type {
   SwapIndeterminateProps,
   SwapOffProps,

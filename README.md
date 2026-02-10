@@ -14,13 +14,14 @@ This project wraps [DaisyUI](https://daisyui.com/) components into React.
 
 ## Storybook
 
-View the live component documentation and examples at: **https://giacomorebonato.github.io/mino-daisy-react/**
+View the live component documentation and examples at: **<https://giacomorebonato.github.io/mino-daisy-react/>**
 
 The Storybook is automatically deployed to GitHub Pages on every push to the main branch.
 
 ## Available Components
 
 ### Navigation & Layout (7/7) ✅
+
 * `Navbar`, `NavbarStart`, `NavbarCenter`, `NavbarEnd` - Top navigation bar with sections
 * `Breadcrumbs` - Navigation helper showing page hierarchy
 * `Menu` - Vertical or horizontal link lists
@@ -30,6 +31,7 @@ The Storybook is automatically deployed to GitHub Pages on every push to the mai
 * `Footer`, `FooterTitle` - Page footer with structured content
 
 ### Data Display (10/10) ✅
+
 * `Table` - Structured data grid with zebra, pinned rows/columns
 * `Card`, `CardBody`, `CardTitle`, `CardActions` - Content container
 * `Badge` - Status indicator with variants and sizes
@@ -42,7 +44,9 @@ The Storybook is automatically deployed to GitHub Pages on every push to the mai
 * `List`, `ListRow` - Vertical information layout
 
 ### Interactive & Feedback (13/13) ✅
+
 * `Button` - Action trigger with variants, sizes, and states
+* `SubmitButton` - Button with loading spinner for form submissions (wraps Button)
 * `Alert` - Important message notification
 * `Modal`, `ModalBox`, `ModalAction`, `ModalBackdrop` - Dialog box overlay
 * `BottomSheet`, `BottomSheetContent`, `BottomSheetBackdrop`, `BottomSheetActions` - Sheet that slides up from bottom
@@ -57,6 +61,7 @@ The Storybook is automatically deployed to GitHub Pages on every push to the mai
 * `Filter`, `FilterReset`, `FilterItem` - Radio button option filter
 
 ### Visual & Media (10/10) ✅
+
 * `Avatar`, `AvatarGroup` - User thumbnail with online/offline status
 * `Carousel`, `CarouselItem` - Scrollable content slider
 * `Chat`, `ChatImage`, `ChatHeader`, `ChatFooter`, `ChatBubble` - Message bubble display
@@ -69,12 +74,14 @@ The Storybook is automatically deployed to GitHub Pages on every push to the mai
 * `Status` - Small status icon
 
 ### Mockups & Prototyping (4/4) ✅
+
 * `MockupBrowser`, `MockupBrowserToolbar` - Browser window frame
 * `MockupPhone`, `MockupPhoneCamera`, `MockupPhoneDisplay` - iPhone device frame
 * `MockupCode` - Code editor appearance
 * `MockupWindow` - OS window frame
 
 ### Forms & Input (12/12) ✅
+
 * `Input` - Text entry field with variants and sizes
 * `Textarea` - Multi-line text entry
 * `Select` - Dropdown option picker with optgroup support
@@ -89,6 +96,7 @@ The Storybook is automatically deployed to GitHub Pages on every push to the mai
 * `RichTextEditor` - WYSIWYG rich text editor with Lexical integration
 
 ### Utilities & Special (10/10) ✅
+
 * `Loading` - Activity animation with 6 type variants
 * `Skeleton` - Loading placeholder for content
 * `Kbd` - Keyboard shortcut display
@@ -103,16 +111,16 @@ The Storybook is automatically deployed to GitHub Pages on every push to the mai
 ## Design Philosophy
 
 This library provides **minimal React wrappers** around DaisyUI components. Components only include:
-- Base DaisyUI class (e.g., `btn`, `input`, `modal`)
-- Essential behavioral props (e.g., `open`, `disabled`, `checked`)
-- Standard HTML attributes
-- Ref forwarding (React 19 pattern)
+* Base DaisyUI class (e.g., `btn`, `input`, `modal`)
+* Essential behavioral props (e.g., `open`, `disabled`, `checked`)
+* Standard HTML attributes
+* Ref forwarding (React 19 pattern)
 
 **All styling is done via className** using DaisyUI's utility classes. This gives you:
-- Direct access to DaisyUI's full power
-- No abstraction layer to learn
-- Smaller bundle size
-- Type-safe HTML attributes
+* Direct access to DaisyUI's full power
+* No abstraction layer to learn
+* Smaller bundle size
+* Type-safe HTML attributes
 
 ## Usage Example
 
@@ -198,90 +206,90 @@ For all available DaisyUI classes, see the [DaisyUI documentation](https://daisy
 
 ### Navigation & Layout
 
-- [x] Navbar - Top navigation bar
-- [x] Breadcrumbs - Navigation helper showing page hierarchy
-- [x] Menu - Vertical or horizontal link lists
-- [x] Pagination - Button group for page navigation
-- [x] Dock - Bottom navigation bar (floating)
-- [x] Drawer - Sidebar layout with toggle capability
-- [x] Footer - Page footer with structured content
+* [x] Navbar - Top navigation bar
+* [x] Breadcrumbs - Navigation helper showing page hierarchy
+* [x] Menu - Vertical or horizontal link lists
+* [x] Pagination - Button group for page navigation
+* [x] Dock - Bottom navigation bar (floating)
+* [x] Drawer - Sidebar layout with toggle capability
+* [x] Footer - Page footer with structured content
 
 ### Forms & Input
 
-- [x] Input - Text entry field
-- [x] Textarea - Multi-line text entry
-- [x] Select - Dropdown option picker
-- [x] Checkbox - Toggle selection element
-- [x] Radio - Single-choice option group
-- [x] Toggle - Switch-style checkbox
-- [x] Range - Slider for value selection
-- [x] File-Input - File upload field
-- [x] Fieldset - Form section grouping
-- [x] FormControl - Form field wrapper (FormControl, Legend, Hint)
-- [x] Label - Input field labeling
-- [x] RichTextEditor - WYSIWYG rich text editor with Lexical
+* [x] Input - Text entry field
+* [x] Textarea - Multi-line text entry
+* [x] Select - Dropdown option picker
+* [x] Checkbox - Toggle selection element
+* [x] Radio - Single-choice option group
+* [x] Toggle - Switch-style checkbox
+* [x] Range - Slider for value selection
+* [x] File-Input - File upload field
+* [x] Fieldset - Form section grouping
+* [x] FormControl - Form field wrapper (FormControl, Legend, Hint)
+* [x] Label - Input field labeling
+* [x] RichTextEditor - WYSIWYG rich text editor with Lexical
 
 ### Data Display
 
-- [x] Table - Structured data grid
-- [x] Card - Content container
-- [x] Badge - Status indicator
-- [x] Stat - Numerical data block
-- [x] Progress - Task completion indicator
-- [x] Radial-Progress - Circular progress display
-- [x] Countdown - Animated number transitions
-- [x] Timeline - Chronological event display
-- [x] Steps - Process progression indicator
-- [x] List - Vertical information layout
+* [x] Table - Structured data grid
+* [x] Card - Content container
+* [x] Badge - Status indicator
+* [x] Stat - Numerical data block
+* [x] Progress - Task completion indicator
+* [x] Radial-Progress - Circular progress display
+* [x] Countdown - Animated number transitions
+* [x] Timeline - Chronological event display
+* [x] Steps - Process progression indicator
+* [x] List - Vertical information layout
 
 ### Interactive & Feedback
 
-- [x] Alert - Important message notification
-- [x] BottomSheet - Sheet that slides up from bottom
-- [x] Button - Action trigger
-- [x] Modal - Dialog box overlay
-- [x] Dropdown - Click-triggered menu
-- [x] Tab - Tabbed content switcher
-- [x] Collapse - Expandable content section
-- [x] Accordion - Single-open collapse group
-- [x] Toast - Corner notification stack
-- [x] Tooltip - Hover info display
-- [x] Rating - Star-based rating input
-- [x] Swap - Toggle between two elements
-- [x] Filter - Radio button option filter
+* [x] Alert - Important message notification
+* [x] BottomSheet - Sheet that slides up from bottom
+* [x] Button - Action trigger
+* [x] Modal - Dialog box overlay
+* [x] Dropdown - Click-triggered menu
+* [x] Tab - Tabbed content switcher
+* [x] Collapse - Expandable content section
+* [x] Accordion - Single-open collapse group
+* [x] Toast - Corner notification stack
+* [x] Tooltip - Hover info display
+* [x] Rating - Star-based rating input
+* [x] Swap - Toggle between two elements
+* [x] Filter - Radio button option filter
 
 ### Visual & Media
 
-- [x] Avatar - User thumbnail image
-- [x] Carousel - Scrollable content slider
-- [x] Chat - Message bubble display
-- [x] Diff - Side-by-side comparison
-- [x] Divider - Content separator
-- [x] Hover-Gallery - Image preview on hover
-- [x] Indicator - Corner element placement
-- [x] Mask - Shape cropping element
-- [x] Stack - Layered element positioning
-- [x] Status - Small status icon
+* [x] Avatar - User thumbnail image
+* [x] Carousel - Scrollable content slider
+* [x] Chat - Message bubble display
+* [x] Diff - Side-by-side comparison
+* [x] Divider - Content separator
+* [x] Hover-Gallery - Image preview on hover
+* [x] Indicator - Corner element placement
+* [x] Mask - Shape cropping element
+* [x] Stack - Layered element positioning
+* [x] Status - Small status icon
 
 ### Mockups & Prototyping
 
-- [x] Mockup-Browser - Browser window frame
-- [x] Mockup-Phone - iPhone device frame
-- [x] Mockup-Code - Code editor appearance
-- [x] Mockup-Window - OS window frame
+* [x] Mockup-Browser - Browser window frame
+* [x] Mockup-Phone - iPhone device frame
+* [x] Mockup-Code - Code editor appearance
+* [x] Mockup-Window - OS window frame
 
 ### Utilities & Special
 
-- [x] Loading - Activity animation
-- [x] Skeleton - Loading placeholder
-- [x] Kbd - Keyboard shortcut display
-- [x] Calendar - Date picker integration
-- [x] Link - Enhanced anchor styling
-- [x] Validator - Form validation styling
-- [x] Theme-Controller - Theme switching control
-- [x] Join - Item grouping container
-- [x] Hero - Large banner section
-- [x] FAB - Floating action button (includes Speed Dial)
+* [x] Loading - Activity animation
+* [x] Skeleton - Loading placeholder
+* [x] Kbd - Keyboard shortcut display
+* [x] Calendar - Date picker integration
+* [x] Link - Enhanced anchor styling
+* [x] Validator - Form validation styling
+* [x] Theme-Controller - Theme switching control
+* [x] Join - Item grouping container
+* [x] Hero - Large banner section
+* [x] FAB - Floating action button (includes Speed Dial)
 
 ### Progress
 

@@ -39,11 +39,12 @@ export interface HintProps extends HTMLAttributes<HTMLParagraphElement> {
    */
   reserveSpace?: boolean
   ref?: React.Ref<HTMLParagraphElement>
+  isError?: boolean
 }
 
-export function Hint({ className, ref, children, reserveSpace, ...props }: HintProps) {
+export function Hint({ className, ref, children, reserveSpace, isError, ...props }: HintProps) {
   return (
-    <p ref={ref} className={clsx('label', { 'min-h-5': reserveSpace }, className)} {...props}>
+    <p ref={ref} className={clsx('label', { 'min-h-5': reserveSpace, 'text-error': isError }, className)} {...props}>
       {children}
     </p>
   )
