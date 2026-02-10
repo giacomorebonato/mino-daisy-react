@@ -10,7 +10,7 @@ export function PwdInput({ className, ref, ...props }: PwdInputProps) {
   const [showPassword, setShowPassword] = useState(false)
 
   return (
-    <label className={clsx('input', className)}>
+    <label className={clsx('input w-full', className)}>
       <input ref={ref} type={showPassword ? 'text' : 'password'} {...props} />
       <button
         type="button"
