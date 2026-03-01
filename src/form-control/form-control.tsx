@@ -1,14 +1,28 @@
 import { clsx } from 'clsx'
-import type { FieldsetHTMLAttributes, HTMLAttributes, ReactNode } from 'react'
+import type { FieldsetHTMLAttributes, HTMLAttributes, LabelHTMLAttributes, ReactNode } from 'react'
 
-export interface FormControlProps extends FieldsetHTMLAttributes<HTMLFieldSetElement> {
-  children?: ReactNode
-  ref?: React.Ref<HTMLFieldSetElement>
-}
+export type FormControlProps =
+  | ({ as?: 'fieldset' } & FieldsetHTMLAttributes<HTMLFieldSetElement> & {
+        children?: ReactNode
+        ref?: React.Ref<HTMLFieldSetElement>
+      })
+  | ({ as: 'label' } & LabelHTMLAttributes<HTMLLabelElement> & {
+        children?: ReactNode
+        ref?: React.Ref<HTMLLabelElement>
+      })
 
-export function FormControl({ className, ref, children, ...props }: FormControlProps) {
+export function FormControl(props: FormControlProps) {
+  if (props.as === 'label') {
+    const { as: _, className, ref, children, ...rest } = props
+    return (
+      <label ref={ref} className={clsx('fieldset', className)} {...rest}>
+        {children}
+      </label>
+    )
+  }
+  const { as: _, className, ref, children, ...rest } = props
   return (
-    <fieldset ref={ref} className={clsx('fieldset', className)} {...props}>
+    <fieldset ref={ref} className={clsx('fieldset', className)} {...rest}>
       {children}
     </fieldset>
   )
@@ -44,7 +58,11 @@ export interface HintProps extends HTMLAttributes<HTMLParagraphElement> {
 
 export function Hint({ className, ref, children, reserveSpace, isError, ...props }: HintProps) {
   return (
-    <p ref={ref} className={clsx('label', { 'min-h-5': reserveSpace, 'text-error': isError }, className)} {...props}>
+    <p
+      ref={ref}
+      className={clsx('label', { 'min-h-5': reserveSpace, 'text-error': isError }, className)}
+      {...props}
+    >
       {children}
     </p>
   )

@@ -47,6 +47,28 @@ describe('FormControl', () => {
     render(<FormControl ref={ref}>Content</FormControl>)
     expect(ref.current).toBeInstanceOf(HTMLFieldSetElement)
   })
+
+  it('renders as label element when as="label"', () => {
+    const { container } = render(<FormControl as="label">Content</FormControl>)
+    expect(container.querySelector('label')).toBeInTheDocument()
+    expect(container.querySelector('fieldset')).not.toBeInTheDocument()
+  })
+
+  it('applies fieldset class when as="label"', () => {
+    const { container } = render(<FormControl as="label">Content</FormControl>)
+    const label = container.querySelector('label')
+    expect(label).toHaveClass('fieldset')
+  })
+
+  it('forwards ref correctly when as="label"', () => {
+    const ref = { current: null }
+    render(
+      <FormControl as="label" ref={ref}>
+        Content
+      </FormControl>,
+    )
+    expect(ref.current).toBeInstanceOf(HTMLLabelElement)
+  })
 })
 
 describe('Legend', () => {
