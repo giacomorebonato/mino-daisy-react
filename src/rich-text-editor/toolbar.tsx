@@ -35,6 +35,7 @@ import { INSERT_IMAGE_COMMAND } from './plugins'
 
 export interface ToolbarProps {
   className?: string
+  enableImage?: boolean
 }
 
 const blockTypeToBlockName = {
@@ -49,7 +50,7 @@ const blockTypeToBlockName = {
   number: 'Numbered List',
 }
 
-export function Toolbar({ className }: ToolbarProps) {
+export function Toolbar({ className, enableImage = true }: ToolbarProps) {
   const [editor] = useLexicalComposerContext()
   const [isBold, setIsBold] = useState(false)
   const [isItalic, setIsItalic] = useState(false)
@@ -321,39 +322,43 @@ export function Toolbar({ className }: ToolbarProps) {
           >
             <LinkIcon />
           </Button>
-          <Dropdown
-            className="join-item [&>summary]:list-none [&>summary::-webkit-details-marker]:hidden"
-            trigger={
-              <div className="btn btn-sm btn-ghost" title="Insert Image">
-                <ImageIcon />
-              </div>
-            }
-            content={
-              <ul className="menu bg-base-200 rounded-box z-10 w-48 p-2 shadow">
-                <li>
-                  <button type="button" onClick={insertImageFromUrl}>
-                    Insert from URL
-                  </button>
-                </li>
-                <li>
-                  <button type="button" onClick={insertImageFromFile}>
-                    Upload File
-                  </button>
-                </li>
-              </ul>
-            }
-          />
+          {enableImage && (
+            <Dropdown
+              className="join-item [&>summary]:list-none [&>summary::-webkit-details-marker]:hidden"
+              trigger={
+                <div className="btn btn-sm btn-ghost" title="Insert Image">
+                  <ImageIcon />
+                </div>
+              }
+              content={
+                <ul className="menu bg-base-200 rounded-box z-10 w-48 p-2 shadow">
+                  <li>
+                    <button type="button" onClick={insertImageFromUrl}>
+                      Insert from URL
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" onClick={insertImageFromFile}>
+                      Upload File
+                    </button>
+                  </li>
+                </ul>
+              }
+            />
+          )}
         </div>
       </div>
 
       {/* Hidden file input for image upload */}
-      <input
-        type="file"
-        ref={fileInputRef}
-        accept="image/*"
-        className="hidden"
-        onChange={handleFileUpload}
-      />
+      {enableImage && (
+        <input
+          type="file"
+          ref={fileInputRef}
+          accept="image/*"
+          className="hidden"
+          onChange={handleFileUpload}
+        />
+      )}
     </>
   )
 }

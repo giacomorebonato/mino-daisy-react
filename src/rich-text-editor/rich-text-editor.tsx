@@ -91,6 +91,12 @@ export interface RichTextEditorProps extends Omit<HTMLAttributes<HTMLDivElement>
    * Ref to the Lexical editor instance for advanced use cases.
    */
   ref?: React.Ref<LexicalEditor>
+
+  /**
+   * Enable image insertion in toolbar.
+   * @default true
+   */
+  enableImage?: boolean
 }
 
 const editorTheme = {
@@ -133,6 +139,7 @@ export function RichTextEditor({
   editorClassName,
   className,
   ref,
+  enableImage = true,
   ...props
 }: RichTextEditorProps) {
   const initialConfig = {
@@ -148,7 +155,7 @@ export function RichTextEditor({
   return (
     <div className={clsx('rich-text-editor', className)} {...props}>
       <LexicalComposer initialConfig={initialConfig}>
-        {!disabled && <Toolbar className={toolbarClassName} />}
+        {!disabled && <Toolbar className={toolbarClassName} enableImage={enableImage} />}
 
         <div className="relative">
           <RichTextPlugin
