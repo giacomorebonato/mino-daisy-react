@@ -11,6 +11,7 @@ This project wraps [DaisyUI](https://daisyui.com/) components into React.
 * it's published to NPM for easy re-use
 * uses TypeScript
 * read updated [DaisyUI documentation](https://daisyui.com/llms.txt)
+* includes the official [daisyUI skill](https://daisyui.com/docs/skill/) under `.agents/skills/daisyui/`
 
 ## Storybook
 
